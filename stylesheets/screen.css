@@ -127,7 +127,7 @@ body {
 }
 
 /* line 12, ../sass/partials/_global.scss */
-.wrap {
+.container {
   margin: 0 auto;
   max-width: 1200px;
   position: relative;
