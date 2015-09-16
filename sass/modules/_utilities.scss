@@ -1,0 +1,11 @@
+/* UTILITIES */
+
+// Clearfix
+.cf:before, .cf:after {content:" "; display:table;}
+.cf:after {clear: both;}
+  //IE
+  .cf {*zoom: 1;}
+
+// Misc
+
+.hide { display: none; }

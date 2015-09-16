@@ -1,0 +1,54 @@
+ // * { transition: all 0.25s linear; -moz-transition: all 0.25s linear; -webkit-transition: all 0.25s linear; -o-transition: all 0.25s linear; }
+
+// Body Styles
+body {
+  font-family: Macha-book;
+}
+
+.wrap {
+  margin: 0 auto; 
+  // max-width: 600px;
+}
+
+
+// Type Styles
+h1 {
+ 
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 { 
+
+}
+
+p {
+
+}
+
+a {
+
+}
+
+a:hover {
+}
+ul, ol { 
+  margin: 0.6em 0; padding: 0; font: 1.4rem ; line-height: 1.4em; 
+}
+ul li, ol li {
+  list-style-type: none;
+  // margin: 15px 0 15px;
+  color: #fff;
+  // font-size: 18px;
+  @include respond-to(handhelds) {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(wide-screens) {  }
+}
+
+blockquote { font: normal 1.3em/1.3em $typeBook;  color: #666; margin: 1em;  }
