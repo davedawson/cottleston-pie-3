@@ -1,4 +1,16 @@
 .browser {
+	@include box-shadow(rgba(0,0,0,0.2) 0px 0px 10px);
+	overflow: hidden;
+	&.desktop {
+		max-width: 1000px;
+		max-height: 1000px;
+	}
+	&.mobile {
+		max-width: 300px;
+		max-height: 800px;
+		border: 0 2px;
+		border-color: #dcdcdc;
+	}
 	.bar {
 		background: #dcdcdc;
 		padding: 5px;
@@ -8,10 +20,25 @@
 			background: #eeeeee;
 		}
 	}
-	&.desktop {
-		max-width: 1000px;
+	
+	.screen {
+		max-width: 100%;
 	}
-	&.mobile {
-		max-width: 300px;
+}
+
+.project {
+	h2 {
+		font-size: 18px;
+		line-height: 24px;
 	}
+	h1 {
+		font-size: 86px;
+		line-height: 24px;
+	}
+	p {
+		font-size: 24px;
+		line-height: 32px;
+		color: $color-text;
+	}
+
 }

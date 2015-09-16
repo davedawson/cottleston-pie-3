@@ -7,6 +7,7 @@ html, body, section {
 }
 body {
   margin: 0;
+  font-family: $typeMedium;
 }
 
 .container {
@@ -14,7 +15,6 @@ body {
   max-width: 1200px;
   position: relative;
 }
-
 
 // Type Styles
 h1 {
@@ -57,3 +57,7 @@ ul li, ol li {
 }
 
 blockquote { color: #666; margin: 1em;  }
+
+img {
+  max-width: 100%;
+}

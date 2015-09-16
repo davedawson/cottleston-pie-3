@@ -137,24 +137,56 @@ html, body, * {
   src: url("/webfonts/25C5FC_2_0.eot");
   src: url("/webfonts/25C5FC_2_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/25C5FC_2_0.woff") format("woff"), url("webfonts/25C5FC_2_0.ttf") format("truetype");
 }
-/* line 2, ../sass/modules/_elements.scss */
+/* line 1, ../sass/modules/_elements.scss */
+.browser {
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+  overflow: hidden;
+}
+/* line 4, ../sass/modules/_elements.scss */
+.browser.desktop {
+  max-width: 1000px;
+  max-height: 1000px;
+}
+/* line 8, ../sass/modules/_elements.scss */
+.browser.mobile {
+  max-width: 300px;
+  max-height: 800px;
+  border: 0 2px;
+  border-color: #dcdcdc;
+}
+/* line 14, ../sass/modules/_elements.scss */
 .browser .bar {
   background: #dcdcdc;
   padding: 5px;
 }
-/* line 5, ../sass/modules/_elements.scss */
+/* line 17, ../sass/modules/_elements.scss */
 .browser .bar a {
   display: block;
   padding: 3px;
   background: #eeeeee;
 }
-/* line 11, ../sass/modules/_elements.scss */
-.browser.desktop {
-  max-width: 1000px;
+/* line 24, ../sass/modules/_elements.scss */
+.browser .screen {
+  max-width: 100%;
 }
-/* line 14, ../sass/modules/_elements.scss */
-.browser.mobile {
-  max-width: 300px;
+
+/* line 30, ../sass/modules/_elements.scss */
+.project h2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+/* line 34, ../sass/modules/_elements.scss */
+.project h1 {
+  font-size: 86px;
+  line-height: 24px;
+}
+/* line 38, ../sass/modules/_elements.scss */
+.project p {
+  font-size: 24px;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /* line 4, ../sass/partials/_global.scss */
@@ -166,9 +198,10 @@ html, body, section {
 /* line 8, ../sass/partials/_global.scss */
 body {
   margin: 0;
+  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
 }
 
-/* line 12, ../sass/partials/_global.scss */
+/* line 13, ../sass/partials/_global.scss */
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -193,6 +226,11 @@ ul li, ol li {
 blockquote {
   color: #666;
   margin: 1em;
+}
+
+/* line 61, ../sass/partials/_global.scss */
+img {
+  max-width: 100%;
 }
 
 /* line 1, ../sass/partials/_body.scss */
