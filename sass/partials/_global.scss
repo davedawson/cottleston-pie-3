@@ -1,13 +1,18 @@
  // * { transition: all 0.25s linear; -moz-transition: all 0.25s linear; -webkit-transition: all 0.25s linear; -o-transition: all 0.25s linear; }
 
 // Body Styles
+html, body, section {
+  margin: 0;
+  padding: 0;
+}
 body {
-  font-family: Macha-book;
+  margin: 0;
 }
 
 .wrap {
   margin: 0 auto; 
-  // max-width: 600px;
+  max-width: 1200px;
+  position: relative;
 }
 
 
@@ -51,4 +56,4 @@ ul li, ol li {
   @include respond-to(wide-screens) {  }
 }
 
-blockquote { font: normal 1.3em/1.3em $typeBook;  color: #666; margin: 1em;  }
+blockquote { color: #666; margin: 1em;  }

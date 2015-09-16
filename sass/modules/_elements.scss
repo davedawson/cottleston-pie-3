@@ -1,0 +1,17 @@
+.browser {
+	.bar {
+		background: #dcdcdc;
+		padding: 5px;
+		a {
+			display: block;
+			padding: 3px;
+			background: #eeeeee;
+		}
+	}
+	&.desktop {
+		max-width: 1000px;
+	}
+	&.mobile {
+		max-width: 300px;
+	}
+}
