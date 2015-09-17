@@ -3,14 +3,17 @@
 	background: url(/img/intro-bg.jpg) repeat-x; 
 	background-size: cover;
 	nav {
-		position: absolute;
-		right: 0;
-		top: 0;
 		ul {
 			margin: 0;
 		}
+
 		li {
 			display: inline;
+			display: none;
+		}
+		a {
+
+
 		}
 	}
 
