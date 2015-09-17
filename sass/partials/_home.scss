@@ -1,15 +1,21 @@
+.nav-wrap {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
 .intro {
 	margin: 0;
 	background: url(/img/intro-bg.jpg) repeat-x; 
 	background-size: cover;
 	nav {
+		margin-top: 50px;
 		ul {
 			margin: 0;
 		}
 
 		li {
 			display: inline;
-			display: none;
 		}
 		a {
 
@@ -18,7 +24,18 @@
 	}
 
 	h1 {
-		margin-top: -50px;
+		// margin-top: 50px;
+		position: relative;
+		top: -50px;
+		img {
+			width: 130%;
+			margin-left: -1%;
+
+		}
+	}
+
+	h2 {
+		margin-top: 300px;
 	}
 }
 
@@ -26,4 +43,19 @@
 	background: #b80f4a;
 	margin-top: -40px;
 	padding: 100px 0;
+	@include clearfix;
+
+	.featured-work {
+		.project-1 {
+			float: right;
+			margin-top: -300px;
+			.iphone {
+				position: relative;
+				top: -500px;
+				left: -100px;
+			}
+		}
+		
+	}
 }
+

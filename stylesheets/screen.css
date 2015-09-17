@@ -181,6 +181,18 @@ body {
   margin: 0 auto;
   max-width: 1400px;
   position: relative;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 46px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 26px;
 }
 
 ul, ol {
@@ -223,24 +235,51 @@ footer, section {
   margin: 0 auto;
 }
 
+.nav-wrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 .intro {
   margin: 0;
   background: url(/img/intro-bg.jpg) repeat-x;
   background-size: cover;
+}
+.intro nav {
+  margin-top: 50px;
 }
 .intro nav ul {
   margin: 0;
 }
 .intro nav li {
   display: inline;
-  display: none;
 }
 .intro h1 {
-  margin-top: -50px;
+  position: relative;
+  top: -50px;
+}
+.intro h1 img {
+  width: 130%;
+  margin-left: -1%;
+}
+.intro h2 {
+  margin-top: 300px;
 }
 
 .description {
   background: #b80f4a;
   margin-top: -40px;
   padding: 100px 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.description .featured-work .project-1 {
+  float: right;
+  margin-top: -300px;
+}
+.description .featured-work .project-1 .iphone {
+  position: relative;
+  top: -500px;
+  left: -100px;
 }

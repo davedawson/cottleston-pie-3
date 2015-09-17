@@ -15,6 +15,7 @@ body {
   margin: 0 auto; 
   max-width: 1400px;
   position: relative;
+  @include clearfix;
 }
 
 // Type Styles
@@ -23,7 +24,8 @@ h1 {
 }
 
 h2 {
-
+  font-size: 40px;
+  line-height: 46px;
 }
 
 h3 {
@@ -35,7 +37,8 @@ h4 {
 }
 
 p {
-
+  font-size: 18px;
+  line-height: 26px;
 }
 
 a {
