@@ -1,11 +1,22 @@
 ---
-layout: default
+layout: project
 title: Film Comment
-path: /projects/fc
+path: /projects/filmcomment
+role: Project Lead, Creative Direction, Design
+team: Cottleston Pie, Patronage
+live-url: http:www.filmlinc.org
 ---
 
-<h1>Film Comment</h1>
+Film Comment is published by The Film Society of Lincoln Center. 
 
-A magazine on the web.
+<div class="project-example iphone">
+	<div class="screen-wrap">
+		<img src="/img/projects/filmlinc.org-mobile-home.png" alt="" />
+	</div>
+</div>
 
-So?
+<div class="project-example ipad horizontal">
+	<div class="screen-wrap">
+		<img src="/img/projects/filmlinc.org-desktop-home.png" alt="" />
+	</div>
+</div>

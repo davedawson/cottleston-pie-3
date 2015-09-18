@@ -166,6 +166,41 @@ html, body, * {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.project-example {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+.project-example.iphone {
+  background: url("/img/projects/iphone-wrap.png") no-repeat;
+  padding: 50px 14px;
+  max-width: 236px;
+  height: 484px;
+  display: block;
+  overflow: hidden;
+}
+.project-example.iphone .screen-wrap {
+  height: 384px;
+  overflow: hidden;
+}
+.project-example.ipad {
+  background: url("/img/projects/ipad-horizontal-wrap.png") no-repeat;
+  padding: 59px 66px;
+  max-width: 828px;
+  height: 626px;
+  display: block;
+  overflow: hidden;
+}
+.project-example.ipad .screen-wrap {
+  height: 526px;
+  overflow: hidden;
+}
+.project-example.ipad.vertical {
+  background: url("/img/projects/ipad-vertical-wrap.png") no-repeat;
+}
+.project-example img {
+  width: 100%;
+  max-width: 100%;
+}
+
 html, body, section {
   margin: 0;
   padding: 0;
@@ -175,6 +210,7 @@ html, body, section {
 body {
   margin: 0;
   font-family: "Macha-medium", Helvetica, Arial, sans-serif;
+  background: #242742;
 }
 
 .container {
@@ -350,11 +386,4 @@ footer, section {
   background: #000;
   border-radius: 4px;
   margin-bottom: 30px;
-}
-.more-work .wrap {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }

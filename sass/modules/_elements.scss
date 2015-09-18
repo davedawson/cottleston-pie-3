@@ -42,3 +42,41 @@
 	}
 
 }
+
+.project-example {
+	filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+	&.iphone {
+		background: url("/img/projects/iphone-wrap.png") no-repeat;
+		padding: 50px 14px;
+		max-width: 236px;	
+		height: 484px;
+		display: block;
+		overflow: hidden;
+		.screen-wrap {
+			border: 1px solid rgba(0,0,0,0,.1);
+			height: 384px;
+			overflow: hidden;
+		}
+	}
+	&.ipad {
+		background: url("/img/projects/ipad-horizontal-wrap.png") no-repeat;
+		padding: 59px 66px;
+		max-width: 828px;	
+		height: 626px;
+		display: block;
+		overflow: hidden;
+		.screen-wrap {
+			border: 1px solid rgba(0,0,0,0,.1);
+			height: 526px;
+			overflow: hidden;
+		}
+		&.vertical {
+			background: url("/img/projects/ipad-vertical-wrap.png") no-repeat;
+		}
+		
+	}
+	img {
+		width: 100%;
+		max-width: 100%;
+	}
+}
