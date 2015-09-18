@@ -8,7 +8,7 @@ html, body, section {
 }
 body {
   margin: 0;
-  font-family: $typeMedium;
+  font-family: $typeSans;
 }
 
 .container {
@@ -26,14 +26,40 @@ h1 {
 h2 {
   font-size: 40px;
   line-height: 46px;
+  font-family: $typeSerif;
 }
 
 h3 {
-
+  font-size: 48px;
+  line-height: 56px;
+  font-family: $typeSerif;
+  color: white;
+  &.section {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    color: white;
+    font-family: $typeSans;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    &:before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 10px;
+      margin-bottom: 30px;
+      background: rgba(255,255,255,0.4);
+    }
+  }
 }
 
 h4 { 
-
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  color: white;
+  font-weight: bold;
 }
 
 p {
