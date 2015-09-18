@@ -344,9 +344,17 @@ footer, section {
   *zoom: 1;
 }
 .more-work .project {
+  display: block;
   min-height: 400px;
   padding: 30px;
   background: #000;
   border-radius: 4px;
   margin-bottom: 30px;
+}
+.more-work .wrap {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }

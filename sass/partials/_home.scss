@@ -79,10 +79,15 @@
 	padding: 60px 0;
 	@include clearfix;
 	.project {
+		display: block;
 		min-height: 400px;
 		padding: 30px;
 		background: #000;
 		border-radius: $radius;
 		margin-bottom: 30px;
+	}
+	.wrap {
+		// @include center(y);
+		// @include vertical-align;
 	}
 }

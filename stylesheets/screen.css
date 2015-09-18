@@ -344,6 +344,7 @@ footer, section {
   *zoom: 1;
 }
 .more-work .project {
+  display: block;
   min-height: 400px;
   padding: 30px;
   background: #000;
