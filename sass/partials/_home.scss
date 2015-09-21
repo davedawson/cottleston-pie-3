@@ -5,15 +5,23 @@
 }
 
 .intro {
-	margin: 0;
+	margin: 0 auto;
 	background: url(/img/intro-bg.jpg) repeat-x; 
 	background-size: cover;
-	
+	@include clearfix;
+	.title-wrap {
+		margin: 0 auto;
+		// position: absolute;
+		// width: 100%;
+		// top: -50px;
 
+	}
 	h1 {
 		// margin-top: 50px;
 		position: relative;
 		top: -50px;
+		margin: 0 auto;
+		max-width: 1800px;
 		img {
 			width: 130%;
 			margin-left: -1%;
@@ -38,21 +46,62 @@
 
 .description {
 	background: #b80f4a;
-	margin-top: -40px;
+	margin-top: -106px;
 	padding: 100px 0;
+	max-height: 1000px;
 	@include clearfix;
 
 	.featured-work {
 		.project-1 {
 			float: right;
-			margin-top: -300px;
+			position: relative;
+			margin-right: -350px;
+			margin-top: 150px;
+			@include respond-to(medium-and-above) {
+				margin-right: -400px;
+			}
+			@include respond-to(extra-wide-screens) {
+				margin-right: -300px;
+			}
 			.iphone {
 				position: relative;
-				top: -500px;
-				left: -100px;
+				top: -400px;
+				left: -75px;
+			}
+			.ipad {
+				top: 130px;
 			}
 		}
-		
+		.project-2 {
+			position: absolute;
+			top: 370px;
+			.macbook {
+				margin-left: -400px;
+			}
+			.iphone {
+				position: relative;
+				top: -400px;
+				right: -150px;
+				@include respond-to(medium-and-above) {
+					right: 50px;
+				}
+				@include respond-to(wide-screens) {
+					right: auto;
+					left: 70%;
+				}
+				@include respond-to(extra-wide-screens) {
+					right: auto; 
+					// left: 35%;
+				}
+			}
+		}
+	}
+	h2 {
+		margin-bottom: 30px;
+	}
+	p {
+		margin-bottom: 20px;
+		margin-right: 25%;
 	}
 }
 

@@ -184,25 +184,45 @@ html, body, * {
   overflow: hidden;
 }
 .project-example.iphone .screen-wrap {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
   height: 384px;
   overflow: hidden;
 }
 .project-example.ipad {
   background: url("/img/projects/ipad-horizontal-wrap.png") no-repeat;
-  padding: 59px 66px;
-  max-width: 828px;
+  padding: 58px 64px;
+  max-width: 814px;
   height: 626px;
   display: block;
   overflow: hidden;
 }
 .project-example.ipad .screen-wrap {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
   height: 526px;
   overflow: hidden;
 }
 .project-example.ipad.vertical {
   background: url("/img/projects/ipad-vertical-wrap.png") no-repeat;
+}
+.project-example.macbook {
+  background: url("/img/projects/macbook-wrap.png") no-repeat;
+  padding: 28px 127px 57px;
+  max-width: 1093px;
+  height: 637px;
+  display: block;
+  overflow: hidden;
+}
+.project-example.macbook .screen-wrap {
+  border: 1px solid #000;
+  height: 531px;
+  overflow: hidden;
+}
+.project-example.macbook.long {
+  background: url("/img/projects/macbook-long-wrap.png") no-repeat;
+  height: 937px;
+}
+.project-example.macbook.long .screen-wrap {
+  height: 600px;
 }
 .project-example img {
   width: 100%;
@@ -222,11 +242,9 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1400px;
   position: relative;
-  overflow: hidden;
-  *zoom: 1;
+  margin: 0 auto;
 }
 
 h2 {
@@ -262,7 +280,7 @@ h3.section:before {
 
 h4 {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.3em;
   color: white;
   font-weight: bold;
@@ -354,13 +372,20 @@ footer, section {
 }
 
 .intro {
-  margin: 0;
+  margin: 0 auto;
   background: url(/img/intro-bg.jpg) repeat-x;
   background-size: cover;
+  overflow: hidden;
+  *zoom: 1;
+}
+.intro .title-wrap {
+  margin: 0 auto;
 }
 .intro h1 {
   position: relative;
   top: -50px;
+  margin: 0 auto;
+  max-width: 1800px;
 }
 .intro h1 img {
   width: 130%;
@@ -382,19 +407,70 @@ footer, section {
 
 .description {
   background: #b80f4a;
-  margin-top: -40px;
+  margin-top: -106px;
   padding: 100px 0;
+  max-height: 1000px;
   overflow: hidden;
   *zoom: 1;
 }
 .description .featured-work .project-1 {
   float: right;
-  margin-top: -300px;
+  position: relative;
+  margin-right: -350px;
+  margin-top: 150px;
+}
+@media only screen and (min-width: 641px) {
+  .description .featured-work .project-1 {
+    margin-right: -400px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .description .featured-work .project-1 {
+    margin-right: -300px;
+  }
 }
 .description .featured-work .project-1 .iphone {
   position: relative;
-  top: -500px;
-  left: -100px;
+  top: -400px;
+  left: -75px;
+}
+.description .featured-work .project-1 .ipad {
+  top: 130px;
+}
+.description .featured-work .project-2 {
+  position: absolute;
+  top: 370px;
+}
+.description .featured-work .project-2 .macbook {
+  margin-left: -400px;
+}
+.description .featured-work .project-2 .iphone {
+  position: relative;
+  top: -400px;
+  right: -150px;
+}
+@media only screen and (min-width: 641px) {
+  .description .featured-work .project-2 .iphone {
+    right: 50px;
+  }
+}
+@media only screen and (min-width: 972px) {
+  .description .featured-work .project-2 .iphone {
+    right: auto;
+    left: 70%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .description .featured-work .project-2 .iphone {
+    right: auto;
+  }
+}
+.description h2 {
+  margin-bottom: 30px;
+}
+.description p {
+  margin-bottom: 20px;
+  margin-right: 25%;
 }
 
 .more-work {

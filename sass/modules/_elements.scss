@@ -59,27 +59,46 @@
 		display: block;
 		overflow: hidden;
 		.screen-wrap {
-			border: 1px solid rgba(0,0,0,0.1);
+			border: 1px solid #e0e0e0;
 			height: 384px;
 			overflow: hidden;
 		}
 	}
 	&.ipad {
 		background: url("/img/projects/ipad-horizontal-wrap.png") no-repeat;
-		padding: 59px 66px;
-		max-width: 828px;	
+    padding: 58px 64px;
+    max-width: 814px;
 		height: 626px;
 		display: block;
 		overflow: hidden;
 		.screen-wrap {
-			border: 1px solid rgba(0,0,0,0.1);
+			border: 1px solid #e0e0e0;
 			height: 526px;
 			overflow: hidden;
 		}
 		&.vertical {
 			background: url("/img/projects/ipad-vertical-wrap.png") no-repeat;
+		}	
+	}
+	&.macbook {
+		background: url("/img/projects/macbook-wrap.png") no-repeat;
+    padding: 28px 127px 57px;
+    max-width: 1093px;
+    height: 637px;
+		display: block;
+		overflow: hidden;
+		.screen-wrap {
+			border: 1px solid #000;
+			height: 531px;
+			overflow: hidden;
 		}
-		
+		&.long {
+			background: url("/img/projects/macbook-long-wrap.png") no-repeat;
+			height: 937px;
+			.screen-wrap {
+				height: 600px;
+			}
+		}
 	}
 	img {
 		width: 100%;

@@ -12,11 +12,12 @@ body {
   background: #242742;
 }
 
-.container {
-  margin: 0 auto; 
+.container { 
   max-width: 1400px;
   position: relative;
-  @include clearfix;
+  margin: 0 auto;
+  // margin: 0 5%;
+  // @include clearfix;
 }
 
 // Type Styles
@@ -57,7 +58,7 @@ h3 {
 
 h4 { 
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.3em;
   color: white;
   font-weight: bold;
