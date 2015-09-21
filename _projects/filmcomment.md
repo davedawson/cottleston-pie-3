@@ -7,16 +7,18 @@ team: Cottleston Pie, Patronage
 live-url: http:www.filmlinc.org
 ---
 
-Film Comment is published by The Film Society of Lincoln Center. 
 
-<div class="project-example iphone">
-	<div class="screen-wrap">
-		<img src="/img/projects/filmlinc.org-mobile-home.png" alt="" />
+<div class="d1-d12">
+	Film Comment is published by The Film Society of Lincoln Center. 
+	<div class="project-example iphone">
+		<div class="screen-wrap">
+			<img src="/img/projects/filmlinc.org-mobile-home.png" alt="" />
+		</div>
 	</div>
-</div>
 
-<div class="project-example ipad horizontal">
-	<div class="screen-wrap">
-		<img src="/img/projects/filmlinc.org-desktop-home.png" alt="" />
+	<div class="project-example ipad horizontal">
+		<div class="screen-wrap">
+			<img src="/img/projects/filmlinc.org-desktop-home.png" alt="" />
+		</div>
 	</div>
 </div>

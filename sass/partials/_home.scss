@@ -8,25 +8,7 @@
 	margin: 0;
 	background: url(/img/intro-bg.jpg) repeat-x; 
 	background-size: cover;
-	nav {
-		margin-top: 50px;
-		ul {
-			margin: 0;
-		}
-
-		li {
-			display: inline;
-			margin-right: 40px;
-		}
-		a {
-			text-transform: uppercase;
-		  font-size: 14px;
-		  letter-spacing: 0.3em;
-		  color: white;
-		  font-weight: bold;
-		  text-decoration: none;
-		}
-	}
+	
 
 	h1 {
 		// margin-top: 50px;
@@ -79,12 +61,156 @@
 	padding: 60px 0;
 	@include clearfix;
 	.project {
+		text-decoration: none;
+		position: relative;
 		display: block;
-		min-height: 400px;
+		min-height: 500px;
 		padding: 30px;
 		background: #000;
 		border-radius: $radius;
 		margin-bottom: 30px;
+		background: #333;
+		background-size: cover;
+		display: table;
+		overflow: hidden;
+		&.small {
+			h3 {
+				font-size: 34px;
+				line-height: 36px;
+			}
+		}
+		&.wide {
+			min-height: 300px;
+		}
+		&.filmlinc {
+			background: url("/img/projects/home/filmlinc.jpg") no-repeat;
+			background-position: 0px  -50px;
+			// background-size: 90%;
+			&:after {
+				content: "";
+				@include left-to-right-dark-gradient;
+				width: 100%;
+			}
+		}
+		&.filmcomment {
+			background: url("/img/projects/home/filmcomment.jpg") no-repeat;
+			background-position: -500px  -50px;
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
+		}
+		&.tackleebola {
+			background: url("/img/projects/home/te.jpg") no-repeat;
+			background-position: -150px -100px;
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
+		}
+		&.oldspice {
+			background: url("/img/projects/home/oldspice.jpg") no-repeat;
+			background-position: -350px bottom;
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
+		}
+		&.raise {
+			background: url("/img/projects/home/raise-the-wage.jpg") no-repeat;
+			background-position: -150px -100px;
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
+		}
+		&.nextgen {
+			background: url("/img/projects/home/nextgen.jpg") no-repeat;
+			.title-wrap {
+				padding-left: 50%;
+			}
+		}
+		&.fes {
+			background: url("/img/projects/home/fes.jpg") no-repeat;
+			// &:after {
+			// 	content: "";
+			// 	@include left-to-right-dark-gradient;
+			// 	width: 100%;
+			// }
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
+		}
+		&.feast {
+			background: url("/img/projects/home/the-feast.jpg") no-repeat;
+		}
+		&.hustwit {
+			background: url("/img/projects/home/hustwit.jpg") no-repeat;
+			text-align: center;
+			background-position: center bottom;
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
+		}
+		&.ndnf {
+			background: url("/img/projects/home/ndnf.jpg") no-repeat;
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
+		}
+		&.avicii {
+			background: url("/img/projects/home/avicii.jpg") no-repeat;
+			&:after {
+				content: "";
+				@include left-to-right-dark-gradient;
+				width: 100%;
+			}
+		}
+		&.littlebits {
+			background: url("/img/projects/home/littlebits.jpg") no-repeat;
+			&:after {
+				content: "";
+				@include left-to-right-light-gradient;
+				width: 100%;
+			}
+		}
+		&.fourseasons {
+			background: url("/img/projects/home/fourseasons.jpg") no-repeat;
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
+		}
+		&.ndnf {
+			background: url("/img/projects/home/ndnf.jpg") no-repeat;
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
+		}
+		.title-wrap {
+			// @include vertical-align;
+			display: table-cell;
+		  vertical-align: middle;
+		  position: relative;
+		  z-index: 2;
+		}
+		.text-bottom {
+			position: absolute;
+			bottom: 30px;
+			display: block;
+		}
+		&.on-light {
+			h3 {
+				color: $color-red;	
+			}
+			h4 {
+				color: $color-text
+			}
+		}
 	}
 	.wrap {
 		// @include center(y);

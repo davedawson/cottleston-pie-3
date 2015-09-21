@@ -1,0 +1,20 @@
+.project-header {
+	h1 {
+		font-size: 68px;
+		line-height: 76px;
+		font-family: $typeSerif;
+	}
+	.project-deets {
+		font-size: 14px;
+		line-height: 18px;
+		dt {
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			margin-bottom: 4px;
+		}
+		dd {
+			margin-bottom: 10px;
+
+		}
+	}
+}
