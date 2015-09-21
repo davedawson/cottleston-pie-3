@@ -56,7 +56,7 @@
 			float: right;
 			position: relative;
 			margin-right: -350px;
-			margin-top: 150px;
+			margin-top: 90px;
 			@include respond-to(medium-and-above) {
 				margin-right: -400px;
 			}
@@ -66,7 +66,12 @@
 			.iphone {
 				position: relative;
 				top: -400px;
-				left: -75px;
+				left: 475px;
+				display: none;
+				@include respond-to(extra-wide-screens) {
+					display: block;
+					left: 75%;
+				}
 			}
 			.ipad {
 				top: 130px;
@@ -75,8 +80,11 @@
 		.project-2 {
 			position: absolute;
 			top: 370px;
-			.macbook {
-				margin-left: -400px;
+			.ipad {
+				margin-left: -50px;
+				@include respond-to(extra-wide-screens) {
+					margin-left: -240px;
+				}
 			}
 			.iphone {
 				position: relative;
@@ -88,9 +96,11 @@
 				@include respond-to(wide-screens) {
 					right: auto;
 					left: 70%;
+					display: none
 				}
 				@include respond-to(extra-wide-screens) {
 					right: auto; 
+					display: block;
 					// left: 35%;
 				}
 			}
