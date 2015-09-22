@@ -173,8 +173,8 @@ html, body, * {
 }
 
 .project-example {
-  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-  -webkit-filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
 }
 .project-example.iphone {
   background: url("/img/projects/iphone-wrap.png") no-repeat;
@@ -182,7 +182,6 @@ html, body, * {
   max-width: 236px;
   height: 484px;
   display: block;
-  overflow: hidden;
 }
 .project-example.iphone .screen-wrap {
   border: 1px solid #e0e0e0;
@@ -192,10 +191,9 @@ html, body, * {
 .project-example.ipad {
   background: url("/img/projects/ipad-horizontal-wrap.png") no-repeat;
   padding: 58px 64px;
-  max-width: 814px;
+  max-width: 819px;
   height: 626px;
   display: block;
-  overflow: hidden;
 }
 .project-example.ipad .screen-wrap {
   border: 1px solid #e0e0e0;
@@ -211,7 +209,6 @@ html, body, * {
   max-width: 1093px;
   height: 637px;
   display: block;
-  overflow: hidden;
 }
 .project-example.macbook .screen-wrap {
   border: 1px solid #000;
@@ -243,9 +240,23 @@ body {
 }
 
 .container {
-  max-width: 1400px;
   position: relative;
   margin: 0 auto;
+}
+@media only screen and (min-width: 641px) and (max-width: 1099px) {
+  .container {
+    max-width: 800px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .container {
+    max-width: 1082px;
+  }
+}
+@media only screen and (min-width: 1480px) {
+  .container {
+    max-width: 1340px;
+  }
 }
 
 h2 {
@@ -434,7 +445,7 @@ footer, section {
     margin-right: -400px;
   }
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1480px) {
   .description .featured-work .project-1 {
     margin-right: -300px;
   }
@@ -445,7 +456,7 @@ footer, section {
   left: 475px;
   display: none;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1480px) {
   .description .featured-work .project-1 .iphone {
     display: block;
     left: 75%;
@@ -461,7 +472,7 @@ footer, section {
 .description .featured-work .project-2 .ipad {
   margin-left: -50px;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1480px) {
   .description .featured-work .project-2 .ipad {
     margin-left: -240px;
   }
@@ -476,14 +487,14 @@ footer, section {
     right: 50px;
   }
 }
-@media only screen and (min-width: 972px) {
+@media only screen and (min-width: 1100px) {
   .description .featured-work .project-2 .iphone {
     right: auto;
     left: 70%;
     display: none;
   }
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1480px) {
   .description .featured-work .project-2 .iphone {
     right: auto;
     display: block;
@@ -500,6 +511,7 @@ footer, section {
 .more-work {
   background: #242742;
   padding: 60px 0;
+  position: relative;
 }
 .more-work::after {
   content: "";
@@ -526,6 +538,7 @@ footer, section {
 }
 .more-work .project.wide {
   min-height: 300px;
+  width: 100%;
 }
 .more-work .project.filmlinc {
   background: url("/img/projects/home/filmlinc.jpg") no-repeat;
@@ -875,6 +888,7 @@ footer, section {
   vertical-align: middle;
   position: relative;
   z-index: 2;
+  width: 90%;
 }
 .more-work .project .text-bottom {
   position: absolute;

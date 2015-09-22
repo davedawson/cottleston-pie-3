@@ -2,8 +2,8 @@ $mq-mobile-portrait   : 320px;
 $mq-mobile-landscape  : 640px;
 $mq-tablet-portrait   : 768px;
 $mq-tablet-landscape  : 1024px;
-$mq-desktop           : 972px;
-$mq-desktop-max       : 1400px;
+$mq-desktop           : 1100px;
+$mq-desktop-max       : 1480px;
 
 @mixin respond-to($media) {
   @if $media == extra-wide-screens {
