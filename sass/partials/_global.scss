@@ -23,7 +23,7 @@ body {
     max-width: 1082px;
   }
   @include respond-to(extra-wide-screens) {
-    max-width: 1340px;
+    max-width: 1400px;
   }
   // @include respond-to(medium-screens) {
   //   max-width: 800px;
@@ -82,7 +82,8 @@ p {
 }
 
 a {
-
+  color: $color-red;
+  
 }
 
 a:hover {

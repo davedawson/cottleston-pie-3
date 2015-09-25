@@ -279,3 +279,57 @@
 		// @include vertical-align;
 	}
 }
+
+.about {
+	background: #07111e;
+	padding: 60px;
+	@include clearfix;
+	h3 {
+		color: $color-red;
+		font-size: 28px;
+		line-height: 36px;
+		padding: 15px;
+	}
+
+	.label {
+		background: #f7f7f7;
+
+		position: relative;
+		top: -30px;
+		right: 30px;
+		width: 300px;
+
+		float: right;
+	}
+	.cp, .the-works {
+		min-height: 340px;
+	}
+	.cp {
+		background: url('/img/about/davedawson-blue.jpg');
+		background-position: -220px -160px;
+		a {
+			display: block;
+			background: $color-red;
+			color: white;
+			font-family: $typeSans;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			letter-spacing: 0.2em;
+			padding: 5px;
+			font-size: 14px;
+		}
+
+	}
+	.the-works {
+		background: url('/img/about/the-works-blue.jpg');
+		background-position: left center;
+		.label {
+			position: relative;
+			top: 280px;
+			float: left;
+			left: -25%;
+			width: 100%;
+		}
+	}
+}

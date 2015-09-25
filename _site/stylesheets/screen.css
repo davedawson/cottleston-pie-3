@@ -255,7 +255,7 @@ body {
 }
 @media only screen and (min-width: 1480px) {
   .container {
-    max-width: 1340px;
+    max-width: 1400px;
   }
 }
 
@@ -301,6 +301,10 @@ h4 {
 p {
   font-size: 18px;
   line-height: 26px;
+}
+
+a {
+  color: #e82643;
 }
 
 ul, ol {
@@ -900,6 +904,60 @@ footer, section {
 }
 .more-work .project.on-light h4 {
   color: rgba(0, 0, 0, 0.8);
+}
+
+.about {
+  background: #07111e;
+  padding: 60px;
+}
+.about::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.about h3 {
+  color: #e82643;
+  font-size: 28px;
+  line-height: 36px;
+  padding: 15px;
+}
+.about .label {
+  background: #f7f7f7;
+  position: relative;
+  top: -30px;
+  right: 30px;
+  width: 300px;
+  float: right;
+}
+.about .cp, .about .the-works {
+  min-height: 340px;
+}
+.about .cp {
+  background: url("/img/about/davedawson-blue.jpg");
+  background-position: -220px -160px;
+}
+.about .cp a {
+  display: block;
+  background: #e82643;
+  color: white;
+  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  padding: 5px;
+  font-size: 14px;
+}
+.about .the-works {
+  background: url("/img/about/the-works-blue.jpg");
+  background-position: left center;
+}
+.about .the-works .label {
+  position: relative;
+  top: 280px;
+  float: left;
+  left: -25%;
+  width: 100%;
 }
 
 .project-header {
