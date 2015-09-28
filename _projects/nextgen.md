@@ -7,9 +7,13 @@ role: Project Lead, Creative Direction, Design
 team: Cottleston Pie, Patronage
 live-url: nextgenclimate.org
 intro: Bringing climate change to the forefront of American politics
-description: |
-  They are making a push to become a louder voice for climate change and using digital media to do that. We focused on using photography to tell the stories of Americans who are being affected by climate change and motivate users to take action.
 ---
+
+{% contentfor description %}
+	
+	<p>NextGen is making a push to become thevoice for climate change and using digital media to do just that. Cottleston Pie was brought on to redesign the homepage to focus on the stories being told. We were able to use some amazing photography to tell the stories of Americans who are being affected by climate change and motivate users to take action.</p>
+
+{% endcontentfor %}
 
 <section class="project-description">
 	<div class="hero">	

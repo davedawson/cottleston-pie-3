@@ -6,10 +6,16 @@ class: fes
 role: Project Lead, Creative Direction, Design
 team: Cottleston Pie, Patronage
 live-url: familiesforexcellentschools.com
-intro: Fighting for the right to an excellent education.
-description: |
-  
+intro: Fighting for the right to an excellent education.  
 ---
+
+{% contentfor description %}
+	
+	<p>Families for Excellent Schools is an organization pushing the movement to ensure all kids have great schools. In partnership with Patronage, we created a website to support the organization as well as the many campaigns that they run. </p>
+
+	<p>We built the site from the ground-up, collaborating with the organization on content-strategy and creating a flexible system that will allow the website to grow as quickly as the organization is growing. </p>
+
+{% endcontentfor %}
 
 <section class="project-description">
 	<div class="hero">	

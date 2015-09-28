@@ -1,12 +1,20 @@
 ---
 layout: default
 ---
-<div class="post project-post {{ page.class }}">
+<div class="container">
+	<div class="post project-post {{ page.class }}">
 
-  <header class="project-header">
-  	<div class="container">
-	    <h1 class="d1-d8">{{ page.title }}</h1>
-	    <div class="project-deets d1-d2">
+	  <header class="project-header">
+	  	<div class="d2-d8">
+		  	<h1>{{ page.intro }}</h1>
+		  	<h3><em>for</em> {{ page.title }}</h3>
+		  </div>
+	  </header>
+	  <div class="project-description">	
+	  	<div class="lead-in d2-d8">
+	  		<h3>{{ page.lead-in }}</h3>
+	  	</div>
+	    <div class="project-deets d2-d3">
 	    	<dl>
 	    		<dt>Role</dt>
 	    		<dd>{{ page.role }}</dd>
@@ -16,16 +24,16 @@ layout: default
 	    		<dd><a href="http://{{ page.live-url }}">{{ page.live-url }}</a></dd>
 	    	</dl>
 	    </div>
-
-	    <div class="project-description d3-d7">
-	    	<!-- <p>{{ page.description }}</p> -->
+	    <div class="d4-d7 story">
 	    	{% contentblock description %}
 	    </div>
+	    <div class="hero">	
+		    {% contentblock hero %}
+		  </div>
     </div>
-  </header>
-
-  <article class="post-content">
-	    {{ content }}
-  </article>	
-
+	</div>
 </div>
+
+<article class="post-content">
+    {{ content }}
+</article>	

@@ -7,9 +7,14 @@ role: Project Lead, Creative Direction, Design
 team: Cottleston Pie, Patronage
 live-url: laraisethewage.org
 intro: Changing the minumum wage to a livable wage in LA
-description: |
-  
 ---
+
+{% contentfor description %}
+	
+	<p>Raise the Wage is a campaign to raise the minimum wage in LA to $15. Cottleston Pie collaborated with Swell and Patronage to bring their campaign strategy to life. We created the branding for the campaign and translated that brand into the website design. </p>
+
+{% endcontentfor %}
+
 
 <section class="project-description">
 	<div class="hero">	

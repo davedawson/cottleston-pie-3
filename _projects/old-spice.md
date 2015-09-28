@@ -6,10 +6,16 @@ class: old-spice
 role: Project Lead, Creative Direction, Design
 team: Cottleston Pie, Patronage
 live-url: twitch.tv/oldspice
-intro: A filmmaker's expanding empire.
-description: |
-  
+intro: A filmmaker's expanding empire.  
 ---
+
+{% contentfor description %}
+	
+	<p>In collaboration with Fourclops, we created a world that allowed the people of the internet to control the actions of a man in the woods. The Old Spice Nature Adventure was a three day event that placed a man in the woods, strapped with cameras, live streaming on twitch.tv. The people in the Twitch chatroom wrote their suggestions, and then NatureMan carried them out. </p>
+
+	<p>Cottleston Pie was brought on to create the overlay graphics for the gameplay and well as design the microsite for the project to live on once the event was over.</p>
+
+{% endcontentfor %}
 
 <section class="project-description">
 	<div class="hero">	

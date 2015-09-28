@@ -6,10 +6,13 @@ class: littlebits
 role: Project Lead, Creative Direction, Design
 team: Cottleston Pie, Patronage
 live-url: littlebits.com
-description: |
-  Film Comment is published by The Film Society of Lincoln Center. Cottleston Pie was tasked with bringing this print magazine's online precense up to date with the print edition of the magazine. This included breaking the site down and considering what user's will be looking for in a print magazine's website. 
-  We approached the project from a mobile-first perspective, considering the simplest for of the content to start and only adding additional content on larger screens when it made sense for the users.
 ---
+
+{% contentfor description %}
+	
+	<p>LittleBits is a company that encourages kids to prototype and play with technology. Cottleston Pie was brought on to rework the Bit and Kit pages. We wanted to showcase how easy the Bits are to use and snap together. Beautiful pieces of hardware that they are, the bits became the focus of the design, allowing them to sell themselves.</p>
+
+{% endcontentfor %}
 
 <section class="project-description">
 	<div class="hero">	

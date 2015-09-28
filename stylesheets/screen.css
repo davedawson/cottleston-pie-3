@@ -301,6 +301,7 @@ h4 {
 p {
   font-size: 18px;
   line-height: 26px;
+  margin-bottom: 0.75em;
 }
 
 a {
@@ -961,10 +962,10 @@ footer, section {
 }
 
 .project-header {
-  min-height: 1000px;
+  background: #111;
   position: relative;
   z-index: 2;
-  padding: 200px 0;
+  padding: 60px 0;
 }
 .project-header::after {
   content: "";
@@ -976,20 +977,39 @@ footer, section {
   line-height: 76px;
   margin-bottom: 20px;
   font-family: "minion-pro", Georgia, Times, serif;
+  color: white;
 }
-.project-header .project-deets {
+
+.project-deets {
   font-size: 14px;
   line-height: 18px;
 }
-.project-header .project-deets dt {
+.project-deets dt {
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
+  font-size: 13px;
 }
-.project-header .project-deets dd {
+.project-deets dd {
   margin-bottom: 10px;
 }
 
+.project-post {
+  background: #fff;
+  padding: 0;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.8);
+}
+.project-post::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.project-description {
+  margin: 120px 0;
+  overflow: hidden;
+}
 .project-description::after {
   content: "";
   display: table;
@@ -997,12 +1017,10 @@ footer, section {
 }
 .project-description .hero {
   float: right;
-  right: -40%;
-  position: relative;
-  position: absolute;
-  top: 300px;
-  width: 100%;
   z-index: 1;
+  margin-left: 67.9688%;
+  float: left;
+  margin-right: -100%;
 }
 .project-description .ipad {
   position: relative;
@@ -1012,12 +1030,20 @@ footer, section {
   left: -10%;
   top: -400px;
 }
+.project-description .story {
+  margin-bottom: 300px;
+}
+.project-description h3 {
+  font-family: "minion-pro", Georgia, Times, serif;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
 
 .project-expanded {
-  background: #192030;
   position: relative;
   z-index: 2;
-  top: -250px;
 }
 .project-expanded::after {
   content: "";
@@ -1050,4 +1076,9 @@ footer, section {
 }
 .project-expanded.tri-screen .screen-3 {
   right: -20%;
+}
+
+.post-content {
+  margin-top: -400px;
+  overflow: hidden;
 }
