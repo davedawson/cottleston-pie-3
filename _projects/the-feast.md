@@ -17,9 +17,7 @@ intro: Designing a web app to allow festival attendees to share ideas
 
 {% endcontentfor %}
 
-<section class="project-description">
-	<div class="hero">	
-		<div class="container">
+{% contentfor hero %}
 			<div class="project-example ipad">
 				<div class="screen-wrap">
 					<img src="/img/projects/feast/the-feast-homepage.jpg" alt="" />
@@ -30,10 +28,8 @@ intro: Designing a web app to allow festival attendees to share ideas
 					<img src="/img/projects/the-feast/the-feast-mobile.jpg" alt="" />
 				</div>
 			</div>
-		</div>
-	</div>
-	</div>
-</section>
+{% endcontentfor %}
+
 <section class="project-expanded tri-screen">
 	<div class="container">
 		<div class="screen screen-1">

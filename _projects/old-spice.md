@@ -17,9 +17,9 @@ intro: A filmmaker's expanding empire.
 
 {% endcontentfor %}
 
-<section class="project-description">
-	<div class="hero">	
-		<div class="container">
+
+
+{% contentfor hero %}
 			<div class="project-example macbook">
 				<div class="screen-wrap">
 					<img src="/img/projects/old-spice/old-spice-overlay.jpg" alt="" />
@@ -30,10 +30,9 @@ intro: A filmmaker's expanding empire.
 					<img src="/img/projects/old-spice/old-spice-mobile.jpg" alt="" />
 				</div>
 			</div>
-		</div>
-	</div>
-	</div>
-</section>
+{% endcontentfor %}
+
+
 <!-- <section class="project-expanded tri-screen">
 	<div class="container">
 		<div class="screen screen-1">

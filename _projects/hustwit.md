@@ -4,9 +4,10 @@ title: Gary Hustwit
 path: /projects/gary-hustwit
 class: hustwit
 role: Project Lead, Creative Direction, Design
-team: Cottleston Pie, Patronage
+team: Cottleston Pie, <a href="https://www.patronage.org/">Patronage</a>
 live-url: hustwit.com
-intro: A filmmaker's expanding empire.  
+intro: A filmmaker&#8217;s expanding empire  
+lead-in: Gary Hustwit is a filmmaker best known for his design trilogy, including <em>Helvetica</em>, <em>Objectified</em>, <em>&amp;</em> <em>Urbanized</em>
 ---
 
 {% contentfor description %}
@@ -15,9 +16,7 @@ intro: A filmmaker's expanding empire.
 
 {% endcontentfor %}
 
-<section class="project-description">
-	<div class="hero">	
-		<div class="container">
+{% contentfor hero %}
 			<div class="project-example macbook">
 				<div class="screen-wrap">
 					<img src="/img/projects/hustwit/hustwit-home.jpg" alt="" />
@@ -28,10 +27,8 @@ intro: A filmmaker's expanding empire.
 					<img src="/img/projects/hustwit/hustwit-mobile.jpg" alt="" />
 				</div>
 			</div>
-		</div>
-	</div>
-	</div>
-</section>
+{% endcontentfor %}
+
 <section class="project-expanded tri-screen">
 	<div class="container">
 		<div class="screen screen-1">

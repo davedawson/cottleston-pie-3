@@ -15,10 +15,7 @@ intro: Changing the minumum wage to a livable wage in LA
 
 {% endcontentfor %}
 
-
-<section class="project-description">
-	<div class="hero">	
-		<div class="container">
+{% contentfor hero %}
 			<div class="project-example raise macbook">
 				<div class="screen-wrap">
 					<img src="/img/projects/raise/raise-desktop.jpg" alt="" />
@@ -29,10 +26,8 @@ intro: Changing the minumum wage to a livable wage in LA
 					<img src="/img/projects/raise/raise-mobile.jpg" alt="" />
 				</div>
 			</div>
-		</div>
-	</div>
-	</div>
-</section>
+{% endcontentfor %}
+
 <section class="project-expanded tri-screen">
 	<div class="container">
 		<div class="screen screen-1">

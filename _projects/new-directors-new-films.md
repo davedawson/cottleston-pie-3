@@ -19,7 +19,6 @@ lead-in: Film Comment is published by The Film Society of Lincoln Center.
 
 {% endcontentfor %}
 
-<!-- <section class="project-description"> -->
 {% contentfor hero %}
 			<div class="project-example ipad">
 				<div class="screen-wrap">

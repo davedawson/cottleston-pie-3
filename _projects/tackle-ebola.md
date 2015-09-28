@@ -17,23 +17,20 @@ intro: Designing Paul Allen's push to Tackle Ebola
 
 {% endcontentfor %}
 
-<section class="project-description">
-	<div class="hero">	
-		<div class="container">
-			<div class="project-example raise macbook">
+{% contentfor hero %}
+			<div class="project-example macbook">
 				<div class="screen-wrap">
 					<img src="/img/projects/tackle-ebola/tackle-ebola-home.jpg" alt="" />
 				</div>
 			</div>
-			<div class="project-example nextgen iphone">
+			<div class="project-example iphone">
 				<div class="screen-wrap">
 					<img src="/img/projects/tackle-ebola/tackle-ebola-mobile.jpg" alt="" />
 				</div>
 			</div>
 		</div>
-	</div>
-	</div>
-</section>
+{% endcontentfor %}
+
 <section class="project-expanded tri-screen">
 	<div class="container">
 		<div class="screen screen-1">

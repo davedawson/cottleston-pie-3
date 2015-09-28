@@ -14,9 +14,7 @@ live-url: littlebits.com
 
 {% endcontentfor %}
 
-<section class="project-description">
-	<div class="hero">	
-		<div class="container">
+{% contentfor hero %}
 			<div class="project-example ipad">
 				<div class="screen-wrap">
 					<img src="/img/projects/littlebits/littlebits-home.jpg" alt="" />
@@ -27,10 +25,8 @@ live-url: littlebits.com
 					<img src="/img/projects/littlebits/littlebits-mobile.jpg" alt="" />
 				</div>
 			</div>
-		</div>
-	</div>
-	</div>
-</section>
+{% endcontentfor %}
+
 <section class="project-expanded tri-screen">
 	<div class="container">
 		<div class="screen screen-1">

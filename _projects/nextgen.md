@@ -15,9 +15,8 @@ intro: Bringing climate change to the forefront of American politics
 
 {% endcontentfor %}
 
-<section class="project-description">
-	<div class="hero">	
-		<div class="container">
+
+{% contentfor hero %}
 			<div class="project-example nextgen macbook">
 				<div class="screen-wrap">
 					<img src="/img/projects/nextgen-desktop.jpg" alt="" />
@@ -28,10 +27,8 @@ intro: Bringing climate change to the forefront of American politics
 					<img src="/img/projects/nextgen-mobile.jpg" alt="" />
 				</div>
 			</div>
-		</div>
-	</div>
-	</div>
-</section>
+{% endcontentfor %}
+
 <section class="project-expanded double-screen">
 	<div class="container">
 		<div class="screen screen-1">
