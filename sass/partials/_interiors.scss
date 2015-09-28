@@ -6,15 +6,35 @@
 	z-index: 2;
 	padding: 60px 0; 
 	h1 {
-		font-size: 68px;
-		line-height: 76px;
+		font-size: 32px;
+		line-height: 40px;
 		margin-bottom: 20px;
 		font-family: $typeSerif;
-		// color: $color-text;
 		color: white;
+		@include respond-to(medium-screens) {
+	  }
+	  @include respond-to(wide-screens) {
+	    font-size: 48px;
+			line-height: 56px;
+	  }
+	  @include respond-to(extra-wide-screens) {
+	    font-size: 68px;
+			line-height: 76px;
+	  }
 	}
 	h3 {
 		// color: $color-text;
+		
+		@include respond-to(medium-screens) {
+	  }
+	  @include respond-to(wide-screens) {
+	  //   font-size: 48px;
+			// line-height: 56px;
+	  }
+	  @include respond-to(extra-wide-screens) {
+			font-size: 48px;
+		  line-height: 56px;
+	  }
 	}
 }
 
@@ -49,6 +69,7 @@
 	margin: 120px 0;
 	overflow: hidden;
 	.hero {
+		display: none;
 		float: right;
 		// right: -60%;
     // position: relative;
@@ -59,6 +80,9 @@
 		margin-left: 67.9688%;
 	  float: left;
 	  margin-right: -100%;
+	  @include respond-to(wide-and-above) {
+	  	display: block;
+	  }
 	}
 	.ipad {
 		position: relative;
@@ -98,14 +122,17 @@
 		.screen {
 			position: absolute;
 			top: 0;
+			img {
+				width: 60%
+			}
 		}
 		.screen-1 {
-			left: -20%;
+			left: -10%;
 		}
 		.screen-2 {
 			top: -60px;
 			z-index: 2;
-			width: 100%;
+			// width: 100%;
 			position: relative;
 			img {
 				margin: 0 auto;
@@ -113,7 +140,36 @@
 			}
 		}
 		.screen-3 {
-			right: -20%;
+			right: -10%;
+			img {
+				float: right;
+			}
+		}
+		@include respond-to(wide-and-above) {
+			.screen {
+				position: absolute;
+				top: 0;
+				img {
+					width: auto;
+				}
+			}
+			.screen-1 {
+				left: -20%;
+			}
+			.screen-2 {
+				top: -60px;
+				z-index: 2;
+				width: 100%;
+				position: relative;
+				img {
+					margin: 0 auto;
+					display: block;
+				}
+			}
+			.screen-3 {
+				right: -20%;
+				float: none;
+			}
 		}
 	}
 }

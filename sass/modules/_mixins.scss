@@ -1,9 +1,9 @@
 $mq-mobile-portrait   : 320px;
 $mq-mobile-landscape  : 640px;
 $mq-tablet-portrait   : 768px;
-$mq-tablet-landscape  : 1024px;
-$mq-desktop           : 1100px;
-$mq-desktop-max       : 1480px;
+// $mq-tablet-landscape  : 1024px;
+$mq-desktop           : 1024px;
+$mq-desktop-max       : 1400px;
 
 @mixin respond-to($media) {
   @if $media == extra-wide-screens {
@@ -11,6 +11,9 @@ $mq-desktop-max       : 1480px;
   }
   @if $media == wide-screens {
     @media only screen and (min-width: $mq-desktop) { @content; }
+  }
+  @else if $media == wide-and-above {
+    @media only screen and (min-width: $mq-desktop + 1) { @content; }
   }
   @else if $media == medium-screens {
     @media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: $mq-desktop - 1) { @content; }

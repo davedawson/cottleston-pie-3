@@ -18,9 +18,11 @@ body {
   margin: 0 auto;
   @include respond-to(medium-screens) {
     max-width: 800px;
+    margin: 0 auto;
   }
   @include respond-to(wide-screens) {
     max-width: 1082px;
+    margin: 0 auto;
   }
   @include respond-to(extra-wide-screens) {
     max-width: 1400px;
@@ -44,10 +46,21 @@ h2 {
 }
 
 h3 {
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 24px;
+  line-height: 30px;
   font-family: $typeSerif;
   color: white;
+  @include respond-to(medium-screens) {
+    
+  }
+  @include respond-to(wide-screens) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  @include respond-to(extra-wide-screens) {
+    font-size: 48px;
+    line-height: 56px;
+  }
   &.section {
     text-transform: uppercase;
     font-size: 16px;
@@ -106,4 +119,12 @@ blockquote { color: #666; margin: 1em;  }
 
 img {
   max-width: 100%;
+}
+
+em {
+  font-style: italic
+}
+
+strong {
+  font-weight: bold;
 }

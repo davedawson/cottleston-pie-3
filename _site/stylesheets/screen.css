@@ -243,17 +243,19 @@ body {
   position: relative;
   margin: 0 auto;
 }
-@media only screen and (min-width: 641px) and (max-width: 1099px) {
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
   .container {
     max-width: 800px;
+    margin: 0 auto;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1024px) {
   .container {
     max-width: 1082px;
+    margin: 0 auto;
   }
 }
-@media only screen and (min-width: 1480px) {
+@media only screen and (min-width: 1400px) {
   .container {
     max-width: 1400px;
   }
@@ -266,10 +268,22 @@ h2 {
 }
 
 h3 {
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 24px;
+  line-height: 30px;
   font-family: "minion-pro", Georgia, Times, serif;
   color: white;
+}
+@media only screen and (min-width: 1024px) {
+  h3 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  h3 {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 h3.section {
   text-transform: uppercase;
@@ -327,6 +341,14 @@ blockquote {
 
 img {
   max-width: 100%;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
 }
 
 nav {
@@ -450,7 +472,7 @@ footer, section {
     margin-right: -400px;
   }
 }
-@media only screen and (min-width: 1480px) {
+@media only screen and (min-width: 1400px) {
   .description .featured-work .project-1 {
     margin-right: -300px;
   }
@@ -461,7 +483,7 @@ footer, section {
   left: 475px;
   display: none;
 }
-@media only screen and (min-width: 1480px) {
+@media only screen and (min-width: 1400px) {
   .description .featured-work .project-1 .iphone {
     display: block;
     left: 75%;
@@ -477,7 +499,7 @@ footer, section {
 .description .featured-work .project-2 .ipad {
   margin-left: -50px;
 }
-@media only screen and (min-width: 1480px) {
+@media only screen and (min-width: 1400px) {
   .description .featured-work .project-2 .ipad {
     margin-left: -240px;
   }
@@ -492,14 +514,14 @@ footer, section {
     right: 50px;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1024px) {
   .description .featured-work .project-2 .iphone {
     right: auto;
     left: 70%;
     display: none;
   }
 }
-@media only screen and (min-width: 1480px) {
+@media only screen and (min-width: 1400px) {
   .description .featured-work .project-2 .iphone {
     right: auto;
     display: block;
@@ -973,11 +995,29 @@ footer, section {
   clear: both;
 }
 .project-header h1 {
-  font-size: 68px;
-  line-height: 76px;
+  font-size: 32px;
+  line-height: 40px;
   margin-bottom: 20px;
   font-family: "minion-pro", Georgia, Times, serif;
   color: white;
+}
+@media only screen and (min-width: 1024px) {
+  .project-header h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .project-header h1 {
+    font-size: 68px;
+    line-height: 76px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .project-header h3 {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 
 .project-deets {
@@ -1016,11 +1056,17 @@ footer, section {
   clear: both;
 }
 .project-description .hero {
+  display: none;
   float: right;
   z-index: 1;
   margin-left: 67.9688%;
   float: left;
   margin-right: -100%;
+}
+@media only screen and (min-width: 1025px) {
+  .project-description .hero {
+    display: block;
+  }
 }
 .project-description .ipad {
   position: relative;
@@ -1061,13 +1107,15 @@ footer, section {
   position: absolute;
   top: 0;
 }
+.project-expanded.tri-screen .screen img {
+  width: 60%;
+}
 .project-expanded.tri-screen .screen-1 {
-  left: -20%;
+  left: -10%;
 }
 .project-expanded.tri-screen .screen-2 {
   top: -60px;
   z-index: 2;
-  width: 100%;
   position: relative;
 }
 .project-expanded.tri-screen .screen-2 img {
@@ -1075,7 +1123,36 @@ footer, section {
   display: block;
 }
 .project-expanded.tri-screen .screen-3 {
-  right: -20%;
+  right: -10%;
+}
+.project-expanded.tri-screen .screen-3 img {
+  float: right;
+}
+@media only screen and (min-width: 1025px) {
+  .project-expanded.tri-screen .screen {
+    position: absolute;
+    top: 0;
+  }
+  .project-expanded.tri-screen .screen img {
+    width: auto;
+  }
+  .project-expanded.tri-screen .screen-1 {
+    left: -20%;
+  }
+  .project-expanded.tri-screen .screen-2 {
+    top: -60px;
+    z-index: 2;
+    width: 100%;
+    position: relative;
+  }
+  .project-expanded.tri-screen .screen-2 img {
+    margin: 0 auto;
+    display: block;
+  }
+  .project-expanded.tri-screen .screen-3 {
+    right: -20%;
+    float: none;
+  }
 }
 
 .post-content {
