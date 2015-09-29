@@ -4,8 +4,10 @@ title: Film Society of Lincoln Center
 path: /projects/film-society-lincoln-center
 class: filmlinc
 role: Project Lead, Creative Direction, Design
-team: Cottleston Pie, Patronage
+team: Cottleston Pie, <a href="http://www.patronage.org">Patronage</a>
 live-url: filmlinc.org
+intro: Rethinking digital programing for a NYC film institution
+lead-in: <em>The Film Society of Lincoln Center</em> is the pre-eminent film presentation organization in New York City.
 ---
 
 {% contentfor description %}
@@ -20,9 +22,7 @@ live-url: filmlinc.org
 
 {% endcontentfor %}
 
-<section class="project-description">
-	<div class="hero">	
-		<div class="container">
+{% contentfor hero %}
 			<div class="project-example filmlinc ipad">
 				<div class="screen-wrap">
 					<img src="/img/projects/filmlinc.org-desktop-home.jpg" alt="" />
@@ -33,10 +33,8 @@ live-url: filmlinc.org
 					<img src="/img/projects/filmlinc.org-mobile-home.jpg" alt="" />
 				</div>
 			</div>
-		</div>
-	</div>
-	</div>
-</section>
+{% endcontentfor %}
+
 <section class="project-expanded tri-screen">
 	<div class="container">
 		<div class="screen screen-1">

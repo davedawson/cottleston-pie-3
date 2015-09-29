@@ -444,9 +444,18 @@ footer, section {
   margin-left: -1%;
 }
 .intro h2 {
-  margin-top: 300px;
   font-size: 25px;
   line-height: 31px;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .intro h2 {
+    margin-top: 120px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .intro h2 {
+    margin-top: 300px;
+  }
 }
 .intro h2:before {
   content: "";
@@ -462,6 +471,7 @@ footer, section {
   margin-top: -106px;
   padding: 100px 0;
   max-height: 1000px;
+  overflow: hidden;
 }
 .description::after {
   content: "";
@@ -477,6 +487,12 @@ footer, section {
 @media only screen and (min-width: 641px) {
   .description .featured-work .project-1 {
     margin-right: -400px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .description .featured-work .project-1 {
+    margin-right: -500px;
+    margin-top: 120px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -504,7 +520,17 @@ footer, section {
   top: 370px;
 }
 .description .featured-work .project-2 .ipad {
-  margin-left: -50px;
+  position: relative;
+}
+@media only screen and (min-width: 641px) {
+  .description .featured-work .project-2 .ipad {
+    right: 200px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .description .featured-work .project-2 .ipad {
+    right: 140px;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .description .featured-work .project-2 .ipad {
@@ -515,18 +541,7 @@ footer, section {
   position: relative;
   top: -400px;
   right: -150px;
-}
-@media only screen and (min-width: 641px) {
-  .description .featured-work .project-2 .iphone {
-    right: 50px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .description .featured-work .project-2 .iphone {
-    right: auto;
-    left: 70%;
-    display: none;
-  }
+  display: none;
 }
 @media only screen and (min-width: 1400px) {
   .description .featured-work .project-2 .iphone {
@@ -539,7 +554,11 @@ footer, section {
 }
 .description p {
   margin-bottom: 20px;
-  margin-right: 25%;
+}
+@media only screen and (min-width: 1025px) {
+  .description p {
+    margin-right: 25%;
+  }
 }
 
 .more-work {
