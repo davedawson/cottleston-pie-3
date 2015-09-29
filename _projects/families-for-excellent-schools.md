@@ -5,16 +5,19 @@ path: /projects/families-for-excellent-schools
 class: fes
 role: Project Lead, Creative Direction, Design
 team: Cottleston Pie, Patronage
-live-url: familiesforexcellentschools.com
+live-url: familiesforexcellentschools .com
 intro: Fighting for the right to an excellent education.
-lead-in: Film Comment is published by The Film Society of Lincoln Center.   
+lead-in: Families for Excellent Schools is the organization behind the movement to ensure all kids have great schools.  
 ---
 
 {% contentfor description %}
 	
-	<p>Families for Excellent Schools is an organization pushing the movement to ensure all kids have great schools. In partnership with Patronage, we created a website to support the organization as well as the many campaigns that they run. </p>
+	<p> In partnership with Patronage, we created a website to support the organization as well as the many campaigns that they run.</p>
 
-	<p>We built the site from the ground-up, collaborating with the organization on content-strategy and creating a flexible system that will allow the website to grow as quickly as the organization is growing. </p>
+	<p>We built the site from the ground-up, collaborating with the organization on content-strategy and creating a flexible system that will allow the website to grow as quickly as the organization's reach.</p>
+
+	<p>Each campaign has a unique look &amp; feel, so we created a modular design that allows <abbr>FES</abbr> to tailor each campaign section to that branding.</p>
+
 
 {% endcontentfor %}
 

@@ -4,7 +4,7 @@ title: Film Comment
 path: /projects/filmcomment
 class: filmcomment
 role: Project Lead, Creative Direction, Design
-team: Cottleston Pie, Patronage
+team: Cottleston Pie, <a href="http://www.patronage.org">Patronage</a>
 live-url: filmcomment.com
 intro: Creating the digital home for a prominent film magazine
 lead-in: Published by <em>The Film Society of Lincoln Center</em>, <em>Film Comment</em> has been an important part of film culture since 1962.
@@ -19,16 +19,16 @@ lead-in: Published by <em>The Film Society of Lincoln Center</em>, <em>Film Comm
 {% endcontentfor %}
 
 {% contentfor hero %}
-			<div class="project-example filmlinc ipad">
+			<div class="project-example ipad">
 				<div class="screen-wrap">
-					<img src="/img/projects/filmlinc.org-desktop-home.jpg" alt="" />
+					<img src="/img/projects/filmcomment/fc-screen-home.jpg" alt="" />
 				</div>
 			</div>
-			<div class="project-example filmlinc iphone">
+<!-- 			<div class="project-example iphone">
 				<div class="screen-wrap">
 					<img src="/img/projects/filmlinc.org-mobile-home.jpg" alt="" />
 				</div>
-			</div>
+			</div> -->
 {% endcontentfor %}
 
 <section class="project-expanded tri-screen">

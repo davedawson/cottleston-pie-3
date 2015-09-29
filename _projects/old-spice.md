@@ -4,9 +4,10 @@ title: Old Spice Nature Adventure
 path: /projects/old-spice
 class: old-spice
 role: Project Lead, Creative Direction, Design
-team: Cottleston Pie, Patronage
+team: Cottleston Pie, <a href="http://www.fourclops.com">Fourclops</a>
 live-url: twitch.tv/oldspice
-intro: A filmmaker's expanding empire.  
+intro: Enabling the citizens of the Internet to control one man, living in the woods
+lead-in: Why just watch someone live in the woods when you can tell them what to do?
 ---
 
 {% contentfor description %}
@@ -33,16 +34,16 @@ intro: A filmmaker's expanding empire.
 {% endcontentfor %}
 
 
-<!-- <section class="project-expanded tri-screen">
+<section class="project-expanded tri-screen">
 	<div class="container">
 		<div class="screen screen-1">
-			<img src="/img/projects/old-spice/old-spice-project.jpg" alt="Hustwit project page" />
+			<img src="/img/projects/old-spice/old-spice-landing-page.jpg" alt="Old Spice landing page" />
 		</div>
 		<div class="screen screen-2">
-			<img src="/img/projects/old-spice/old-spice-article.jpg" alt="Hustwit article page" />
+			<img src="/img/projects/old-spice/old-spice-overlay.jpg" alt="Old Spice overlay page" />
 		</div>
 		<div class="screen screen-3">
-			<img src="/img/projects/old-spice/old-spice-shop.jpg" alt="Hustwit shop page" />
+			<img src="/img/projects/old-spice/old-spice-mobile.jpg" alt="Old Spice mobile" />
 		</div>
 	</div>
-</section> -->
+</section>

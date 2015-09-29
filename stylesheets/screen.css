@@ -1014,13 +1014,22 @@ footer, section {
   position: relative;
   z-index: 2;
   padding: 60px 0;
-  min-height: 420px;
   background-size: cover;
+  width: 100%;
+  height: 420px;
 }
 .project-header::after {
   content: "";
   display: table;
   clear: both;
+}
+.project-header:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
 }
 .project-header h1 {
   font-size: 32px;
@@ -1046,6 +1055,12 @@ footer, section {
     font-size: 48px;
     line-height: 56px;
   }
+}
+.project-header .wrap {
+  display: inline-block;
+  vertical-align: middle;
+  width: 49.0234%;
+  margin-left: 8.4961%;
 }
 .project-header.filmlinc {
   background-image: url("/img/projects/filmlinc/hero-filmlinc.jpg");
@@ -1219,6 +1234,51 @@ footer, section {
   .project-expanded.tri-screen .screen-3 {
     right: -20%;
     float: none;
+  }
+}
+.project-expanded.bi-screen {
+  padding-top: 120px;
+}
+.project-expanded.bi-screen .screen {
+  position: absolute;
+  top: 0;
+}
+.project-expanded.bi-screen .screen img {
+  width: 60%;
+}
+.project-expanded.bi-screen .screen-1 {
+  left: -10%;
+}
+.project-expanded.bi-screen .screen-2 {
+  top: -60px;
+  z-index: 2;
+  right: -29%;
+  position: relative;
+}
+.project-expanded.bi-screen .screen-2 img {
+  margin: 0 auto;
+  display: block;
+}
+@media only screen and (min-width: 1025px) {
+  .project-expanded.bi-screen .screen {
+    position: absolute;
+    top: 0;
+  }
+  .project-expanded.bi-screen .screen img {
+    width: auto;
+  }
+  .project-expanded.bi-screen .screen-1 {
+    left: -20%;
+  }
+  .project-expanded.bi-screen .screen-2 {
+    top: -60px;
+    z-index: 2;
+    width: 100%;
+    position: relative;
+  }
+  .project-expanded.bi-screen .screen-2 img {
+    margin: 0 auto;
+    display: block;
   }
 }
 

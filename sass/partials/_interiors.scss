@@ -5,8 +5,19 @@
 	position: relative;
 	z-index: 2;
 	padding: 60px 0; 
-	min-height: 420px;
+	
 	background-size: cover;
+	// display: table;
+  width: 100%;
+  // white-space: nowrap;
+  height: 420px;
+  &:before {
+  	content: '';
+	  display: inline-block;
+	  height: 100%;
+	  vertical-align: middle;
+	  margin-right: -0.25em; /* Adjusts for spacing */
+  }
 	h1 {
 		font-size: 32px;
 		line-height: 40px;
@@ -40,6 +51,13 @@
 	}
 	.wrap {
 		// @include center(y);
+		// display: table-cell;
+		// // text-align: center;
+		// vertical-align: middle;
+		display: inline-block;
+	  vertical-align: middle;
+    width: 49.0234%;
+		margin-left: 8.4961%
 	}
 	&.filmlinc {
 		background-image: url('/img/projects/filmlinc/hero-filmlinc.jpg');
@@ -213,6 +231,53 @@
 			.screen-3 {
 				right: -20%;
 				float: none;
+			}
+		}
+	}
+	&.bi-screen {
+		padding-top: 120px;
+		.screen {
+			position: absolute;
+			top: 0;
+			img {
+				width: 60%
+			}
+		}
+		.screen-1 {
+			left: -10%;
+		}
+		.screen-2 {
+			top: -60px;
+			z-index: 2;
+			right: -29%;
+			// width: 100%;
+			position: relative;
+			img {
+				margin: 0 auto;
+				display: block;
+			}
+		}
+		@include respond-to(wide-and-above) {
+			.screen {
+				position: absolute;
+				top: 0;
+				img {
+					width: auto;
+				}
+			}
+			.screen-1 {
+				left: -20%;
+			}
+			.screen-2 {
+				top: -60px;
+				z-index: 2;
+				width: 100%;
+				
+				position: relative;
+				img {
+					margin: 0 auto;
+					display: block;
+				}
 			}
 		}
 	}
