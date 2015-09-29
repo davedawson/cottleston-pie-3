@@ -5,6 +5,8 @@
 	position: relative;
 	z-index: 2;
 	padding: 60px 0; 
+	min-height: 420px;
+	background-size: cover;
 	h1 {
 		font-size: 32px;
 		line-height: 40px;
@@ -35,6 +37,48 @@
 			font-size: 48px;
 		  line-height: 56px;
 	  }
+	}
+	.wrap {
+		// @include center(y);
+	}
+	&.filmlinc {
+		background-image: url('/img/projects/filmlinc/hero-filmlinc.jpg');
+	}
+	&.filmcomment {
+		background-image: url('/img/projects/filmcomment/hero-fc.jpg');
+	}
+	&.avicii {
+		background-image: url('/img/projects/avicii/hero-avicii.jpg');
+	}
+	&.fes {
+		background-image: url('/img/projects/fes/hero-fes.jpg');
+	}
+	&.hustwit {
+		background-image: url('/img/projects/hustwit/hero-hustwit.jpg');
+	}
+	&.littlebits {
+		background-image: url('/img/projects/littlebits/hero-littlebits.jpg');
+	}
+	&.ndnf {
+		background-image: url('/img/projects/ndnf/hero-ndnf.jpg');
+	}
+	&.nextgen {
+		background-image: url('/img/projects/nextgen/hero-nextgen.jpg');
+	}
+	&.old-spice {
+		background-image: url('/img/projects/old-spice/hero-old-spice.jpg');
+	}
+	&.raise {
+		background-image: url('/img/projects/raise/hero-raise.jpg');
+	}
+	&.tackleebola {
+		background-image: url('/img/projects/tackle-ebola/hero-te.jpg');
+	}
+	&.feast {
+		background-image: url('/img/projects/feast/hero-feast.jpg');
+	}
+	&.four-seasons {
+		background-image: url('/img/projects/four-seasons/hero-fs.jpg');
 	}
 }
 

@@ -6,7 +6,7 @@ class: tackleebola
 role: Project Lead, Creative Direction, Design
 team: Cottleston Pie, Patronage
 live-url: tackleebola.org
-intro: Designing Paul Allen's push to Tackle Ebola  
+intro: Designing Paul Allen&#8217;s push to Tackle Ebola  
 ---
 
 {% contentfor description %}
