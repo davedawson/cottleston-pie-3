@@ -83,6 +83,18 @@ html, body, * {
   display: none;
 }
 
+@media only screen and (max-width: 640px) {
+  .h-hidden {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .h-visible {
+    display: block;
+  }
+}
+
 /* @license
  * MyFonts Webfont Build ID 2475516, 2013-02-10T12:19:37-0500
  *
@@ -243,6 +255,11 @@ body {
   position: relative;
   margin: 0 auto;
 }
+@media only screen and (max-width: 640px) {
+  .container {
+    padding: 0 6%;
+  }
+}
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .container {
     max-width: 800px;
@@ -351,8 +368,10 @@ strong {
   font-weight: bold;
 }
 
-nav {
-  margin-top: 50px;
+@media only screen and (min-width: 641px) {
+  nav {
+    margin-top: 50px;
+  }
 }
 nav ul {
   margin: 0;
@@ -415,9 +434,15 @@ footer, section {
 }
 
 .nav-wrap {
-  position: absolute;
-  top: 0;
+  text-align: center;
   width: 100%;
+}
+@media only screen and (min-width: 641px) {
+  .nav-wrap {
+    text-align: left;
+    position: absolute;
+    top: 0;
+  }
 }
 
 .intro {
@@ -433,15 +458,29 @@ footer, section {
 .intro .title-wrap {
   margin: 0 auto;
 }
+@media only screen and (max-width: 640px) {
+  .intro .nav-wrap {
+    background: #242742;
+    padding: 20px;
+  }
+}
 .intro h1 {
   position: relative;
-  top: -50px;
+  width: 90%;
   margin: 0 auto;
   max-width: 1800px;
 }
-.intro h1 img {
-  width: 130%;
-  margin-left: -1%;
+@media only screen and (min-width: 641px) {
+  .intro h1 {
+    top: -50px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .intro h1 img {
+    width: 130%;
+    margin-left: -1%;
+  }
 }
 .intro h2 {
   font-size: 25px;
@@ -457,13 +496,15 @@ footer, section {
     margin-top: 300px;
   }
 }
-.intro h2:before {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 7px;
-  margin-bottom: 30px;
-  background: rgba(255, 255, 255, 0.4);
+@media only screen and (min-width: 641px) {
+  .intro h2:before {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 7px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.4);
+  }
 }
 
 .description {
@@ -585,12 +626,28 @@ footer, section {
   display: table;
   overflow: hidden;
 }
+@media only screen and (max-width: 640px) {
+  .more-work .project {
+    width: 100%;
+    min-height: 300px;
+    margin: 30px auto;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .more-work .project h3 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
 .more-work .project.small h3 {
   font-size: 34px;
   line-height: 36px;
 }
 .more-work .project.wide {
   min-height: 300px;
+  width: 100%;
+}
+.more-work .project.wide .title-wrap {
   width: 100%;
 }
 .more-work .project.filmlinc {
@@ -624,7 +681,7 @@ footer, section {
 }
 .more-work .project.filmcomment {
   background: url("/img/projects/home/filmcomment.jpg") no-repeat;
-  background-position: -500px  -50px;
+  background-position: -530px -370px;
 }
 .more-work .project.filmcomment:after {
   content: "";
@@ -853,6 +910,9 @@ footer, section {
   height: 500px;
   width: 50%;
   width: 100%;
+}
+.more-work .project.avicii .title-wrap {
+  width: 60%;
 }
 .more-work .project.littlebits {
   background: url("/img/projects/home/littlebits.jpg") no-repeat;

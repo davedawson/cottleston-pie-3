@@ -9,13 +9,16 @@ html, body, section {
 body {
   margin: 0;
   font-family: $typeSans;
-  background: #242742;
+  background: $color-dark-blue;
 }
 
 .container { 
   
   position: relative;
   margin: 0 auto;
+  @include respond-to(handhelds) {
+    padding: 0 6%;
+  }
   @include respond-to(medium-screens) {
     max-width: 800px;
     margin: 0 auto;

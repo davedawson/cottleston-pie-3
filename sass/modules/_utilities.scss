@@ -9,3 +9,15 @@
 // Misc
 
 .hide { display: none; }
+
+.h-hidden {
+	@include respond-to(handhelds) {
+		display: none;
+	}
+}
+
+.h-visible {
+	@include respond-to(handhelds) {
+		display: block;
+	}
+}

@@ -1,5 +1,7 @@
 nav {
-	margin-top: 50px;
+	@include respond-to(medium-and-above) {
+		margin-top: 50px;
+	}
 	ul {
 		margin: 0;
 	}
