@@ -466,7 +466,10 @@
 
 .about {
 	background: #07111e;
-	padding: 60px;
+	padding: 30px 0;
+	@include respond-to(medium-and-above) {
+		padding: 60px 3%;
+	}
 	@include clearfix;
 	h3 {
 		color: $color-red;
@@ -477,20 +480,24 @@
 
 	.label {
 		background: #f7f7f7;
-
-		position: relative;
-		top: -30px;
-		right: 30px;
-		width: 300px;
-
-		float: right;
+		@include respond-to(wide-and-above) {
+			position: absolute;
+			top: -30px;
+			right: 60px;
+			width: 300px;
+			float: right;
+		}
 	}
 	.cp, .the-works {
 		min-height: 340px;
 	}
 	.cp {
-		background: url('/img/about/davedawson-blue.jpg');
+		// background: url('/img/about/davedawson-blue.jpg');
 		background-position: -220px -160px;
+		margin-bottom: 30px;
+		@include respond-to(medium-and-above) {
+			margin-bottom: 0;
+		}
 		a {
 			display: block;
 			background: $color-red;
@@ -503,17 +510,18 @@
 			padding: 5px;
 			font-size: 14px;
 		}
-
 	}
 	.the-works {
-		background: url('/img/about/the-works-blue.jpg');
+		// background: url('/img/about/the-works-blue.jpg');
 		background-position: left center;
 		.label {
-			position: relative;
-			top: 280px;
-			float: left;
-			left: -25%;
-			width: 100%;
+			@include respond-to(wide-and-above) {
+				position: relative;
+				top: -30px;
+				float: left;
+				left: -25%;
+				width: 100%;
+			}
 		}
 	}
 }
