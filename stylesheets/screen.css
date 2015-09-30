@@ -245,6 +245,15 @@ html, body, * {
   max-width: 100%;
 }
 
+.button {
+  background: #e82643;
+  color: white;
+  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  padding: 8px 15px;
+  font-size: 16px;
+}
+
 html, body, section {
   margin: 0;
   padding: 0;
@@ -268,7 +277,6 @@ body {
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .container {
-    max-width: 800px;
     margin: 0 auto;
     padding: 0 3%;
   }
@@ -377,13 +385,23 @@ strong {
   font-weight: bold;
 }
 
+nav {
+  text-align: center;
+}
 @media only screen and (min-width: 641px) {
   nav {
     margin-top: 50px;
+    text-align: left;
   }
 }
 nav ul {
   margin: 0;
+  text-align: center;
+}
+@media only screen and (min-width: 641px) {
+  nav ul {
+    text-align: left;
+  }
 }
 nav li {
   display: inline;
@@ -400,8 +418,38 @@ nav a {
   font-weight: bold;
   text-decoration: none;
 }
+nav a.contact {
+  position: relative;
+}
+nav a.contact:hover em {
+  opacity: 1;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+nav a.contact em {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  nav a.contact em {
+    display: block;
+    opacity: 0;
+    text-align: center;
+    font-size: 13px;
+    top: 35px;
+    position: absolute;
+    width: 200%;
+    left: -50%;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
 
 .header {
+  text-align: center;
   margin: 30px 0;
 }
 .header::after {
@@ -409,13 +457,23 @@ nav a {
   display: table;
   clear: both;
 }
+@media only screen and (min-width: 641px) {
+  .header {
+    text-align: left;
+  }
+}
 .header h2 {
   font-size: 20px;
   line-height: 30px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 .header nav {
+  margin-top: 0;
+}
+.header ul {
   margin: 0;
-  text-align: right;
+  text-align: center;
 }
 .header a {
   color: white;
@@ -424,6 +482,35 @@ nav a {
 .header strong {
   font-family: "Macha-medium", Helvetica, Arial, sans-serif;
   font-weight: 100;
+  background: url(/img/intro-bg-thin.png) repeat-x;
+  background-size: 10%;
+  background-position: 0 bottom;
+  padding: 12px 15px;
+  font-size: 16px;
+  margin-left: 10px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.header strong:hover {
+  background-position: 0 -50px;
+}
+@media only screen and (max-width: 640px) {
+  .header strong {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 15px;
+  }
+}
+
+.footer {
+  padding: 30px 6%;
+  text-align: center;
+  background: #07111e;
+}
+.footer h4 {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 * {
@@ -564,6 +651,10 @@ footer, section {
     max-height: 1000px;
     overflow: hidden;
   }
+}
+.description .button {
+  margin-left: 20px;
+  border-bottom: 2px solid white;
 }
 .description .featured-work {
   display: none;
@@ -1245,7 +1336,7 @@ footer, section {
   padding: 15px;
 }
 .about .label {
-  background: #f7f7f7;
+  background: rgba(255, 255, 255, 0.95);
 }
 @media only screen and (min-width: 1025px) {
   .about .label {
@@ -1268,29 +1359,21 @@ footer, section {
     margin-bottom: 0;
   }
 }
-.about .cp a {
-  display: block;
-  background: #e82643;
-  color: white;
-  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.2em;
-  padding: 5px;
-  font-size: 14px;
-}
 .about .the-works {
   background-position: left center;
 }
 @media only screen and (min-width: 1025px) {
   .about .the-works .label {
     position: relative;
-    top: -30px;
+    top: 30px;
     float: left;
     left: -25%;
     width: 100%;
   }
+}
+.about .button {
+  display: block;
+  text-align: center;
 }
 
 .project-header {

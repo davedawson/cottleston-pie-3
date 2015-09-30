@@ -1,9 +1,15 @@
 nav {
+	text-align: center;
 	@include respond-to(medium-and-above) {
 		margin-top: 50px;
+		text-align: left;
 	}
 	ul {
 		margin: 0;
+		text-align: center;
+		@include respond-to(medium-and-above) {
+			text-align: left;
+		}
 	}
 
 	li {
@@ -20,23 +26,53 @@ nav {
 	  color: white;
 	  font-weight: bold;
 	  text-decoration: none;
+	  &.contact {
+			position: relative;
+			&:hover em {
+				opacity: 1;
+				@include transition(all 0.3s ease-in-out);
+			}
+			em {
+				display: none;
+				@include respond-to(wide-screens) {
+					display: block;
+					opacity: 0;
+					text-align: center;
+					font-size: 13px;
+					// color: lighten($color-grey, 40%);
+					top: 35px;
+					position: absolute;
+					width: 200%;
+					left: -50%;
+					@include transition(all 0.3s ease-in-out);
+				}
+			}
+		}
 	}
 }
 
 .header {
 	// background: rgba(0,0,0,0.3);
 	// padding: 20px;
+	text-align: center;
 	margin: 30px 0;
 	@include clearfix;
+	@include respond-to(medium-and-above) {
+		text-align: left;
+	}
 	h2 {
 		font-size: 20px;
 		line-height: 30px;
+		text-align: center;
+		margin-bottom: 15px;
 	}
 	nav {
+		margin-top: 0;
+	}
+	ul {
 		margin: 0;
-		text-align: right;
+		text-align: center;
 		li {
-
 		}
 	}
 	a {
@@ -46,6 +82,32 @@ nav {
 	strong {
 		font-family: $typeSans;
 		font-weight: 100;
+		// background: $color-red;
+		background: url(/img/intro-bg-thin.png) repeat-x;
+		background-size: 10%;
+		background-position: 0 bottom;
+		padding: 12px 15px;
+		font-size: 16px;
+		margin-left: 10px;
+		@include transition(all 0.3s ease-in-out);
+		&:hover {
+			background-position: 0 -50px;
+		}
+		@include respond-to(handhelds) {
+			display: inline-block;
+			margin-top: 5px;
+			padding: 5px 15px;
+		}		
 	}
 
+	@include respond-to(wide-and-up) {
+		h2 {
+			text-align: left;
+			margin-bottom: 0;
+		}
+		ul {
+			text-align: right;
+			margin-top: 5px;
+		}
+	}
 }

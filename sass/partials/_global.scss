@@ -20,7 +20,7 @@ body {
     padding: 0 6%;
   }
   @include respond-to(medium-screens) {
-    max-width: 800px;
+    // max-width: 800px;
     margin: 0 auto;
     padding: 0 3%;
   }

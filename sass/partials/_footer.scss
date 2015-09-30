@@ -1,2 +1,8 @@
-footer {
+.footer {
+	padding: 30px 6%;
+	text-align: center;
+	background: $color-darkest-blue;
+	h4 {
+		color: rgba(255,255,255,0.6);
+	}
 }
