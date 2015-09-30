@@ -270,12 +270,14 @@ body {
   .container {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 3%;
   }
 }
 @media only screen and (min-width: 1024px) {
   .container {
     max-width: 1082px;
     margin: 0 auto;
+    padding: 0 1%;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -387,6 +389,9 @@ nav li {
   display: inline;
   margin-right: 40px;
 }
+nav li:last-child {
+  margin-right: 0;
+}
 nav a {
   text-transform: uppercase;
   font-size: 14px;
@@ -443,6 +448,8 @@ footer, section {
 .nav-wrap {
   text-align: center;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 @media only screen and (max-width: 640px) {
   .nav-wrap li {
@@ -493,6 +500,7 @@ footer, section {
   width: 90%;
   max-width: 1800px;
   margin: 30px auto;
+  z-index: 1;
 }
 @media only screen and (min-width: 641px) {
   .intro h1 {
@@ -541,7 +549,15 @@ footer, section {
   display: table;
   clear: both;
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .description {
+    margin-top: -73px;
+    padding: 100px 3%;
+    max-height: 1000px;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 1025px) {
   .description {
     margin-top: -106px;
     padding: 100px 0;
@@ -565,7 +581,8 @@ footer, section {
 }
 @media only screen and (min-width: 641px) {
   .description .featured-work .project-1 {
-    margin-right: -400px;
+    margin-top: 0;
+    margin-right: -640px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -594,6 +611,12 @@ footer, section {
 .description .featured-work .project-1 .ipad {
   top: 130px;
 }
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .description .featured-work .project-1 .macbook {
+    position: relative;
+    right: -7%;
+  }
+}
 .description .featured-work .project-2 {
   position: absolute;
   top: 370px;
@@ -603,7 +626,9 @@ footer, section {
 }
 @media only screen and (min-width: 641px) {
   .description .featured-work .project-2 .ipad {
-    right: 200px;
+    right: 300px;
+    top: 150px;
+    width: 820px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -758,7 +783,7 @@ footer, section {
 }
 .more-work .project.filmlinc {
   background: url("/img/projects/home/filmlinc.jpg") no-repeat;
-  background-position: 0px  -50px;
+  background-size: cover;
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.filmlinc {
@@ -867,6 +892,11 @@ footer, section {
     background-position: -350px -210px;
   }
 }
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project.oldspice {
+    background-position: -350px -210px;
+  }
+}
 .more-work .project.oldspice:after {
   content: "";
   background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
@@ -921,11 +951,11 @@ footer, section {
 }
 .more-work .project.nextgen {
   background: url("/img/projects/home/nextgen.jpg") no-repeat;
+  background-size: cover;
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.nextgen {
     background-position: -150px 00px;
-    background-size: cover;
   }
 }
 @media only screen and (min-width: 641px) {
@@ -935,6 +965,7 @@ footer, section {
 }
 .more-work .project.fes {
   background: url("/img/projects/home/fes.jpg") no-repeat;
+  background-size: cover;
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.fes {
@@ -1032,10 +1063,10 @@ footer, section {
 }
 .more-work .project.avicii {
   background: url("/img/projects/home/avicii.jpg") no-repeat;
+  background-size: cover;
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.avicii {
-    background-size: cover;
     background-position: -410px 0;
   }
 }
@@ -1102,6 +1133,7 @@ footer, section {
 }
 .more-work .project.fourseasons {
   background: url("/img/projects/home/fourseasons.jpg") no-repeat;
+  background-size: cover;
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.fourseasons {
@@ -1134,6 +1166,7 @@ footer, section {
 }
 .more-work .project.ndnf {
   background: url("/img/projects/home/ndnf.jpg") no-repeat;
+  background-size: cover;
 }
 .more-work .project.ndnf:after {
   content: "";

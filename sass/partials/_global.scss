@@ -22,10 +22,12 @@ body {
   @include respond-to(medium-screens) {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 3%;
   }
   @include respond-to(wide-screens) {
     max-width: 1082px;
     margin: 0 auto;
+    padding: 0 1%;
   }
   @include respond-to(extra-wide-screens) {
     max-width: 1400px;

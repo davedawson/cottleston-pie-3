@@ -1,6 +1,8 @@
 .nav-wrap {
 	text-align: center;
 	width: 100%;
+	position: relative;
+	z-index: 2;
 	@include respond-to(handhelds) {
 		li {
 			margin-right: 10%;
@@ -49,6 +51,7 @@
 		width: 90%;
 		max-width: 1800px;
 		margin: 30px auto;
+		z-index: 1;
 		@include respond-to(medium-and-above) {
 			top: -50px;
 			width: 100%;
@@ -89,7 +92,14 @@
 	background: #b80f4a;
 	padding: 30px 0;
 	@include clearfix;
-	@include respond-to(medium-and-above) {
+	
+	@include respond-to(medium-screens) {
+		margin-top: -73px;
+		padding: 100px 3%;
+		max-height: 1000px;
+		overflow: hidden;
+	}
+	@include respond-to(wide-and-above) {
 		margin-top: -106px;
 		padding: 100px 0;
 		max-height: 1000px;
@@ -106,7 +116,8 @@
 			margin-right: -350px;
 			margin-top: 90px;
 			@include respond-to(medium-and-above) {
-				margin-right: -400px;
+				margin-top:0;
+				margin-right: -640px;
 			}
 			@include respond-to(wide-screens) {
 				margin-right: -500px;
@@ -128,6 +139,12 @@
 			.ipad {
 				top: 130px;
 			}
+			.macbook {
+				@include respond-to(medium-screens) {
+					position: relative;
+					right: -7%;
+				}
+			}
 		}
 		.project-2 {
 			position: absolute;
@@ -135,7 +152,9 @@
 			.ipad {
 				position: relative;
 				@include respond-to(medium-and-above) {
-					right: 200px;
+					right: 300px;
+					top: 150px;
+					width: 820px;
 				}
 				@include respond-to(wide-screens) {
 					right: 140px;
@@ -247,12 +266,16 @@
 		}
 		&.filmlinc {
 			background: url("/img/projects/home/filmlinc.jpg") no-repeat;
-			background-position: 0px  -50px;
+			background-size: cover;
 			// background-size: 90%;
 			@include respond-to(handhelds) {
 		    background-size: cover;
 		    background-position: center;
 			}
+			@include respond-to(wide-and-up) {
+				background-position: 0px  -50px;
+			}
+
 			&:after {
 				content: "";
 				@include left-to-right-dark-gradient;
@@ -265,6 +288,7 @@
 			@include respond-to(handhelds) {
 				background-position: -270px -180px;
 			}
+			
 			&:after {
 				content: "";
 				@include bottom-to-top-dark-gradient;
@@ -288,6 +312,9 @@
 			@include respond-to(handhelds) {
 				background-position: -350px -210px;
 			}
+			@include respond-to(medium-screens) {
+				background-position: -350px -210px;
+			}
 			&:after {
 				content: "";
 				@include bottom-to-top-dark-gradient;
@@ -303,9 +330,9 @@
 		}
 		&.nextgen {
 			background: url("/img/projects/home/nextgen.jpg") no-repeat;
+			background-size: cover;
 			@include respond-to(handhelds) {
 				background-position: -150px 00px;
-				background-size: cover;
 			}
 			.title-wrap {
 				@include respond-to(medium-and-above) {
@@ -315,6 +342,7 @@
 		}
 		&.fes {
 			background: url("/img/projects/home/fes.jpg") no-repeat;
+			background-size: cover;
 			// &:after {
 			// 	content: "";
 			// 	@include left-to-right-dark-gradient;
@@ -353,8 +381,9 @@
 		}
 		&.avicii {
 			background: url("/img/projects/home/avicii.jpg") no-repeat;
+			background-size: cover;
 			@include respond-to(handhelds) {
-		    background-size: cover;
+		    
         background-position: -410px 0;
 			}
 			&:after {
@@ -379,6 +408,7 @@
 		}
 		&.fourseasons {
 			background: url("/img/projects/home/fourseasons.jpg") no-repeat;
+			background-size: cover;
 			@include respond-to(handhelds) {
 		    background-size: cover;
 			}
@@ -389,6 +419,7 @@
 		}
 		&.ndnf {
 			background: url("/img/projects/home/ndnf.jpg") no-repeat;
+			background-size: cover;
 			&:after {
 				content: "";
 				@include bottom-to-top-dark-gradient;
