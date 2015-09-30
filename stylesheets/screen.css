@@ -631,6 +631,37 @@ footer, section {
     width: 100%;
     min-height: 300px;
     margin: 30px auto;
+    background-size: cover;
+    background-position: -410px 0;
+  }
+  .more-work .project:after {
+    content: "";
+    background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(43%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+    /* IE6-9 */
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    z-index: 1;
+    height: 500px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .more-work .project h3 {
+    font-size: 26px;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -639,9 +670,11 @@ footer, section {
     line-height: 56px;
   }
 }
-.more-work .project.small h3 {
-  font-size: 34px;
-  line-height: 36px;
+@media only screen and (min-width: 641px) {
+  .more-work .project.small h3 {
+    font-size: 34px;
+    line-height: 36px;
+  }
 }
 .more-work .project.wide {
   min-height: 300px;
@@ -650,9 +683,21 @@ footer, section {
 .more-work .project.wide .title-wrap {
   width: 100%;
 }
+@media only screen and (max-width: 640px) {
+  .more-work .project.wide .title-wrap {
+    text-align: left;
+    width: 90%;
+  }
+}
 .more-work .project.filmlinc {
   background: url("/img/projects/home/filmlinc.jpg") no-repeat;
   background-position: 0px  -50px;
+}
+@media only screen and (max-width: 640px) {
+  .more-work .project.filmlinc {
+    background-size: cover;
+    background-position: center;
+  }
 }
 .more-work .project.filmlinc:after {
   content: "";
@@ -681,7 +726,12 @@ footer, section {
 }
 .more-work .project.filmcomment {
   background: url("/img/projects/home/filmcomment.jpg") no-repeat;
-  background-position: -530px -370px;
+  background-position: -230px 0px;
+}
+@media only screen and (max-width: 640px) {
+  .more-work .project.filmcomment {
+    background-position: -270px -180px;
+  }
 }
 .more-work .project.filmcomment:after {
   content: "";
@@ -711,6 +761,12 @@ footer, section {
   background: url("/img/projects/home/te.jpg") no-repeat;
   background-position: -150px -100px;
 }
+@media only screen and (max-width: 640px) {
+  .more-work .project.tackleebola {
+    background-position: 0;
+    background-size: cover;
+  }
+}
 .more-work .project.tackleebola:after {
   content: "";
   background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
@@ -738,6 +794,11 @@ footer, section {
 .more-work .project.oldspice {
   background: url("/img/projects/home/oldspice.jpg") no-repeat;
   background-position: -350px bottom;
+}
+@media only screen and (max-width: 640px) {
+  .more-work .project.oldspice {
+    background-position: -350px -210px;
+  }
 }
 .more-work .project.oldspice:after {
   content: "";
@@ -794,11 +855,25 @@ footer, section {
 .more-work .project.nextgen {
   background: url("/img/projects/home/nextgen.jpg") no-repeat;
 }
-.more-work .project.nextgen .title-wrap {
-  padding-left: 50%;
+@media only screen and (max-width: 640px) {
+  .more-work .project.nextgen {
+    background-position: -150px 00px;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project.nextgen .title-wrap {
+    padding-left: 50%;
+  }
 }
 .more-work .project.fes {
   background: url("/img/projects/home/fes.jpg") no-repeat;
+}
+@media only screen and (max-width: 640px) {
+  .more-work .project.fes {
+    background-size: cover;
+    background-position: -120px 0;
+  }
 }
 .more-work .project.fes:after {
   content: "";
@@ -826,6 +901,11 @@ footer, section {
 }
 .more-work .project.feast {
   background: url("/img/projects/home/the-feast.jpg") no-repeat;
+}
+@media only screen and (max-width: 640px) {
+  .more-work .project.feast {
+    background-size: cover;
+  }
 }
 .more-work .project.hustwit {
   background: url("/img/projects/home/hustwit.jpg") no-repeat;
@@ -886,6 +966,12 @@ footer, section {
 .more-work .project.avicii {
   background: url("/img/projects/home/avicii.jpg") no-repeat;
 }
+@media only screen and (max-width: 640px) {
+  .more-work .project.avicii {
+    background-size: cover;
+    background-position: -410px 0;
+  }
+}
 .more-work .project.avicii:after {
   content: "";
   background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 57%, transparent 100%);
@@ -916,6 +1002,11 @@ footer, section {
 }
 .more-work .project.littlebits {
   background: url("/img/projects/home/littlebits.jpg") no-repeat;
+}
+@media only screen and (max-width: 640px) {
+  .more-work .project.littlebits {
+    background-size: cover;
+  }
 }
 .more-work .project.littlebits:after {
   content: "";
@@ -997,11 +1088,20 @@ footer, section {
   width: 100%;
 }
 .more-work .project .title-wrap {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 80%;
   z-index: 2;
-  width: 90%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project .title-wrap {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+  }
 }
 .more-work .project .text-bottom {
   position: absolute;

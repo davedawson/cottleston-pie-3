@@ -166,8 +166,19 @@
 			width: 100%;
 			min-height: 300px;
 			margin: 30px auto;
+			// @include respond-to(handhelds) {
+	    background-size: cover;
+      background-position: -410px 0;
+			// }
+			&:after {
+				content: "";
+				@include bottom-to-top-dark-gradient;
+			}
 		}
 		h3 {
+			@include respond-to(handhelds) {
+				font-size: 26px;
+			}
 			@include respond-to(wide-and-above) {
 				font-size: 48px;
 				line-height: 56px;
@@ -175,8 +186,10 @@
 		}
 		&.small {
 			h3 {
-				font-size: 34px;
-				line-height: 36px;
+				@include respond-to(medium-and-above) {
+					font-size: 34px;
+					line-height: 36px;
+				}
 			}
 		}
 		&.wide {
@@ -184,12 +197,20 @@
 			width: 100%;
 			.title-wrap {
 				width: 100%;
+				@include respond-to(handhelds) {
+					text-align: left;
+					width: 90%;
+				}
 			}
 		}
 		&.filmlinc {
 			background: url("/img/projects/home/filmlinc.jpg") no-repeat;
 			background-position: 0px  -50px;
 			// background-size: 90%;
+			@include respond-to(handhelds) {
+		    background-size: cover;
+		    background-position: center;
+			}
 			&:after {
 				content: "";
 				@include left-to-right-dark-gradient;
@@ -198,7 +219,10 @@
 		}
 		&.filmcomment {
 			background: url("/img/projects/home/filmcomment.jpg") no-repeat;
-			background-position: -530px -370px;
+			background-position: -230px 0px;
+			@include respond-to(handhelds) {
+				background-position: -270px -180px;
+			}
 			&:after {
 				content: "";
 				@include bottom-to-top-dark-gradient;
@@ -207,6 +231,10 @@
 		&.tackleebola {
 			background: url("/img/projects/home/te.jpg") no-repeat;
 			background-position: -150px -100px;
+			@include respond-to(handhelds) {
+				background-position: 0;
+		    background-size: cover;
+			}
 			&:after {
 				content: "";
 				@include bottom-to-top-dark-gradient;
@@ -215,6 +243,9 @@
 		&.oldspice {
 			background: url("/img/projects/home/oldspice.jpg") no-repeat;
 			background-position: -350px bottom;
+			@include respond-to(handhelds) {
+				background-position: -350px -210px;
+			}
 			&:after {
 				content: "";
 				@include bottom-to-top-dark-gradient;
@@ -230,8 +261,14 @@
 		}
 		&.nextgen {
 			background: url("/img/projects/home/nextgen.jpg") no-repeat;
+			@include respond-to(handhelds) {
+				background-position: -150px 00px;
+				background-size: cover;
+			}
 			.title-wrap {
-				padding-left: 50%;
+				@include respond-to(medium-and-above) {
+					padding-left: 50%;
+				}
 			}
 		}
 		&.fes {
@@ -241,6 +278,10 @@
 			// 	@include left-to-right-dark-gradient;
 			// 	width: 100%;
 			// }
+			@include respond-to(handhelds) {
+		    background-size: cover;
+		    background-position: -120px 0;
+			}
 			&:after {
 				content: "";
 				@include bottom-to-top-dark-gradient;
@@ -248,6 +289,9 @@
 		}
 		&.feast {
 			background: url("/img/projects/home/the-feast.jpg") no-repeat;
+			@include respond-to(handhelds) {
+		    background-size: cover;
+			}
 		}
 		&.hustwit {
 			background: url("/img/projects/home/hustwit.jpg") no-repeat;
@@ -267,6 +311,10 @@
 		}
 		&.avicii {
 			background: url("/img/projects/home/avicii.jpg") no-repeat;
+			@include respond-to(handhelds) {
+		    background-size: cover;
+        background-position: -410px 0;
+			}
 			&:after {
 				content: "";
 				@include left-to-right-dark-gradient;
@@ -278,6 +326,9 @@
 		}
 		&.littlebits {
 			background: url("/img/projects/home/littlebits.jpg") no-repeat;
+			@include respond-to(handhelds) {
+		    background-size: cover;
+			}
 			&:after {
 				content: "";
 				@include left-to-right-light-gradient;
@@ -300,11 +351,18 @@
 		}
 		.title-wrap {
 			// @include vertical-align;
-			display: table-cell;
-		  vertical-align: middle;
-		  position: relative;
-		  z-index: 2;
-		  width: 90%;
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+			width: 80%;
+			z-index: 2;
+			@include respond-to(medium-and-above) {
+				display: table-cell;
+			  vertical-align: middle;
+			  position: relative;
+			  z-index: 2;
+			  width: 90%;
+			} 
 		}
 		.text-bottom {
 			position: absolute;
