@@ -11,12 +11,14 @@
 .hide { display: none; }
 
 .h-hidden {
+	display: block;
 	@include respond-to(handhelds) {
 		display: none;
 	}
 }
 
 .h-visible {
+	display: none;
 	@include respond-to(handhelds) {
 		display: block;
 	}
