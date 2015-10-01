@@ -346,6 +346,10 @@ p {
   line-height: 26px;
   margin-bottom: 0.75em;
 }
+p.small {
+  font-size: 14px;
+  line-height: 20px;
+}
 
 a {
   color: #e82643;
@@ -438,10 +442,15 @@ nav a.contact em {
     opacity: 0;
     text-align: center;
     font-size: 13px;
-    top: 35px;
+    top: 20px;
     position: absolute;
     width: 200%;
     left: -50%;
+    font-style: normal;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 5px 3px;
+    background: rgba(0, 0, 0, 0.2);
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -451,7 +460,7 @@ nav a.contact em {
 
 .header {
   text-align: center;
-  margin: 30px 0;
+  margin: 30px 0 10px;
 }
 .header::after {
   content: "";
@@ -475,7 +484,7 @@ nav a.contact em {
   }
 }
 .header nav {
-  margin-top: 0;
+  margin-top: 5px;
 }
 .header ul {
   margin: 0;
@@ -587,6 +596,7 @@ footer, section {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
   }
   .intro .tagline-wrap h2 {
     height: 100%;
@@ -620,6 +630,10 @@ footer, section {
   .intro .nav-wrap h2 {
     font-size: 16px;
   }
+}
+.intro .nav-wrap nav {
+  position: relative;
+  z-index: 2;
 }
 .intro h1 {
   position: relative;
@@ -695,6 +709,14 @@ footer, section {
   margin-left: 20px;
   border-bottom: 2px solid white;
 }
+@media only screen and (max-width: 640px) {
+  .description .button {
+    display: block;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
 .description .featured-work {
   display: none;
 }
@@ -741,10 +763,17 @@ footer, section {
 .description .featured-work .project-1 .ipad {
   top: 130px;
 }
+.description .featured-work .project-1 .macbook {
+  position: relative;
+}
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .description .featured-work .project-1 .macbook {
-    position: relative;
     right: -7%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .description .featured-work .project-1 .macbook {
+    left: 5%;
   }
 }
 .description .featured-work .project-2 {
@@ -768,7 +797,7 @@ footer, section {
 }
 @media only screen and (min-width: 1400px) {
   .description .featured-work .project-2 .ipad {
-    margin-left: -240px;
+    left: 0;
   }
 }
 .description .featured-work .project-2 .iphone {
@@ -781,6 +810,7 @@ footer, section {
   .description .featured-work .project-2 .iphone {
     right: auto;
     display: block;
+    left: -20%;
   }
 }
 .description h2 {
@@ -939,10 +969,9 @@ footer, section {
   /* IE6-9 */
   position: absolute;
   top: 0;
-  height: 100%;
   left: 0;
   z-index: 1;
-  height: 500px;
+  height: 100%;
   width: 50%;
   width: 100%;
 }
@@ -1218,10 +1247,9 @@ footer, section {
   /* IE6-9 */
   position: absolute;
   top: 0;
-  height: 100%;
   left: 0;
   z-index: 1;
-  height: 500px;
+  height: 100%;
   width: 50%;
   width: 100%;
 }
@@ -1425,33 +1453,36 @@ footer, section {
   padding-top: 80px;
   position: relative;
 }
-@media only screen and (max-width: 640px) {
-  .project-header:after {
-    content: "";
-    background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(43%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.65) 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
-    /* IE6-9 */
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    z-index: 1;
-    height: 500px;
-    width: 100%;
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .project-header {
+    padding-top: 200px;
   }
 }
-@media only screen and (min-width: 641px) {
+.project-header:after {
+  content: "";
+  background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(43%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  /* IE6-9 */
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  z-index: 1;
+  height: 500px;
+  width: 100%;
+}
+@media only screen and (min-width: 1025px) {
   .project-header {
     background: #111;
     position: relative;
@@ -1474,30 +1505,41 @@ footer, section {
     margin-right: -0.25em;
     /* Adjusts for spacing */
   }
+  .project-header:after {
+    content: none;
+  }
 }
 .project-header h1 {
   font-size: 32px;
   line-height: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-family: "minion-pro", Georgia, Times, serif;
   color: white;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .project-header h1 {
+    font-size: 40px;
+    line-height: 46px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .project-header h1 {
     font-size: 48px;
     line-height: 56px;
+    margin-bottom: 10px;
   }
 }
 @media only screen and (min-width: 1400px) {
   .project-header h1 {
-    font-size: 68px;
-    line-height: 76px;
+    font-size: 56px;
+    line-height: 62px;
+    margin-bottom: 10px;
   }
 }
 @media only screen and (min-width: 1400px) {
   .project-header h3 {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 38px;
+    line-height: 46px;
   }
 }
 .project-header .wrap {
@@ -1505,7 +1547,7 @@ footer, section {
   z-index: 2;
   padding: 30px;
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 1025px) {
   .project-header .wrap {
     display: inline-block;
     vertical-align: middle;
@@ -1528,6 +1570,32 @@ footer, section {
 }
 .project-header.hustwit {
   background-image: url("/img/projects/hustwit/hero-hustwit.jpg");
+}
+@media only screen and (min-width: 1025px) {
+  .project-header.hustwit:after {
+    content: "";
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 57%, transparent 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(57%, transparent), color-stop(100%, transparent));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 57%, transparent 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 57%, transparent 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 57%, transparent 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 0) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+    /* IE6-9 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+    width: 100%;
+  }
 }
 .project-header.littlebits {
   background-image: url("/img/projects/littlebits/hero-littlebits.jpg");
@@ -1621,9 +1689,15 @@ footer, section {
 .project-description h3 {
   font-family: "minion-pro", Georgia, Times, serif;
   color: rgba(0, 0, 0, 0.8);
-  font-size: 30px;
-  line-height: 36px;
   margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 26px;
+}
+@media only screen and (min-width: 641px) {
+  .project-description h3 {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 .project-expanded {
@@ -1775,10 +1849,11 @@ footer, section {
   background-size: 10%;
   background-position: 0 bottom;
   padding: 5px;
+  color: white;
 }
 .more-projects li a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Macha-medium", Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -1802,10 +1877,16 @@ footer, section {
   background-position: bottom;
   background-size: cover;
 }
-@media only screen and (max-width: 640px) {
-  .about-page .project-header:after {
-    content: none;
-  }
+.about-page .project-header:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+.about-page .project-header:after {
+  content: none;
 }
 .about-page .project-header h1 {
   font-size: 48px;
@@ -1893,8 +1974,6 @@ footer, section {
   position: relative;
 }
 .about-page .cp-projects .the-works .more-info p {
-  font-size: 14px;
-  line-height: 20px;
   margin-top: 20px;
   clear: both;
 }

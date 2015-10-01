@@ -36,6 +36,7 @@
 	    width: 100%;
 	    top: 0;
 	    left: 0;
+	    z-index: 1;
 	    h2 {
 		    height: 100%;
 		    position: absolute;
@@ -55,9 +56,6 @@
 	}
 	.title-wrap {
 		margin: 0 auto;
-		// position: absolute;
-		// width: 100%;
-		// top: -50px;
 	}
 	.nav-wrap {
 		@include respond-to(handhelds) {
@@ -66,6 +64,10 @@
 			h2 {
 				font-size: 16px;
 			}
+		}
+		nav {
+			position: relative;
+			z-index: 2;
 		}
 	}
 	h1 {
@@ -137,6 +139,12 @@
 		margin-left: 20px;
 		border-bottom: 2px solid white;
 		// color: $color-red;
+		@include respond-to(handhelds) {
+			display: block;
+			text-align: center;
+			margin-left: 0;
+			margin-top: 10px;
+		}
 	}
 	.featured-work {
 		display: none;
@@ -173,9 +181,12 @@
 				top: 130px;
 			}
 			.macbook {
+				position: relative;
 				@include respond-to(medium-screens) {
-					position: relative;
 					right: -7%;
+				}
+				@include respond-to(extra-wide-screens) {
+					left: 5%;
 				}
 			}
 		}
@@ -193,7 +204,8 @@
 					right: 140px;
 				}
 				@include respond-to(extra-wide-screens) {
-					margin-left: -240px;
+					// margin-left: -240px;
+					left: 0;
 				}
 			}
 			.iphone {
@@ -204,7 +216,7 @@
 				@include respond-to(extra-wide-screens) {
 					right: auto; 
 					display: block;
-					// left: 35%;
+					left: -20%;
 				}
 			}
 		}

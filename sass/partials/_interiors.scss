@@ -9,13 +9,16 @@
 	background-position: center right;
 	padding-top: 80px;
 	position: relative;
-	@include respond-to(handhelds) {
-		&:after {
-			content: "";
-			@include bottom-to-top-dark-gradient;
-		}
+	// @include respond-to(handhelds) {
+	@include respond-to(medium-screens) {
+		padding-top: 200px;
 	}
-	@include respond-to(medium-and-above) {
+	&:after {
+		content: "";
+		@include bottom-to-top-dark-gradient;
+	}
+	// }
+	@include respond-to(wide-and-above) {
 		background: #111;
 		@include clearfix;
 		position: relative;
@@ -31,24 +34,31 @@
 		  vertical-align: middle;
 		  margin-right: -0.25em; /* Adjusts for spacing */
 	  }
+	  &:after {
+	  	content: none;
+	  }
 	}
 	
   
 	h1 {
 		font-size: 32px;
 		line-height: 40px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		font-family: $typeSerif;
 		color: white;
 		@include respond-to(medium-screens) {
+			font-size: 40px;
+			line-height: 46px;
 	  }
 	  @include respond-to(wide-screens) {
 	    font-size: 48px;
 			line-height: 56px;
+			margin-bottom: 10px;
 	  }
 	  @include respond-to(extra-wide-screens) {
-	    font-size: 68px;
-			line-height: 76px;
+	    font-size: 56px;
+	    line-height: 62px;
+	    margin-bottom: 10px;
 	  }
 	}
 	h3 {
@@ -61,15 +71,15 @@
 			// line-height: 56px;
 	  }
 	  @include respond-to(extra-wide-screens) {
-			font-size: 48px;
-		  line-height: 56px;
+			font-size: 38px;
+		  line-height: 46px;
 	  }
 	}
 	.wrap {
 		position: relative;
 		z-index: 2;
 		padding: 30px;
-		@include respond-to(medium-and-above) {
+		@include respond-to(wide-and-above) {
 			display: inline-block;
 		  vertical-align: middle;
 	    width: 49.0234%;
@@ -91,6 +101,13 @@
 	}
 	&.hustwit {
 		background-image: url('/img/projects/hustwit/hero-hustwit.jpg');
+		@include respond-to(wide-and-above) {
+			&:after {
+				content: "";
+				@include left-to-right-dark-gradient;
+				width: 100%;
+			}
+		}
 	}
 	&.littlebits {
 		background-image: url('/img/projects/littlebits/hero-littlebits.jpg');
@@ -184,9 +201,13 @@
 	h3 {
 		font-family: $typeSerif;
 		color: $color-text;
-		font-size: 30px;
-		line-height: 36px;
 		margin-bottom: 30px;
+		font-size: 20px;
+		line-height: 26px;
+		@include respond-to(medium-and-above) {
+			font-size: 30px;
+			line-height: 36px;
+		}
 	}
 }
 
@@ -338,10 +359,11 @@
 			background-size: 10%;
 			background-position: 0 bottom;
 			padding: 5px;
+			color: white;
 		}
 		a {
 			text-decoration: none;
-			color: white;
+			color: rgba(255,255,255,0.7);
 			font-family: $typeSans;
 			font-weight: 500;
 			// background: $color-red;
@@ -364,10 +386,15 @@
 		background-image: url('/img/about/about-hero-bg.png');
     background-position: bottom;
     background-size: cover;
-		@include respond-to(handhelds) {
-			&:after {
-				content: none;
-			}
+    &:before {
+	  	content: '';
+		  display: inline-block;
+		  height: 100%;
+		  vertical-align: middle;
+		  margin-right: -0.25em; /* Adjusts for spacing */
+	  }
+		&:after {
+			content: none;
 		}
 		h1 {
 			font-size: 48px;
@@ -435,8 +462,6 @@
 				color: $color-text;
 				position: relative;
 				p {
-					font-size: 14px;
-					line-height: 20px;
 					margin-top: 20px;
 					clear: both;
 				}
