@@ -69,7 +69,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 gulp.task('upload', function() {
   return gulp.src('_site/**')
       .pipe(s3(awsCredentials, {
-        uploadPath: "/",
+        uploadPath: "/assets/",
         headers: {
           'x-amz-acl': 'public-read'
         }
