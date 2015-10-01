@@ -38,10 +38,18 @@ layout: default
 
 <article class="post-content">
     {{ content }}
-</article>	
-<!-- {% for project in site.projects %}
-	{% unless project.title == page.title %}
-	  <h2>{{ project.title }} - {{ project.title }}</h2>
-	  
-  {% endunless %}
-{% endfor %} -->
+</article>
+<section class="more-projects">
+	<div class="container">
+		<h2>More Projects</h2>	
+		<ul>
+		{% for project in site.projects %}
+			{% unless project.title == page.title %}
+			<li>
+			  <h3><a href="{{ project.url }}">{{ project.intro }} <em>for</em> <span>{{ project.title }}</a></span> </h3>
+		  </li>
+		  {% endunless %}
+		{% endfor %}
+		</ul>
+	</div>
+</section>

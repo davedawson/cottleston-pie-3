@@ -1702,6 +1702,55 @@ footer, section {
   overflow: hidden;
 }
 
+.more-projects {
+  padding: 60px 0;
+  background: black;
+  padding: 30px 6%;
+}
+@media only screen and (min-width: 641px) {
+  .more-projects {
+    padding: 60px 3%;
+  }
+}
+.more-projects li {
+  margin: 0;
+  display: inline;
+}
+.more-projects li:after {
+  content: '¶';
+  opacity: 0.5;
+  padding: 0 10px;
+}
+.more-projects li:last-child:after {
+  content: "";
+}
+.more-projects li h3 {
+  display: inline;
+}
+.more-projects li span {
+  background: url(/img/intro-bg-thin.png) repeat-x;
+  background-size: 10%;
+  background-position: 0 bottom;
+  padding: 5px;
+}
+.more-projects li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.more-projects li a:hover {
+  background: url(/img/intro-bg-thin.png) repeat-x;
+  background-size: 10%;
+  background-position: 0 bottom;
+  padding: 5px;
+}
+
 .about-page .project-header {
   background-image: url("/img/about/about-hero.png");
 }
