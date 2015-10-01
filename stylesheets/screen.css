@@ -84,7 +84,7 @@ html, body, * {
 }
 
 .h-hidden {
-  display: block;
+  display: inherit;
 }
 @media only screen and (max-width: 640px) {
   .h-hidden {
@@ -97,7 +97,7 @@ html, body, * {
 }
 @media only screen and (max-width: 640px) {
   .h-visible {
-    display: block;
+    display: inherit;
   }
 }
 
@@ -270,11 +270,6 @@ body {
   position: relative;
   margin: 0 auto;
 }
-@media only screen and (max-width: 640px) {
-  .container {
-    padding: 0 6%;
-  }
-}
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .container {
     margin: 0 auto;
@@ -383,6 +378,12 @@ em {
 
 strong {
   font-weight: bold;
+}
+
+abbr {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
 }
 
 nav {
@@ -629,7 +630,7 @@ footer, section {
 
 .description {
   background: #b80f4a;
-  padding: 30px 0;
+  padding: 30px 6%;
 }
 .description::after {
   content: "";
@@ -764,7 +765,7 @@ footer, section {
 
 .more-work {
   background: #242742;
-  padding: 0;
+  padding: 0 6%;
   position: relative;
 }
 .more-work::after {
@@ -1317,7 +1318,7 @@ footer, section {
 
 .about {
   background: #07111e;
-  padding: 30px 0;
+  padding: 30px 6%;
 }
 @media only screen and (min-width: 641px) {
   .about {
@@ -1377,26 +1378,60 @@ footer, section {
 }
 
 .project-header {
-  background: #111;
-  position: relative;
-  z-index: 2;
-  padding: 60px 0;
   background-size: cover;
-  width: 100%;
-  height: 420px;
+  background-position: center right;
+  padding-top: 80px;
+  position: relative;
 }
-.project-header::after {
-  content: "";
-  display: table;
-  clear: both;
+@media only screen and (max-width: 640px) {
+  .project-header:after {
+    content: "";
+    background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(43%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.65) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+    /* IE6-9 */
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    z-index: 1;
+    height: 500px;
+    width: 100%;
+  }
 }
-.project-header:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em;
-  /* Adjusts for spacing */
+@media only screen and (min-width: 641px) {
+  .project-header {
+    background: #111;
+    position: relative;
+    z-index: 2;
+    padding: 60px 0;
+    background-size: cover;
+    width: 100%;
+    height: 420px;
+  }
+  .project-header::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .project-header:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+    /* Adjusts for spacing */
+  }
 }
 .project-header h1 {
   font-size: 32px;
@@ -1424,10 +1459,18 @@ footer, section {
   }
 }
 .project-header .wrap {
-  display: inline-block;
-  vertical-align: middle;
-  width: 49.0234%;
-  margin-left: 8.4961%;
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+}
+@media only screen and (min-width: 641px) {
+  .project-header .wrap {
+    display: inline-block;
+    vertical-align: middle;
+    width: 49.0234%;
+    margin-left: 8.4961%;
+    padding: 0;
+  }
 }
 .project-header.filmlinc {
   background-image: url("/img/projects/filmlinc/hero-filmlinc.jpg");
@@ -1496,13 +1539,18 @@ footer, section {
 }
 
 .project-description {
-  margin: 120px 0;
+  margin: 30px 0;
   overflow: hidden;
 }
 .project-description::after {
   content: "";
   display: table;
   clear: both;
+}
+@media only screen and (min-width: 641px) {
+  .project-description {
+    margin: 120px 0;
+  }
 }
 .project-description .hero {
   display: none;

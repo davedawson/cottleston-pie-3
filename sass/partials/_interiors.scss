@@ -1,23 +1,34 @@
 .project-header {
-	background: #111;
-	@include clearfix;
-	// min-height: 1000px;
-	position: relative;
-	z-index: 2;
-	padding: 60px 0; 
-	
 	background-size: cover;
-	// display: table;
-  width: 100%;
-  // white-space: nowrap;
-  height: 420px;
-  &:before {
-  	content: '';
-	  display: inline-block;
-	  height: 100%;
-	  vertical-align: middle;
-	  margin-right: -0.25em; /* Adjusts for spacing */
-  }
+	background-position: center right;
+	padding-top: 80px;
+	position: relative;
+	@include respond-to(handhelds) {
+		&:after {
+			content: "";
+			@include bottom-to-top-dark-gradient;
+		}
+
+	}
+	@include respond-to(medium-and-above) {
+		background: #111;
+		@include clearfix;
+		position: relative;
+		z-index: 2;
+		padding: 60px 0;
+		background-size: cover;
+	  width: 100%;
+	  height: 420px;
+	  &:before {
+	  	content: '';
+		  display: inline-block;
+		  height: 100%;
+		  vertical-align: middle;
+		  margin-right: -0.25em; /* Adjusts for spacing */
+	  }
+	}
+	
+  
 	h1 {
 		font-size: 32px;
 		line-height: 40px;
@@ -50,14 +61,16 @@
 	  }
 	}
 	.wrap {
-		// @include center(y);
-		// display: table-cell;
-		// // text-align: center;
-		// vertical-align: middle;
-		display: inline-block;
-	  vertical-align: middle;
-    width: 49.0234%;
-		margin-left: 8.4961%
+		position: relative;
+		z-index: 2;
+		padding: 30px;
+		@include respond-to(medium-and-above) {
+			display: inline-block;
+		  vertical-align: middle;
+	    width: 49.0234%;
+			margin-left: 8.4961%;
+			padding: 0;
+		}
 	}
 	&.filmlinc {
 		background-image: url('/img/projects/filmlinc/hero-filmlinc.jpg');
@@ -127,9 +140,12 @@
 }
 
 .project-description {
-	@include clearfix;
-	margin: 120px 0;
+	margin: 30px 0;
 	overflow: hidden;
+	@include clearfix;
+	@include respond-to(medium-and-above) {
+		margin: 120px 0;	
+	}
 	.hero {
 		display: none;
 		float: right;

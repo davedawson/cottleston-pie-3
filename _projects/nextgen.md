@@ -4,7 +4,7 @@ title: NextGen Climate
 path: /projects/nextgen-climate
 class: nextgen
 role: Project Lead, Creative Direction, Design
-team: Cottleston Pie, Patronage
+team: Cottleston Pie, <a href="http://www.patronage.org">Patronage</a>
 live-url: nextgenclimate.org
 intro: Bringing climate change to the forefront of American politics
 lead-in: NextGen Climate is making a push to become the voice for climate change and using digital media to do just that. 

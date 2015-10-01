@@ -90,7 +90,7 @@
 
 .description {
 	background: #b80f4a;
-	padding: 30px 0;
+	padding: 30px 6%;
 	@include clearfix;
 	
 	@include respond-to(medium-screens) {
@@ -199,7 +199,7 @@
 
 .more-work {
 	background: #242742;
-	padding: 0;
+	padding: 0 6%;
 	position: relative;
 	@include clearfix;
 	@include respond-to(medium-and-above) {
@@ -472,7 +472,7 @@
 
 .about {
 	background: $color-darkest-blue;
-	padding: 30px 0;
+	padding: 30px 6%;
 	@include respond-to(medium-and-above) {
 		padding: 60px 3%;
 	}

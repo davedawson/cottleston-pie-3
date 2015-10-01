@@ -17,7 +17,7 @@ body {
   position: relative;
   margin: 0 auto;
   @include respond-to(handhelds) {
-    padding: 0 6%;
+    // padding: 0 6%;
   }
   @include respond-to(medium-screens) {
     // max-width: 800px;
@@ -133,4 +133,10 @@ em {
 
 strong {
   font-weight: bold;
+}
+
+abbr {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
 }

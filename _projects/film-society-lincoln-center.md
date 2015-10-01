@@ -6,7 +6,7 @@ class: filmlinc
 role: Project Lead, Creative Direction, Design
 team: Cottleston Pie, <a href="http://www.patronage.org">Patronage</a>
 live-url: filmlinc.org
-intro: Rethinking digital programing for a NYC film institution
+intro: Rethinking digital programing for a <abbr>NYC</abbr> film institution
 lead-in: <em>The Film Society of Lincoln Center</em> is the pre-eminent film presentation organization in New York City.
 ---
 
