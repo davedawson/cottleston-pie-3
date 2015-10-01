@@ -1701,3 +1701,7 @@ footer, section {
   margin-top: -400px;
   overflow: hidden;
 }
+
+.about-page .project-header {
+  background-image: url("/img/about/about-hero.png");
+}
