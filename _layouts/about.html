@@ -13,13 +13,13 @@ class: about-page
 		  <!-- </div> -->
 	  </header>
 	  <div class="project-description">	
-	  	<div class="lead-in d2-d9 t1-t5 t-padinfull h-padinfull">
+	  	<div class="lead-in d2-d9 t1-t6 t-padinfull h-padinfull">
 	  		<h3>Cottleston Pie designs websites for organizations. We create screen-based solutions to business problems on time and on budget.</h3>
 	  	</div>
-	    <div class="d2-d7 t1-t3 h-padinfull story">
+	    <div class="d2-d7 t1-t3 t-padinfull h-padinfull story">
 	    	<p>We work with organizations to design and build things used on screens. From conception to delivery (and every step in between), Cottleston Pie takes a holistic approach to digital design.</p>
 
-				<p>Cottleston Pie specializes in responsive web design and development as well as UX & UI Design. Available for full projects or as an individual consultant.</p>
+				<p>Cottleston Pie specializes in responsive web design and development as well as UX &amp; UI Design. Available for full projects or as an individual consultant.</p>
 
 				<p>Each project we take on is unique and every client has different needs. When we get a new project, we assemble a team made up of people who have the skills that the project requires. This allows us to create the perfect team for your project without the overhead of a full-time staff. </p>
 
@@ -27,37 +27,49 @@ class: about-page
 
 <!-- {% contentblock description %} -->
 	    </div>
-	    <div class="d8-d11">
+	    <div class="d8-d11 t4-t6 t-padinfull h-padinfull">
 	    	<img src="/img/about/dave-dawson-at-the-works.jpg" alt="Dave Dawson at The Works" />
 	    	<p>Dave Dawson heads up the day-to-day at Cottleston Pie. Previously the principal designer at Blue State Digital, he started his </p>
 	    </div>
 	    <!-- <div class="hero">	
 		    {% contentblock hero %}
 		  </div> -->
-		  <section class="cp-projects">
-				<div class="the-works">
-					<div class="d2-d5">
-						<img src="/img/about/the-works-tall.jpg" alt="The Works storefront" />
-					</div>
-					<div class="d6-d9">
-						
-					</div>
-					<div class="d10-d11">
-						<img src="/img/about/the-works-spock-tall.jpg" alt="The Works storefront" />
-					</div>
-					<div class="d6-d11">
-						<img src="/img/about/the-works-tall.jpg" alt="The Works backyard" />
-					</div>
-
-				</div>
-			</section>
     </div>
 	</div>
 </div>
-
+<section class="cp-projects">
+	<div class="container">
+		<div class="projects-intro">
+			<div class="d2-d11 t1-t6 t-padinfull h-padinfull">
+				<h3 class="section">Cottleston Pie Adventures</h3>
+				<p>Projects that do one thing, and do it well.</p>
+			</div>
+		</div>
+		<div class="the-works">
+			<div class="d6-d8 t1-t5 t-padinfull h-padinfull more-info">
+				<div class="wrap">
+					<a href="http://thisistheworks.com"><img src="/img/about/the-works-logo.png" alt="The Works logo" class="t1-t3" /></a>
+					<p>The Works is a coworking space in a former storefront in Carroll Gardens, Brooklyn. Opened in 2014, we've created an intimate community of creative people who share the space. <a href="http://thisistheworks.com">Learn More at thisistheworks.com</a></p>
+				</div>
+			</div>
+			<div class="photos t-padinfull h-padinfull">
+				<div class="d2-d5 t1-t3 ">
+					<img src="/img/about/the-works-tall.jpg" alt="The Works storefront" />
+				</div>
+				<div class="d9-d11 t4-t6">
+					<img src="/img/about/the-works-spock-tall.jpg" alt="The Works storefront" />
+				</div>
+				<div class="d6-d11 t1-t6 wide-photo">
+					<img src="/img/about/the-works-outside.jpg" alt="The Works backyard" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 
 <article class="post-content">
     {{ content }}
-</article>	
+</article>	 -->
 <!-- {% for project in site.projects %}
 	{% unless project.title == page.title %}
 	  <h2>{{ project.title }} - {{ project.title }}</h2>

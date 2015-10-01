@@ -1,3 +1,9 @@
+.interior {
+	.container {
+		padding: 0;
+	}
+}
+
 .project-header {
 	background-size: cover;
 	background-position: center right;
@@ -8,7 +14,6 @@
 			content: "";
 			@include bottom-to-top-dark-gradient;
 		}
-
 	}
 	@include respond-to(medium-and-above) {
 		background: #111;
@@ -326,6 +331,7 @@
 		}
 		h3 {
 			display: inline;
+			line-height: 34px;
 		}
 		span {
 			background: url(/img/intro-bg-thin.png) repeat-x;
@@ -353,7 +359,106 @@
 }
 
 .about-page {
+	color: $color-text;
 	.project-header {
-		background-image: url('/img/about/about-hero.png');
+		background-image: url('/img/about/about-hero-bg.png');
+    background-position: bottom;
+    background-size: cover;
+		@include respond-to(handhelds) {
+			&:after {
+				content: none;
+			}
+		}
+		h1 {
+			font-size: 48px;
+			line-height: 56px;
+		}
+		.wrap {
+			@include respond-to(medium-and-above) {
+				width: 80%;
+			}
+		}
+	}
+	.project-description {
+		margin-bottom: 60px;
+	}
+	.section, p {
+		color: $color-text;
+	}
+	.section {
+		margin: 0;
+		&:before {
+			background: rgba(0,0,0,0.1);
+		}
+	}
+	.projects-intro {
+		 padding-bottom: 30px;
+	}
+	.cp-projects {
+		@include clearfix;
+		padding-bottom: 60px;
+		.the-works, .projects-intro {
+			background: white;
+			@include clearfix;
+		}
+		.the-works {
+			padding-bottom: 60px;
+			.photos {
+				@include clearfix;
+				clear: both;
+				margin-top: 30px;
+				@include respond-to(wide-and-above) {
+					margin-top: 0;
+				}
+				img {
+					@include respond-to(handhelds) {
+						margin-bottom: 30px;	
+					}
+					@include respond-to(medium-screens) {
+						margin-bottom: 30px;
+					}
+				}
+			}
+			.wide-photo {			
+				@include respond-to(medium-screens) {
+					width: 100%;
+					img {
+						margin: 0 auto;	
+						display: block;
+					}
+				}	
+				@include respond-to(wide-and-above) {
+					margin-top: -130px;
+				}
+			}
+			.more-info {
+				color: $color-text;
+				position: relative;
+				p {
+					font-size: 14px;
+					line-height: 20px;
+					margin-top: 20px;
+					clear: both;
+				}
+				img {
+					width: 60%;
+					@include respond-to(medium-screens) {
+						margin-bottom: 30px;
+					}
+				}
+				.wrap {
+					@include respond-to(wide-screens) {
+						margin-top: -240px;
+				    position: relative;
+				    top: 320px;
+					}
+					@include respond-to(extra-wide-screenssla) {
+						margin-top: -240px;
+				    position: relative;
+				    top: 520px;
+					}
+				}
+			}
+		}
 	}
 }

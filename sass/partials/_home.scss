@@ -30,6 +30,29 @@
   background: url(/img/intro-bg-thin.png) repeat-x;
 	background-size: contain;
 	@include clearfix;
+	.tagline-wrap {
+    @include respond-to(medium-and-above) {
+    	position: absolute;
+	    width: 100%;
+	    top: 0;
+	    left: 0;
+	    h2 {
+		    height: 100%;
+		    position: absolute;
+		    left: 0;
+	    }
+    }
+    @include respond-to(medium-screens) {
+			padding-top: 27%;
+		}
+		@include respond-to(wide-screens) {
+			padding-top: 30%;
+		}
+		@include respond-to(extra-wide-screens) {
+			padding-top: 38%;
+		}
+    
+	}
 	.title-wrap {
 		margin: 0 auto;
 		// position: absolute;
@@ -69,13 +92,17 @@
 		// margin-top: 300px;
 		font-size: 25px;
 		line-height: 31px;
+		text-align: center;
 		@include respond-to(medium-screens) {
-			margin-top: 120px;
+			// margin-top: 120px;
+			font-size: 20px;
+			line-height: 26px;
 		}
 		@include respond-to(wide-and-above) {
-			margin-top: 300px;
+			// margin-top: 300px;
 		}
 		@include respond-to(medium-and-above) {
+			text-align: left;
 			&:before {
 	      content: "";
 	      display: block;

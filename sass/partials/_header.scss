@@ -65,6 +65,9 @@ nav {
 		line-height: 30px;
 		text-align: center;
 		margin-bottom: 15px;
+		@include respond-to(medium-and-above) {
+			text-align: left;
+		}
 	}
 	nav {
 		margin-top: 0;
@@ -72,6 +75,9 @@ nav {
 	ul {
 		margin: 0;
 		text-align: center;
+		@include respond-to(medium-and-above) {
+			text-align: right;
+		}
 		li {
 		}
 	}

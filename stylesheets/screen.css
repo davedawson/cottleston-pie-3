@@ -469,12 +469,22 @@ nav a.contact em {
   text-align: center;
   margin-bottom: 15px;
 }
+@media only screen and (min-width: 641px) {
+  .header h2 {
+    text-align: left;
+  }
+}
 .header nav {
   margin-top: 0;
 }
 .header ul {
   margin: 0;
   text-align: center;
+}
+@media only screen and (min-width: 641px) {
+  .header ul {
+    text-align: right;
+  }
 }
 .header a {
   color: white;
@@ -571,6 +581,34 @@ footer, section {
   display: table;
   clear: both;
 }
+@media only screen and (min-width: 641px) {
+  .intro .tagline-wrap {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .intro .tagline-wrap h2 {
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .intro .tagline-wrap {
+    padding-top: 27%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .intro .tagline-wrap {
+    padding-top: 30%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .intro .tagline-wrap {
+    padding-top: 38%;
+  }
+}
 .intro .title-wrap {
   margin: 0 auto;
 }
@@ -606,18 +644,18 @@ footer, section {
 .intro h2 {
   font-size: 25px;
   line-height: 31px;
+  text-align: center;
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .intro h2 {
-    margin-top: 120px;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  .intro h2 {
-    margin-top: 300px;
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 @media only screen and (min-width: 641px) {
+  .intro h2 {
+    text-align: left;
+  }
   .intro h2:before {
     content: "";
     display: block;
@@ -1377,6 +1415,10 @@ footer, section {
   text-align: center;
 }
 
+.interior .container {
+  padding: 0;
+}
+
 .project-header {
   background-size: cover;
   background-position: center right;
@@ -1726,6 +1768,7 @@ footer, section {
 }
 .more-projects li h3 {
   display: inline;
+  line-height: 34px;
 }
 .more-projects li span {
   background: url(/img/intro-bg-thin.png) repeat-x;
@@ -1751,6 +1794,122 @@ footer, section {
   padding: 5px;
 }
 
+.about-page {
+  color: rgba(0, 0, 0, 0.8);
+}
 .about-page .project-header {
-  background-image: url("/img/about/about-hero.png");
+  background-image: url("/img/about/about-hero-bg.png");
+  background-position: bottom;
+  background-size: cover;
+}
+@media only screen and (max-width: 640px) {
+  .about-page .project-header:after {
+    content: none;
+  }
+}
+.about-page .project-header h1 {
+  font-size: 48px;
+  line-height: 56px;
+}
+@media only screen and (min-width: 641px) {
+  .about-page .project-header .wrap {
+    width: 80%;
+  }
+}
+.about-page .project-description {
+  margin-bottom: 60px;
+}
+.about-page .section, .about-page p {
+  color: rgba(0, 0, 0, 0.8);
+}
+.about-page .section {
+  margin: 0;
+}
+.about-page .section:before {
+  background: rgba(0, 0, 0, 0.1);
+}
+.about-page .projects-intro {
+  padding-bottom: 30px;
+}
+.about-page .cp-projects {
+  padding-bottom: 60px;
+}
+.about-page .cp-projects::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.about-page .cp-projects .the-works, .about-page .cp-projects .projects-intro {
+  background: white;
+}
+.about-page .cp-projects .the-works::after, .about-page .cp-projects .projects-intro::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.about-page .cp-projects .the-works {
+  padding-bottom: 60px;
+}
+.about-page .cp-projects .the-works .photos {
+  clear: both;
+  margin-top: 30px;
+}
+.about-page .cp-projects .the-works .photos::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 1025px) {
+  .about-page .cp-projects .the-works .photos {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .about-page .cp-projects .the-works .photos img {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .about-page .cp-projects .the-works .photos img {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .about-page .cp-projects .the-works .wide-photo {
+    width: 100%;
+  }
+  .about-page .cp-projects .the-works .wide-photo img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .about-page .cp-projects .the-works .wide-photo {
+    margin-top: -130px;
+  }
+}
+.about-page .cp-projects .the-works .more-info {
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+.about-page .cp-projects .the-works .more-info p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 20px;
+  clear: both;
+}
+.about-page .cp-projects .the-works .more-info img {
+  width: 60%;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .about-page .cp-projects .the-works .more-info img {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .about-page .cp-projects .the-works .more-info .wrap {
+    margin-top: -240px;
+    position: relative;
+    top: 320px;
+  }
 }
