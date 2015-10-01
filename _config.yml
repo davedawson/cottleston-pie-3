@@ -17,3 +17,5 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+
+exclude: [node_modules, package.json, npm-debug.log, Gruntfile.js, scss]

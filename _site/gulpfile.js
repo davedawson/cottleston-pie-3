@@ -4,7 +4,9 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var compass     = require('gulp-compass');
-
+var fs = require("fs");
+var s3 = require("gulp-s3");
+var awsCredentials = JSON.parse(fs.readFileSync('aws.json'));
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -63,3 +65,13 @@ gulp.task('sass', function() {
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
+
+gulp.task('upload', function() {
+  return gulp.src('_site/**')
+      .pipe(s3(awsCredentials, {
+        uploadPath: "/",
+        headers: {
+          'x-amz-acl': 'public-read'
+        }
+      }));
+});
