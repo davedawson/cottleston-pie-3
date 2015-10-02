@@ -3,7 +3,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import url("//hello.myfonts.net/count/25c5fc");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -126,21 +125,6 @@ html, body, * {
  * © 2013 MyFonts Inc
 */
 /* @import must be at top of file, otherwise CSS will not work */
-@font-face {
-  font-family: 'Macha-Book';
-  src: url("/webfonts/25C5FC_0_0.eot");
-  src: url("/webfonts/25C5FC_0_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/25C5FC_0_0.woff") format("woff"), url("webfonts/25C5FC_0_0.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'Macha-Medium';
-  src: url("/webfonts/25C5FC_1_0.eot");
-  src: url("/webfonts/25C5FC_1_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/25C5FC_1_0.woff") format("woff"), url("webfonts/25C5FC_1_0.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'Macha-Thin';
-  src: url("/webfonts/25C5FC_2_0.eot");
-  src: url("/webfonts/25C5FC_2_0.eot?#iefix") format("embedded-opentype"), url("/webfonts/25C5FC_2_0.woff") format("woff"), url("webfonts/25C5FC_2_0.ttf") format("truetype");
-}
 .text-bottom {
   position: absolute;
   bottom: 30px;
@@ -248,10 +232,21 @@ html, body, * {
 .button {
   background: #e82643;
   color: white;
-  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
+  font-family: "macha", Helvetica, Arial, sans-serif;
   text-decoration: none;
   padding: 8px 15px;
   font-size: 16px;
+}
+.button:hover {
+  color: white;
+  background: #981024;
+}
+
+* {
+  transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
 }
 
 html, body, section {
@@ -262,8 +257,9 @@ html, body, section {
 
 body {
   margin: 0;
-  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
+  font-family: "macha", Helvetica, Arial, sans-serif;
   background: #242742;
+  font-weight: 500;
 }
 
 .container {
@@ -286,6 +282,35 @@ body {
 @media only screen and (min-width: 1400px) {
   .container {
     max-width: 1400px;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  font-family: "minion-pro", Georgia, Times, serif;
+  font-weight: bold;
+  color: white;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  h1 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  h1 {
+    font-size: 56px;
+    line-height: 62px;
+    margin-bottom: 10px;
   }
 }
 
@@ -318,7 +343,7 @@ h3.section {
   font-size: 16px;
   letter-spacing: 0.3em;
   color: white;
-  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
+  font-family: "macha", Helvetica, Arial, sans-serif;
   font-weight: bold;
   margin-top: 60px;
   margin-bottom: 30px;
@@ -360,6 +385,11 @@ a {
   color: #e82643;
 }
 
+a:hover {
+  text-decoration: none;
+  color: #981024;
+}
+
 ul, ol {
   margin: 0.6em 0;
   padding: 0;
@@ -393,6 +423,36 @@ abbr {
   text-transform: uppercase;
   font-size: 0.7em;
   letter-spacing: 0.1em;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 10px 0 5px;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 7px 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input[type=submit] {
+  background: #e82643;
+  color: white;
+  font-family: "macha", Helvetica, Arial, sans-serif;
+  border: 0;
+  text-decoration: none;
+  padding: 8px 15px;
+  font-size: 16px;
+}
+
+address {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 nav {
@@ -462,6 +522,9 @@ nav a.contact em {
     transition: all 0.3s ease-in-out;
   }
 }
+nav a:hover {
+  border-bottom: 8px solid rgba(255, 255, 255, 0.3);
+}
 
 .header {
   text-align: center;
@@ -505,7 +568,7 @@ nav a.contact em {
   text-decoration: none;
 }
 .header strong {
-  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
+  font-family: "macha", Helvetica, Arial, sans-serif;
   font-weight: 100;
   background: url(/img/intro-bg-thin.png) repeat-x;
   background-size: 10%;
@@ -1613,6 +1676,8 @@ footer, section {
 }
 .project-header.old-spice {
   background-image: url("/img/projects/old-spice/hero-old-spice.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .project-header.raise {
   background-image: url("/img/projects/raise/hero-raise.jpg");
@@ -1859,7 +1924,7 @@ footer, section {
 .more-projects li a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Macha-medium", Helvetica, Arial, sans-serif;
+  font-family: "macha", Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 20px;
   -moz-transition: all 0.3s ease-in-out;
@@ -2002,11 +2067,18 @@ footer, section {
 }
 .about-page .content h4 {
   color: rgba(0, 0, 0, 0.8);
-  margin: 30px 0 10px;
-  margin: 0;
+  margin: 5px 0 10px;
 }
-.about-page .sidebar img {
-  margin-bottom: 10px;
+@media only screen and (min-width: 1025px) {
+  .about-page .sidebar img {
+    margin-bottom: -40px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .about-page .sidebar .dd-summary {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 60px 15px 15px;
+  }
 }
 .about-page .section {
   clear: both;
@@ -2016,4 +2088,42 @@ footer, section {
   content: "";
   display: table;
   clear: both;
+}
+.about-page .partners li {
+  display: inline;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.about-page .partners li:after {
+  content: "•";
+  color: rgba(0, 0, 0, 0.2);
+  padding: 0 2%;
+}
+.about-page .partners li:last-child:after {
+  content: none;
+  padding: 0;
+}
+
+.contact-page {
+  color: rgba(0, 0, 0, 0.8);
+}
+.contact-page h1 {
+  color: rgba(0, 0, 0, 0.8);
+}
+.contact-page .content {
+  background: white;
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+.contact-page .content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 1025px) {
+  .contact-page .content {
+    padding: 60px 0;
+    margin-bottom: 0px;
+  }
 }

@@ -48,7 +48,7 @@ gulp.task('watch', ['sass'], function() {
 
     gulp.watch("sass/**/*.scss", ['sass']);
     // gulp.watch("*.html").on('change', browserSync.reload);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_projects/*', 'about.html', 'about/*', 'img/*', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_projects/*', 'contact/*', 'about.html', 'about/*', 'img/*', '_includes/*'], ['jekyll-rebuild']);
 });
 
 // Compile sass into CSS & auto-inject into browsers

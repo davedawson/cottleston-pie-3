@@ -120,6 +120,8 @@
 	}
 	&.old-spice {
 		background-image: url('/img/projects/old-spice/hero-old-spice.jpg');
+		background-size: cover;
+		background-position: center;
 	}
 	&.raise {
 		background-image: url('/img/projects/raise/hero-raise.jpg');
@@ -492,13 +494,21 @@
 	.content {
 		h4 {
 			color: $color-text;
-			margin: 30px 0 10px;
-			margin: 0;
+			margin: 5px 0 10px;
 		}	
 	}
 	.sidebar {
 		img {
-			margin-bottom: 10px;
+			@include respond-to(wide-and-above) {
+				margin-bottom: -40px;
+				// border-radius: 50px;
+			}
+		}
+		.dd-summary {
+			@include respond-to(wide-and-above) {
+				background-color: rgba(0,0,0,0.03);
+				padding: 60px 15px 15px;
+			}
 		}
 	}
 	.section {
@@ -506,5 +516,40 @@
 		margin-bottom: 30px;
 		@include clearfix;
 	}
-	
+	.partners {
+		li {
+			display: inline;
+			font-size: 16px;
+			line-height: 20px;
+			font-weight: bold;
+			&:after {
+				content: "•";
+				color: rgba(0,0,0,0.2);
+				padding: 0 2%;
+			}
+			&:last-child {
+				&:after {
+					content: none;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+.contact-page {
+	color: $color-text;
+	h1 {
+		color: $color-text;
+	}
+	.content {
+		background: white;
+		@include clearfix;
+		padding: 30px 0;
+		margin-bottom: 30px;
+		@include respond-to(wide-and-above) {
+			padding: 60px 0;
+			margin-bottom: 6*0px;
+		}
+	}
 }
