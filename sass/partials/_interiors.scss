@@ -486,4 +486,25 @@
 			}
 		}
 	}
+	.story {
+		margin-bottom: 0;
+	}
+	.content {
+		h4 {
+			color: $color-text;
+			margin: 30px 0 10px;
+			margin: 0;
+		}	
+	}
+	.sidebar {
+		img {
+			margin-bottom: 10px;
+		}
+	}
+	.section {
+		clear: both;
+		margin-bottom: 30px;
+		@include clearfix;
+	}
+	
 }

@@ -348,7 +348,12 @@ p {
 }
 p.small {
   font-size: 14px;
+  line-height: 19px;
+}
+p.caption {
+  font-size: 12px;
   line-height: 20px;
+  font-style: italic;
 }
 
 a {
@@ -1991,4 +1996,24 @@ footer, section {
     position: relative;
     top: 320px;
   }
+}
+.about-page .story {
+  margin-bottom: 0;
+}
+.about-page .content h4 {
+  color: rgba(0, 0, 0, 0.8);
+  margin: 30px 0 10px;
+  margin: 0;
+}
+.about-page .sidebar img {
+  margin-bottom: 10px;
+}
+.about-page .section {
+  clear: both;
+  margin-bottom: 30px;
+}
+.about-page .section::after {
+  content: "";
+  display: table;
+  clear: both;
 }
