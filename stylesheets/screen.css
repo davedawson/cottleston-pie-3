@@ -675,8 +675,10 @@ nav a:hover {
   position: relative;
   z-index: 2;
 }
-.hire h2:hover:after {
-  right: -120px;
+@media only screen and (min-width: 1025px) {
+  .hire h2:hover:after {
+    right: -120px;
+  }
 }
 .hire h2:after {
   content: "☞";
@@ -685,6 +687,18 @@ nav a:hover {
   z-index: 1;
   opacity: 0.3;
   transition: all 0.2s linear;
+}
+@media only screen and (max-width: 640px) {
+  .hire h2:after {
+    left: 30%;
+    top: 120px;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .hire h2:after {
+    left: 40%;
+    top: 100px;
+  }
 }
 @media only screen and (min-width: 1025px) {
   .hire h2 {
@@ -697,6 +711,7 @@ nav a:hover {
   }
   .hire h2:after {
     right: -80px;
+    top: auto;
   }
 }
 
@@ -2041,17 +2056,18 @@ footer, section {
   display: table;
   clear: both;
 }
-.about-page .cp-projects .the-works, .about-page .cp-projects .projects-intro, .about-page .cp-projects .get-biked, .about-page .cp-projects .scrtchpd, .about-page .cp-projects .season {
+.about-page .cp-projects .the-works, .about-page .cp-projects .projects-intro, .about-page .cp-projects .get-biked, .about-page .cp-projects .scrtchpd, .about-page .cp-projects .season, .about-page .cp-projects .wednesday, .about-page .cp-projects .songfight {
   background: white;
   padding: 30px;
 }
-.about-page .cp-projects .the-works::after, .about-page .cp-projects .projects-intro::after, .about-page .cp-projects .get-biked::after, .about-page .cp-projects .scrtchpd::after, .about-page .cp-projects .season::after {
+.about-page .cp-projects .the-works::after, .about-page .cp-projects .projects-intro::after, .about-page .cp-projects .get-biked::after, .about-page .cp-projects .scrtchpd::after, .about-page .cp-projects .season::after, .about-page .cp-projects .wednesday::after, .about-page .cp-projects .songfight::after {
   content: "";
   display: table;
   clear: both;
 }
-.about-page .cp-projects .the-works h3, .about-page .cp-projects .projects-intro h3, .about-page .cp-projects .get-biked h3, .about-page .cp-projects .scrtchpd h3, .about-page .cp-projects .season h3 {
+.about-page .cp-projects .the-works h3, .about-page .cp-projects .projects-intro h3, .about-page .cp-projects .get-biked h3, .about-page .cp-projects .scrtchpd h3, .about-page .cp-projects .season h3, .about-page .cp-projects .wednesday h3, .about-page .cp-projects .songfight h3 {
   color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
 }
 .about-page .cp-projects .the-works {
   padding-bottom: 60px;
