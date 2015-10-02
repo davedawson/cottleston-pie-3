@@ -134,6 +134,10 @@
 		max-height: 1000px;
 		overflow: hidden;
 	}
+	.intro-text {
+		position: relative;
+		z-index: 2;
+	}
 	.button {
 		// background: rgba(255,255,255,0.6);
 		margin-left: 20px;
@@ -509,102 +513,3 @@
 	}
 }
 
-.about {
-	background: $color-darkest-blue;
-	padding: 30px 6%;
-	@include respond-to(medium-and-above) {
-		padding: 60px 3%;
-	}
-	@include clearfix;
-	h3 {
-		color: $color-red;
-		font-size: 28px;
-		line-height: 36px;
-		padding: 15px;
-	}
-
-	.label {
-		// background: #f7f7f7;
-		background: rgba(255,255,255,0.95);
-		@include respond-to(wide-and-above) {
-			position: absolute;
-			top: -30px;
-			right: 60px;
-			width: 300px;
-			float: right;
-		}
-	}
-	.cp, .the-works {
-		min-height: 340px;
-	}
-	.cp {
-		// background: url('/img/about/davedawson-blue.jpg');
-		background-position: -220px -160px;
-		margin-bottom: 30px;
-		@include respond-to(medium-and-above) {
-			margin-bottom: 0;
-		}
-	}
-	.the-works {
-		// background: url('/img/about/the-works-blue.jpg');
-		background-position: left center;
-		.label {
-			@include respond-to(wide-and-above) {
-				position: relative;
-				top: 30px;
-				float: left;
-				left: -25%;
-				width: 100%;
-			}
-		}
-	}
-	.button {
-		display: block;
-		text-align: center;
-	}
-}
-.hire {
-	clear: both;
-	margin: 60px auto;
-  float: left;
-  width: 100%;
-	@include respond-to(wide-and-above) {
-		margin: 0;
-	}
-	h2 {
-		text-align: center;
-		@include respond-to(wide-and-above) {
-			text-align: left;
-			width: 46%;
-			margin-left: -3%;
-	    font-size: 4.4em;
-	    line-height: 1.2em;
-	    margin-top: 30px;
-	    z-index: 2;
-	    position: relative;
-	  }
-		@include respond-to(extra-wide-screens) {
-	  	margin-left: -10%;
-	  }	  
-	}
-}
-
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-.parallax__layer--back {
-  transform: translateZ(-1px);
-}

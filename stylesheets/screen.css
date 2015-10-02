@@ -598,6 +598,108 @@ nav a:hover {
   }
 }
 
+.about {
+  background: #07111e;
+  padding: 30px 6%;
+}
+@media only screen and (min-width: 641px) {
+  .about {
+    padding: 60px 3%;
+  }
+}
+.about::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.about h3 {
+  color: #e82643;
+  font-size: 28px;
+  line-height: 36px;
+  padding: 15px;
+}
+.about .label {
+  background: rgba(255, 255, 255, 0.95);
+}
+@media only screen and (min-width: 1025px) {
+  .about .label {
+    position: absolute;
+    top: -30px;
+    right: 60px;
+    width: 300px;
+    float: right;
+  }
+}
+.about .cp, .about .the-works {
+  min-height: 340px;
+}
+.about .cp {
+  background-position: -220px -160px;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 641px) {
+  .about .cp {
+    margin-bottom: 0;
+  }
+}
+.about .the-works {
+  background-position: left center;
+}
+@media only screen and (min-width: 1025px) {
+  .about .the-works .label {
+    position: relative;
+    top: 30px;
+    float: left;
+    left: -25%;
+    width: 100%;
+  }
+}
+.about .button {
+  display: block;
+  text-align: center;
+}
+
+.hire {
+  clear: both;
+  margin: 60px auto;
+  float: left;
+  width: 100%;
+}
+@media only screen and (min-width: 1025px) {
+  .hire {
+    margin: 0;
+  }
+}
+.hire h2 {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.hire h2:hover:after {
+  right: -120px;
+}
+.hire h2:after {
+  content: "☞";
+  position: absolute;
+  font-size: 350%;
+  z-index: 1;
+  opacity: 0.3;
+  transition: all 0.2s linear;
+}
+@media only screen and (min-width: 1025px) {
+  .hire h2 {
+    text-align: left;
+    font-size: 4.4em;
+    line-height: 1.2em;
+    margin-top: 30px;
+    z-index: 2;
+    position: relative;
+  }
+  .hire h2:after {
+    right: -80px;
+  }
+}
+
 .footer {
   padding: 30px 6%;
   text-align: center;
@@ -778,6 +880,10 @@ footer, section {
     max-height: 1000px;
     overflow: hidden;
   }
+}
+.description .intro-text {
+  position: relative;
+  z-index: 2;
 }
 .description .button {
   margin-left: 20px;
@@ -1454,122 +1560,6 @@ footer, section {
 }
 .more-work .project.on-light h4 {
   color: rgba(0, 0, 0, 0.8);
-}
-
-.about {
-  background: #07111e;
-  padding: 30px 6%;
-}
-@media only screen and (min-width: 641px) {
-  .about {
-    padding: 60px 3%;
-  }
-}
-.about::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.about h3 {
-  color: #e82643;
-  font-size: 28px;
-  line-height: 36px;
-  padding: 15px;
-}
-.about .label {
-  background: rgba(255, 255, 255, 0.95);
-}
-@media only screen and (min-width: 1025px) {
-  .about .label {
-    position: absolute;
-    top: -30px;
-    right: 60px;
-    width: 300px;
-    float: right;
-  }
-}
-.about .cp, .about .the-works {
-  min-height: 340px;
-}
-.about .cp {
-  background-position: -220px -160px;
-  margin-bottom: 30px;
-}
-@media only screen and (min-width: 641px) {
-  .about .cp {
-    margin-bottom: 0;
-  }
-}
-.about .the-works {
-  background-position: left center;
-}
-@media only screen and (min-width: 1025px) {
-  .about .the-works .label {
-    position: relative;
-    top: 30px;
-    float: left;
-    left: -25%;
-    width: 100%;
-  }
-}
-.about .button {
-  display: block;
-  text-align: center;
-}
-
-.hire {
-  clear: both;
-  margin: 60px auto;
-  float: left;
-  width: 100%;
-}
-@media only screen and (min-width: 1025px) {
-  .hire {
-    margin: 0;
-  }
-}
-.hire h2 {
-  text-align: center;
-}
-@media only screen and (min-width: 1025px) {
-  .hire h2 {
-    text-align: left;
-    width: 46%;
-    margin-left: -3%;
-    font-size: 4.4em;
-    line-height: 1.2em;
-    margin-top: 30px;
-    z-index: 2;
-    position: relative;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .hire h2 {
-    margin-left: -10%;
-  }
-}
-
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-
-.parallax__layer--back {
-  transform: translateZ(-1px);
 }
 
 .interior .container {
