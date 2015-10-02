@@ -426,9 +426,13 @@
 	.cp-projects {
 		@include clearfix;
 		padding-bottom: 60px;
-		.the-works, .projects-intro {
+		.the-works, .projects-intro, .get-biked, .scrtchpd, .season {
 			background: white;
+			padding: 30px;
 			@include clearfix;
+			h3 {
+				color: $color-text;
+			}
 		}
 		.the-works {
 			padding-bottom: 60px;

@@ -2041,13 +2041,17 @@ footer, section {
   display: table;
   clear: both;
 }
-.about-page .cp-projects .the-works, .about-page .cp-projects .projects-intro {
+.about-page .cp-projects .the-works, .about-page .cp-projects .projects-intro, .about-page .cp-projects .get-biked, .about-page .cp-projects .scrtchpd, .about-page .cp-projects .season {
   background: white;
+  padding: 30px;
 }
-.about-page .cp-projects .the-works::after, .about-page .cp-projects .projects-intro::after {
+.about-page .cp-projects .the-works::after, .about-page .cp-projects .projects-intro::after, .about-page .cp-projects .get-biked::after, .about-page .cp-projects .scrtchpd::after, .about-page .cp-projects .season::after {
   content: "";
   display: table;
   clear: both;
+}
+.about-page .cp-projects .the-works h3, .about-page .cp-projects .projects-intro h3, .about-page .cp-projects .get-biked h3, .about-page .cp-projects .scrtchpd h3, .about-page .cp-projects .season h3 {
+  color: rgba(0, 0, 0, 0.8);
 }
 .about-page .cp-projects .the-works {
   padding-bottom: 60px;
