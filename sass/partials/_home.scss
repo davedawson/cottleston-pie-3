@@ -563,3 +563,28 @@
 		text-align: center;
 	}
 }
+.hire {
+	clear: both;
+	margin: 60px auto;
+  float: left;
+  width: 100%;
+	@include respond-to(wide-and-above) {
+		margin: 0;
+	}
+	h2 {
+		text-align: center;
+		@include respond-to(wide-and-above) {
+			text-align: left;
+			width: 46%;
+			margin-left: -3%;
+	    font-size: 4.4em;
+	    line-height: 1.2em;
+	    margin-top: 30px;
+	    z-index: 2;
+	    position: relative;
+	  }
+		@include respond-to(extra-wide-screens) {
+	  	margin-left: -10%;
+	  }	  
+	}
+}
