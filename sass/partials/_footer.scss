@@ -67,7 +67,8 @@
 		&:hover {
 			&:after {
 				@include respond-to(wide-and-above) {
-					right: -120px;
+					// right: -120px;
+					transform:rotateY(180deg);
 				}
 			}
 		}
@@ -78,8 +79,9 @@
 	    z-index: 1;
 	    opacity: 0.3;
 	    transition: all 0.2s linear; 
+	    transition: translateX(-120px);
 	    @include respond-to(handhelds) {
-	    	left: 30%;
+	    	left: 0%;
 		    top: 120px;
 	    }
       @include respond-to(medium-screens) {

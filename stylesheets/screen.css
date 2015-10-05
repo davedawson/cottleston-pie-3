@@ -438,6 +438,8 @@ input, textarea {
   padding: 7px 10px;
   font-size: 16px;
   line-height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-appearance: none;
 }
 
 input[type=submit] {
@@ -677,7 +679,7 @@ nav a:hover {
 }
 @media only screen and (min-width: 1025px) {
   .hire h2:hover:after {
-    right: -120px;
+    transform: rotateY(180deg);
   }
 }
 .hire h2:after {
@@ -687,10 +689,11 @@ nav a:hover {
   z-index: 1;
   opacity: 0.3;
   transition: all 0.2s linear;
+  transition: translateX(-120px);
 }
 @media only screen and (max-width: 640px) {
   .hire h2:after {
-    left: 30%;
+    left: 0%;
     top: 120px;
   }
 }

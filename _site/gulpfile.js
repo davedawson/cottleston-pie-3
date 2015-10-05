@@ -4,8 +4,9 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var compass     = require('gulp-compass');
-var fs = require("fs");
-var s3 = require("gulp-s3");
+var fs          = require("fs");
+var s3          = require("gulp-s3");
+var minifycss   = require('gulp-minify-css');
 var awsCredentials = JSON.parse(fs.readFileSync('aws.json'));
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -60,6 +61,7 @@ gulp.task('sass', function() {
 		      sass: 'sass'
 		    }))
         // .pipe(sass())
+        .pipe(minifycss())
         .pipe(gulp.dest("_site/stylesheets"))
         .pipe(browserSync.stream());
 });
