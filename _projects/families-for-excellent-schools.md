@@ -43,7 +43,7 @@ lead-in: Families for Excellent Schools is the organization behind the movement 
 			<img src="/img/projects/fes/fes-home.jpg" alt="Families for Excellent Schools homepage" />
 		</div>
 		<div class="screen screen-3">
-			<img src="/img/projects/fes/fes-landing.jpg" alt="Families for Excellent Schools landing page" />
+			<img src="/img/projects/fes/fes-campaign.jpg" alt="Families for Excellent Schools campaign page" />
 		</div>
 	</div>
 </section>

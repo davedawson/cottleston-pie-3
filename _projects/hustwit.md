@@ -34,10 +34,10 @@ lead-in: Gary Hustwit is a filmmaker best known for his design trilogy, includin
 <section class="project-expanded tri-screen">
 	<div class="container">
 		<div class="screen screen-1">
-			<img src="/img/projects/hustwit/hustwit-project.jpg" alt="Hustwit project page" />
+			<img src="/img/projects/hustwit/hustwit-article.jpg" alt="Hustwit article page" />
 		</div>
 		<div class="screen screen-2">
-			<img src="/img/projects/hustwit/hustwit-article.jpg" alt="Hustwit article page" />
+			<img src="/img/projects/hustwit/hustwit-project.jpg" alt="Hustwit project page" />
 		</div>
 		<div class="screen screen-3">
 			<img src="/img/projects/hustwit/hustwit-shop.jpg" alt="Hustwit shop page" />
