@@ -575,6 +575,10 @@ nav a:hover {
   color: white;
   text-decoration: none;
 }
+.header .tagline {
+  margin-right: 10px;
+  padding-bottom: 5px;
+}
 .header strong {
   font-family: "macha", Helvetica, Arial, sans-serif;
   font-weight: 100;
@@ -583,7 +587,7 @@ nav a:hover {
   background-position: 0 bottom;
   padding: 12px 15px;
   font-size: 16px;
-  margin-left: 10px;
+  white-space: nowrap;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -820,6 +824,11 @@ footer, section {
 @media only screen and (min-width: 1400px) {
   .intro .tagline-wrap {
     padding-top: 38%;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .intro .tagline-wrap {
+    padding-top: 32%;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 831px) {

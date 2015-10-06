@@ -97,6 +97,10 @@ nav {
 		color: white;
 		text-decoration: none;
 	}
+	.tagline {
+		margin-right: 10px;
+		padding-bottom: 5px;
+	}
 	strong {
 		font-family: $typeSans;
 		font-weight: 100;
@@ -106,7 +110,7 @@ nav {
 		background-position: 0 bottom;
 		padding: 12px 15px;
 		font-size: 16px;
-		margin-left: 10px;
+		white-space: nowrap;
 		@include transition(all 0.3s ease-in-out);
 		&:hover {
 			background-position: 0 -50px;

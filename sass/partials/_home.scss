@@ -52,6 +52,9 @@
 		@include respond-to(extra-wide-screens) {
 			padding-top: 38%;
 		}
+		@media only screen and (min-width: 1400px) and (max-width: 1600px) { 
+			padding-top: 32%;	
+		}
 		@media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: 831px) { 
 			padding-top: 23%;
 			h2 {
