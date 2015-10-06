@@ -7,7 +7,8 @@ var compass     = require('gulp-compass');
 var fs          = require("fs");
 var s3          = require("gulp-s3");
 var minifycss   = require('gulp-minify-css');
-var awsCredentials = JSON.parse(fs.readFileSync('aws.json'));
+// var awsCredentials = JSON.parse(fs.readFileSync('aws.json'));
+var creds       = require('./aws.json');
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -70,7 +71,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 
 gulp.task('upload', function() {
   return gulp.src('_site/**')
-      .pipe(s3(awsCredentials, {
+      .pipe(s3(creds, {
         uploadPath: "/",
         headers: {
           'x-amz-acl': 'public-read'

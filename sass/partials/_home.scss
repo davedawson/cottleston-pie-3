@@ -145,6 +145,7 @@
 	.button {
 		// background: rgba(255,255,255,0.6);
 		margin-left: 20px;
+		white-space:nowrap;
 		border-bottom: 2px solid white;
 		// color: $color-red;
 		@include respond-to(handhelds) {
@@ -270,6 +271,14 @@
 		display: table;
 		overflow: hidden;
 		// width: 100%;
+		&:hover {
+			.title-wrap {
+				padding-bottom: 15px;
+			}
+			&:after {
+				// @include left-to-right-light-gradient;
+			}
+		}
 		@include respond-to(handhelds) {
 			width: 100%;
 			min-height: 300px;

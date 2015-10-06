@@ -922,6 +922,7 @@ footer, section {
 }
 .description .button {
   margin-left: 20px;
+  white-space: nowrap;
   border-bottom: 2px solid white;
 }
 @media only screen and (max-width: 640px) {
@@ -1079,6 +1080,9 @@ footer, section {
   background-size: cover;
   display: table;
   overflow: hidden;
+}
+.more-work .project:hover .title-wrap {
+  padding-bottom: 15px;
 }
 @media only screen and (max-width: 640px) {
   .more-work .project {
@@ -1507,7 +1511,7 @@ footer, section {
   height: 100%;
   left: 0;
   z-index: 1;
-  height: 500px;
+  height: 100%;
   width: 50%;
   width: 100%;
 }
