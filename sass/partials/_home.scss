@@ -52,6 +52,12 @@
 		@include respond-to(extra-wide-screens) {
 			padding-top: 38%;
 		}
+		@media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: 831px) { 
+			padding-top: 23%;
+			h2 {
+				font-size: 19px;
+			}
+		}
     
 	}
 	.title-wrap {
@@ -119,8 +125,7 @@
 .description {
 	background: #b80f4a;
 	padding: 30px 6%;
-	@include clearfix;
-	
+	@include clearfix;	
 	@include respond-to(medium-screens) {
 		margin-top: -73px;
 		padding: 100px 3%;
@@ -196,6 +201,9 @@
 		.project-2 {
 			position: absolute;
 			top: 370px;
+			@media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: 831px) { 
+				top: 550px;
+			}
 			.ipad {
 				position: relative;
 				@include respond-to(medium-and-above) {
@@ -251,7 +259,8 @@
 		text-decoration: none;
 		position: relative;
 		display: block;
-		min-height: 500px;
+		// min-height: 500px;
+		height: 500px;
 		padding: 30px;
 		background: #000;
 		border-radius: $radius;
@@ -264,6 +273,7 @@
 		@include respond-to(handhelds) {
 			width: 100%;
 			min-height: 300px;
+			height: auto;
 			margin: 30px auto;
 	    background-size: cover;
       padding: 15px;
@@ -273,7 +283,8 @@
 			}
 		}
 		@include respond-to(medium-screens) {
-			min-height: 300px;
+			// min-height: 300px;
+			height: 300px;
 		}
 		h3 {
 			@include respond-to(handhelds) {
@@ -302,6 +313,7 @@
 			}
 		}
 		&.wide {
+			height: 300px;
 			min-height: 300px;
 			width: 100%;
 			.title-wrap {
@@ -398,7 +410,7 @@
 			// }
 			@include respond-to(handhelds) {
 		    background-size: cover;
-		    background-position: -120px 0;
+        background-position: center right;
 			}
 			&:after {
 				content: "";

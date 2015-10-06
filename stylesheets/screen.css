@@ -677,12 +677,15 @@ nav a:hover {
   position: relative;
   z-index: 2;
 }
+.hire h2 a:hover:after {
+  transform: rotateZ(240deg);
+}
 @media only screen and (min-width: 1025px) {
-  .hire h2:hover:after {
+  .hire h2 a:hover:after {
     transform: rotateY(180deg);
   }
 }
-.hire h2:after {
+.hire h2 a:after {
   content: "☞";
   position: absolute;
   font-size: 350%;
@@ -690,15 +693,21 @@ nav a:hover {
   opacity: 0.3;
   transition: all 0.2s linear;
   transition: translateX(-120px);
+  color: white;
+}
+@media only screen and (min-width: 1025px) {
+  .hire h2 a:after {
+    right: -150px;
+  }
 }
 @media only screen and (max-width: 640px) {
-  .hire h2:after {
+  .hire h2 a:after {
     left: 0%;
     top: 120px;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
-  .hire h2:after {
+  .hire h2 a:after {
     left: 40%;
     top: 100px;
   }
@@ -811,6 +820,14 @@ footer, section {
 @media only screen and (min-width: 1400px) {
   .intro .tagline-wrap {
     padding-top: 38%;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 831px) {
+  .intro .tagline-wrap {
+    padding-top: 23%;
+  }
+  .intro .tagline-wrap h2 {
+    font-size: 19px;
   }
 }
 .intro .title-wrap {
@@ -978,6 +995,11 @@ footer, section {
   position: absolute;
   top: 370px;
 }
+@media only screen and (min-width: 641px) and (max-width: 831px) {
+  .description .featured-work .project-2 {
+    top: 550px;
+  }
+}
 .description .featured-work .project-2 .ipad {
   position: relative;
 }
@@ -1048,7 +1070,7 @@ footer, section {
   text-decoration: none;
   position: relative;
   display: block;
-  min-height: 500px;
+  height: 500px;
   padding: 30px;
   background: #000;
   border-radius: 4px;
@@ -1062,6 +1084,7 @@ footer, section {
   .more-work .project {
     width: 100%;
     min-height: 300px;
+    height: auto;
     margin: 30px auto;
     background-size: cover;
     padding: 15px;
@@ -1093,7 +1116,7 @@ footer, section {
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .more-work .project {
-    min-height: 300px;
+    height: 300px;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -1127,6 +1150,7 @@ footer, section {
   }
 }
 .more-work .project.wide {
+  height: 300px;
   min-height: 300px;
   width: 100%;
 }
@@ -1327,7 +1351,7 @@ footer, section {
 @media only screen and (max-width: 640px) {
   .more-work .project.fes {
     background-size: cover;
-    background-position: -120px 0;
+    background-position: center right;
   }
 }
 .more-work .project.fes:after {
@@ -2162,6 +2186,17 @@ footer, section {
   content: "";
   display: table;
   clear: both;
+}
+@media only screen and (min-width: 1025px) {
+  .about-page .section .d2 {
+    margin-left: -30px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .about-page .lead-in {
+    width: 74.23095703%;
+    margin-bottom: 30px;
+  }
 }
 .about-page .partners li {
   display: inline;

@@ -520,6 +520,17 @@
 		clear: both;
 		margin-bottom: 30px;
 		@include clearfix;
+		.d2 {
+			@include respond-to(wide-and-above) {
+				margin-left: -30px;
+			}
+		}
+	}
+	.lead-in {
+		@include respond-to(extra-wide-screens) {
+	    width: 74.23095703%;
+	    margin-bottom: 30px;
+		}
 	}
 	.partners {
 		li {
