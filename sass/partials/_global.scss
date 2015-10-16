@@ -19,7 +19,6 @@ body {
 }
 
 .container { 
-  
   position: relative;
   margin: 0 auto;
   @include respond-to(handhelds) {
@@ -38,11 +37,6 @@ body {
   @include respond-to(extra-wide-screens) {
     max-width: 1400px;
   }
-  // @include respond-to(medium-screens) {
-  //   max-width: 800px;
-  // }
-  // margin: 0 5%;
-  // @include clearfix;
 }
 
 // Type Styles
@@ -151,9 +145,7 @@ ul, ol {
 }
 ul li, ol li {
   list-style-type: none;
-  // margin: 15px 0 15px;
   color: #fff;
-  // font-size: 18px;
   @include respond-to(handhelds) {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(wide-screens) {  }

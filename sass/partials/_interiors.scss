@@ -9,7 +9,6 @@
 	background-position: center right;
 	padding-top: 80px;
 	position: relative;
-	// @include respond-to(handhelds) {
 	@include respond-to(medium-screens) {
 		padding-top: 200px;
 	}
@@ -32,7 +31,7 @@
 		  display: inline-block;
 		  height: 100%;
 		  vertical-align: middle;
-		  margin-right: -0.25em; /* Adjusts for spacing */
+		  margin-right: -0.25em;
 	  }
 	  &:after {
 	  	content: none;
@@ -61,15 +60,7 @@
 	    margin-bottom: 10px;
 	  }
 	}
-	h3 {
-		// color: $color-text;
-		
-		@include respond-to(medium-screens) {
-	  }
-	  @include respond-to(wide-screens) {
-	  //   font-size: 48px;
-			// line-height: 56px;
-	  }
+	h3 {		
 	  @include respond-to(extra-wide-screens) {
 			font-size: 38px;
 		  line-height: 46px;
@@ -214,10 +205,8 @@
 }
 
 .project-expanded {
-	// background: #192030;
 	position: relative;
 	z-index: 2;
-	// top: -250px;
 	@include clearfix;
 	img {
 		filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
@@ -238,7 +227,6 @@
 		.screen-2 {
 			top: -60px;
 			z-index: 2;
-			// width: 100%;
 			position: relative;
 			img {
 				margin: 0 auto;
@@ -294,7 +282,6 @@
 			top: -60px;
 			z-index: 2;
 			right: -29%;
-			// width: 100%;
 			position: relative;
 			img {
 				margin: 0 auto;
@@ -368,14 +355,12 @@
 			color: rgba(255,255,255,0.7);
 			font-family: $typeSans;
 			font-weight: 500;
-			// background: $color-red;
 			font-size: 20px;
 			@include transition(all 0.3s ease-in-out);
 			&:hover {
 				background: url(/img/intro-bg-thin.png) repeat-x;
 				background-size: 10%;
 				background-position: 0 bottom;
-				// padding: 12px 15px;
 				padding: 5px;
 			}
 		}
@@ -393,7 +378,7 @@
 		  display: inline-block;
 		  height: 100%;
 		  vertical-align: middle;
-		  margin-right: -0.25em; /* Adjusts for spacing */
+		  margin-right: -0.25em;
 	  }
 		&:after {
 			content: none;
@@ -506,7 +491,6 @@
 		img {
 			@include respond-to(wide-and-above) {
 				margin-bottom: -40px;
-				// border-radius: 50px;
 			}
 		}
 		.dd-summary {

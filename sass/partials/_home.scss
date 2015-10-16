@@ -26,8 +26,6 @@
 
 .intro {
 	margin: 0 auto;
-	// background: url(/img/intro-bg.jpg) repeat-x; 
-  // background: url(/img/intro-bg-thin.png) repeat-x;
 	background-size: contain;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5a005+0,f69d05+3,f79d08+3,f49c07+4,f69709+9,f5930c+11,f3920a+11,f5940c+11,f49209+12,f4920d+12,f48d0d+17,f28812+21,f48114+24,f18113+24,f38015+25,f27d16+28,f1701c+34,f06d1f+38,f06520+41,f1671f+41,ee6322+43,ef5f23+45,f05f26+46,ee5d24+46,ee5b25+47,ef5c28+47,ee5b25+47,f05a27+48,ed5b27+48,ef5927+48,ed5627+50,ef562a+50,ef512c+54,ec4c2c+56,ee4a2e+57,eb4a2d+57,ee4a2f+57,ec4630+60,ef4631+60,ec4630+60,ec4231+61,ec4034+64,ea3c35+65,ed3c36+65,eb3935+67,ec3a38+67,ea3836+67,ea3637+69,eb373a+69,e93538+69,ec353a+70,e92d3b+74,e92f3d+74,e82b3d+75,ea2b3d+77,e9293d+77,e92740+78,e92741+78,e8263e+78,e92741+78,e92741+79,ea243f+79,e82641+80,e71d43+86,e71e45+87,e91b45+87,e71d45+87,e91c47+87,e81b44+88,e81a48+90,e91747+90,e71846+90,e81849+91,e61846+91,e71749+92,e81349+96,e7124c+97,e7124c+98,e61149+98,e7124c+98,e61149+99,e7124c+99,e6114b+100 */
 	background: #f5a005; /* Old browsers */
@@ -108,17 +106,12 @@
 		}
 	}
 	h2 {
-		// margin-top: 300px;
 		font-size: 25px;
 		line-height: 31px;
 		text-align: center;
 		@include respond-to(medium-screens) {
-			// margin-top: 120px;
 			font-size: 20px;
 			line-height: 26px;
-		}
-		@include respond-to(wide-and-above) {
-			// margin-top: 300px;
 		}
 		@include respond-to(medium-and-above) {
 			text-align: left;
@@ -155,11 +148,9 @@
 		z-index: 2;
 	}
 	.button {
-		// background: rgba(255,255,255,0.6);
 		margin-left: 20px;
 		white-space:nowrap;
 		border-bottom: 2px solid white;
-		// color: $color-red;
 		@include respond-to(handhelds) {
 			display: block;
 			text-align: center;
@@ -228,7 +219,6 @@
 					right: 140px;
 				}
 				@include respond-to(extra-wide-screens) {
-					// margin-left: -240px;
 					left: 0;
 				}
 			}
@@ -272,7 +262,6 @@
 		text-decoration: none;
 		position: relative;
 		display: block;
-		// min-height: 500px;
 		height: 500px;
 		padding: 30px;
 		background: #000;
@@ -286,9 +275,6 @@
 		&:hover {
 			.title-wrap {
 				padding-bottom: 15px;
-			}
-			&:after {
-				// @include left-to-right-light-gradient;
 			}
 		}
 		@include respond-to(handhelds) {
@@ -304,7 +290,6 @@
 			}
 		}
 		@include respond-to(medium-screens) {
-			// min-height: 300px;
 			height: 300px;
 		}
 		h3 {
@@ -507,7 +492,6 @@
 			}
 		}
 		.title-wrap {
-			// @include vertical-align;
 			position: absolute;
 			bottom: 15px;
 			left: 15px;
@@ -538,10 +522,6 @@
 				color: $color-text
 			}
 		}
-	}
-	.wrap {
-		// @include center(y);
-		// @include vertical-align;
 	}
 }
 

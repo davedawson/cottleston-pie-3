@@ -1693,7 +1693,6 @@ footer, section {
     height: 100%;
     vertical-align: middle;
     margin-right: -0.25em;
-    /* Adjusts for spacing */
   }
   .project-header:after {
     content: none;
@@ -2075,7 +2074,6 @@ footer, section {
   height: 100%;
   vertical-align: middle;
   margin-right: -0.25em;
-  /* Adjusts for spacing */
 }
 .about-page .project-header:after {
   content: none;
