@@ -12,9 +12,9 @@ lead-in: Raising and enforcing the wage to $15 will transform the LA region, cre
 
 {% contentfor description %}
 	
-	<p>On a mission to bring a livable wage to Los Angeles, Raise the Wage works on the ground with community activists to push for the minimum wage to be raised to $15.</p>
+<p>On a mission to bring a livable wage to Los Angeles, Raise the Wage works on the ground with community activists to push for the minimum wage to be raised to $15.</p>
 
-	<p> Cottleston Pie collaborated with Swell and Patronage to bring their campaign strategy to life. We created the branding for the campaign and translated that brand into the website design. </p>
+<p> Cottleston Pie collaborated with Swell and Patronage to bring their campaign strategy to life. We created the branding for the campaign and translated that brand into the website design. </p>
 
 {% endcontentfor %}
 

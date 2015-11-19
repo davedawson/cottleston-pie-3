@@ -12,9 +12,9 @@ lead-in: Gary Hustwit is a filmmaker best known for his design trilogy, includin
 
 {% contentfor description %}
 	
-	<p>Gary Hustwit approached Cottleston Pie to help wrangle in his many projects into one cohesive website. Each film and book of Gary’s was originally housed under it’s own website and domain name.</p>
+<p>Gary Hustwit approached Cottleston Pie to help wrangle in his many projects into one cohesive website. Each film and book of Gary’s was originally housed under it’s own website and domain name.</p>
 
-	<p>We collaborated with Gary to create a website that allowed all of his projects to live under one roof. We also created a flexible system for future projects, which can easily be added to the website. </p>
+<p>We collaborated with Gary to create a website that allowed all of his projects to live under one roof. We also created a flexible system for future projects, which can easily be added to the website. </p>
 
 {% endcontentfor %}
 

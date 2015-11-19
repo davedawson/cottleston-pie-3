@@ -12,9 +12,9 @@ lead-in: Published by <em>The Film Society of Lincoln Center</em>, <em>Film Comm
 
 {% contentfor description %}
 	
-	<p><em>Film Comment</em> is a bi-monthly printed magazine published by <em>The Film Society of Lincoln Center</em>. Cottleston Pie was tasked with creating a website that allows the publication to feature more printed content online, as well as publish exclusive online content.</p>
-	<p>Approaching the project from a mobile first perspective, we completely stripped out the original site structure and started from scratch, reorganizing and creating content types and labels that make sense for the online version of a print magazine.</p>
-	<p>Subtle design elements tie the visuals of the site to the printed magazine, but allow for much more flexiblility to showcase some of the beautiful imagery and quirky writing of the magazine.</p>
+<p><em>Film Comment</em> is a bi-monthly printed magazine published by <em>The Film Society of Lincoln Center</em>. Cottleston Pie was tasked with creating a website that allows the publication to feature more printed content online, as well as publish exclusive online content.</p>
+<p>Approaching the project from a mobile first perspective, we completely stripped out the original site structure and started from scratch, reorganizing and creating content types and labels that make sense for the online version of a print magazine.</p>
+<p>Subtle design elements tie the visuals of the site to the printed magazine, but allow for much more flexiblility to showcase some of the beautiful imagery and quirky writing of the magazine.</p>
 
 {% endcontentfor %}
 
