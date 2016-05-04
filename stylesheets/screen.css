@@ -1099,7 +1099,7 @@ footer, section {
   height: 500px;
   padding: 30px;
   background: #000;
-  border-radius: 4px;
+  border-radius: 5px;
   margin-bottom: 30px;
   background: #333;
   background-size: cover;
@@ -1108,6 +1108,33 @@ footer, section {
 }
 .more-work .project:hover .title-wrap {
   padding-bottom: 15px;
+}
+.more-work .project:hover:before {
+  opacity: 0.1;
+}
+.more-work .project:hover h3 {
+  bottom: 8px;
+}
+.more-work .project:before {
+  position: absolute;
+  left: -50px;
+  z-index: 1;
+  display: block;
+  background-size: cover;
+  width: 125%;
+  height: 125%;
+  -webkit-filter: blur(16px);
+  -moz-filter: blur(16px);
+  -o-filter: blur(16px);
+  -ms-filter: blur(16px);
+  filter: blur(16px);
+  -webkit-transition: -webkit-opacity 0.5s ease;
+  -moz-transition: -moz-opacity 0.5s ease;
+  -o-transition: -o-opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  top: -50px;
+  -webkit-transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 @media only screen and (max-width: 640px) {
   .more-work .project {
@@ -1148,6 +1175,23 @@ footer, section {
     height: 300px;
   }
 }
+.more-work .project h3 {
+  font-family: "macha", Helvetica, Arial, sans-serif;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin: 30px auto;
+  width: 75%;
+  -webkit-transition: bottom .2s ease;
+  -moz-transition: bottom .2s ease;
+  -o-transition: bottom .2s ease;
+  transition: bottom .2s ease;
+  position: relative;
+  font-weight: bold;
+  opacity: 0.95;
+  margin-top: 0;
+  top: 50px;
+}
 @media only screen and (max-width: 640px) {
   .more-work .project h3 {
     font-size: 26px;
@@ -1162,8 +1206,13 @@ footer, section {
 }
 @media only screen and (min-width: 1025px) {
   .more-work .project h3 {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 22px;
+    line-height: 28px;
+    position: absolute;
+    top: auto;
+    bottom: 0px;
+    width: 100%;
+    padding: 0 25%;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
@@ -1174,8 +1223,10 @@ footer, section {
 }
 @media only screen and (min-width: 1025px) {
   .more-work .project.small h3 {
-    font-size: 34px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 24px;
+    width: 100%;
+    padding: 0 10%;
   }
 }
 .more-work .project.wide {
@@ -1192,9 +1243,14 @@ footer, section {
     width: 90%;
   }
 }
+.more-work .project.wide .logo {
+  max-width: 250px;
+}
 .more-work .project.filmlinc {
   background: url("/img/projects/home/filmlinc.jpg") no-repeat;
-  background-size: cover;
+}
+.more-work .project.filmlinc .logo {
+  background-image: url("/img/logos/filmlinc.svg");
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.filmlinc {
@@ -1226,14 +1282,24 @@ footer, section {
   width: 50%;
   width: 100%;
 }
+.more-work .project.filmlinc:before {
+  background-image: url(/img/projects/home/filmlinc.jpg);
+}
 .more-work .project.filmcomment {
   background: url("/img/projects/home/filmcomment.jpg") no-repeat;
-  background-position: -230px 0px;
+  background-position: right;
+}
+.more-work .project.filmcomment:before {
+  background-image: url("/img/projects/home/filmcomment.jpg");
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.filmcomment {
     background-position: -270px -180px;
   }
+}
+.more-work .project.filmcomment .logo {
+  background-image: url("/img/logos/film-comment.svg");
+  width: 80%;
 }
 .more-work .project.filmcomment:after {
   content: "";
@@ -1263,11 +1329,17 @@ footer, section {
   background: url("/img/projects/home/te.jpg") no-repeat;
   background-position: -150px -100px;
 }
+.more-work .project.tackleebola:before {
+  background-image: url("/img/projects/home/te.jpg");
+}
 @media only screen and (max-width: 640px) {
   .more-work .project.tackleebola {
     background-position: 0;
     background-size: cover;
   }
+}
+.more-work .project.tackleebola .logo {
+  background-image: url("/img/logos/tackle-ebola.svg");
 }
 .more-work .project.tackleebola:after {
   content: "";
@@ -1297,6 +1369,9 @@ footer, section {
   background: url("/img/projects/home/oldspice.jpg") no-repeat;
   background-position: -350px bottom;
 }
+.more-work .project.oldspice:before {
+  background-image: url("/img/projects/home/oldspice.jpg");
+}
 @media only screen and (max-width: 640px) {
   .more-work .project.oldspice {
     background-position: -350px -210px;
@@ -1306,6 +1381,9 @@ footer, section {
   .more-work .project.oldspice {
     background-position: -350px -210px;
   }
+}
+.more-work .project.oldspice .logo {
+  background-image: url("/img/logos/old-spice.svg");
 }
 .more-work .project.oldspice:after {
   content: "";
@@ -1335,6 +1413,9 @@ footer, section {
   background: url("/img/projects/home/raise-the-wage.jpg") no-repeat;
   background-position: -150px -100px;
 }
+.more-work .project.raise:before {
+  background-image: url("/img/projects/home/raise-the-wage.jpg");
+}
 .more-work .project.raise:after {
   content: "";
   background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
@@ -1359,9 +1440,16 @@ footer, section {
   height: 500px;
   width: 100%;
 }
+.more-work .project.raise .logo {
+  background-image: url("/img/logos/raise-the-wage.svg");
+  width: 44%;
+}
 .more-work .project.nextgen {
   background: url("/img/projects/home/nextgen.jpg") no-repeat;
   background-size: cover;
+}
+.more-work .project.nextgen:before {
+  background-image: url("/img/projects/home/nextgen.jpg");
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.nextgen {
@@ -1373,9 +1461,53 @@ footer, section {
     padding-left: 50%;
   }
 }
+.more-work .project.nextgen .logo {
+  background-image: url("/img/logos/nextgen.png");
+  height: 80px;
+  min-height: 70px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project.nextgen .logo {
+    float: right;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project.nextgen h3 {
+    text-align: right;
+    padding: 0;
+  }
+}
+.more-work .project.nextgen:after {
+  content: "";
+  background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(43%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  /* IE6-9 */
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  z-index: 1;
+  height: 500px;
+  width: 100%;
+}
 .more-work .project.fes {
   background: url("/img/projects/home/fes.jpg") no-repeat;
   background-size: cover;
+}
+.more-work .project.fes:before {
+  background-image: url("/img/projects/home/fes.jpg");
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.fes {
@@ -1407,18 +1539,82 @@ footer, section {
   height: 500px;
   width: 100%;
 }
+.more-work .project.fes .logo {
+  background-image: url("/img/logos/fes.svg");
+}
 .more-work .project.feast {
   background: url("/img/projects/home/the-feast.jpg") no-repeat;
+}
+.more-work .project.feast:before {
+  background-image: url("/img/projects/home/the-feast.jpg");
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.feast {
     background-size: cover;
   }
 }
+.more-work .project.feast .logo {
+  background-image: url("/img/logos/the-feast.svg");
+}
+.more-work .project.feast:after {
+  content: "";
+  background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(43%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  /* IE6-9 */
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  z-index: 1;
+  height: 500px;
+  width: 100%;
+}
 .more-work .project.hustwit {
   background: url("/img/projects/home/hustwit.jpg") no-repeat;
   text-align: center;
   background-position: center bottom;
+}
+.more-work .project.hustwit:before {
+  background-image: url("/img/projects/home/hustwit.jpg");
+}
+.more-work .project.hustwit:after {
+  content: "";
+  background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(43%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  /* IE6-9 */
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  z-index: 1;
+  height: 500px;
+  width: 100%;
+}
+.more-work .project.hustwit .logo {
+  background-image: url("/img/logos/hustwit.svg");
+  max-width: 330px;
 }
 .more-work .project.hustwit:after {
   content: "";
@@ -1447,6 +1643,9 @@ footer, section {
 .more-work .project.ndnf {
   background: url("/img/projects/home/ndnf.jpg") no-repeat;
 }
+.more-work .project.ndnf:before {
+  background-image: url("/img/projects/home/ndnf.jpg");
+}
 .more-work .project.ndnf:after {
   content: "";
   background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
@@ -1471,13 +1670,24 @@ footer, section {
   height: 500px;
   width: 100%;
 }
+.more-work .project.ndnf .logo {
+  background-image: url("/img/logos/ndnf.svg");
+}
 .more-work .project.avicii {
   background: url("/img/projects/home/avicii.jpg") no-repeat;
   background-size: cover;
 }
+.more-work .project.avicii:before {
+  background-image: url("/img/projects/home/avicii.jpg");
+}
 @media only screen and (max-width: 640px) {
   .more-work .project.avicii {
+    text-align: center;
     background-position: -410px 0;
+  }
+  .more-work .project.avicii h3 {
+    text-align: center;
+    padding: 0 20%;
   }
 }
 .more-work .project.avicii:after {
@@ -1507,8 +1717,19 @@ footer, section {
 .more-work .project.avicii .title-wrap {
   width: 60%;
 }
+.more-work .project.avicii .logo {
+  background-image: url("/img/logos/avicii.svg");
+  float: left;
+}
+.more-work .project.avicii h3 {
+  text-align: left;
+  padding: 0;
+}
 .more-work .project.littlebits {
   background: url("/img/projects/home/littlebits.jpg") no-repeat;
+}
+.more-work .project.littlebits:before {
+  background-image: url("/img/projects/home/littlebits.jpg");
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.littlebits {
@@ -1540,9 +1761,15 @@ footer, section {
   width: 50%;
   width: 100%;
 }
+.more-work .project.littlebits .logo {
+  background-image: url("/img/logos/littlebits.svg");
+}
 .more-work .project.fourseasons {
   background: url("/img/projects/home/fourseasons.jpg") no-repeat;
   background-size: cover;
+}
+.more-work .project.fourseasons:before {
+  background-image: url("/img/projects/home/fourseasons.jpg");
 }
 @media only screen and (max-width: 640px) {
   .more-work .project.fourseasons {
@@ -1573,33 +1800,8 @@ footer, section {
   height: 500px;
   width: 100%;
 }
-.more-work .project.ndnf {
-  background: url("/img/projects/home/ndnf.jpg") no-repeat;
-  background-size: cover;
-}
-.more-work .project.ndnf:after {
-  content: "";
-  background: -moz-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(43%, transparent), color-stop(100%, rgba(0, 0, 0, 0.65)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, transparent 0%, transparent 43%, rgba(0, 0, 0, 0.65) 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.65) 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
-  /* IE6-9 */
-  position: absolute;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  z-index: 1;
-  height: 500px;
-  width: 100%;
+.more-work .project.fourseasons .logo {
+  background-image: url("/img/logos/four-seasons.svg");
 }
 .more-work .project .title-wrap {
   position: absolute;
@@ -1631,6 +1833,34 @@ footer, section {
 }
 .more-work .project.on-light h4 {
   color: rgba(0, 0, 0, 0.8);
+}
+.more-work .project .wrap {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+}
+.more-work .project .wrap:before {
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.2);
+}
+.more-work .project .logo {
+  width: 60%;
+  display: block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  min-height: 150px;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0px 0px 45px rgba(0, 0, 0, 0.3));
 }
 
 .interior .container {
