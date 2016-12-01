@@ -349,8 +349,8 @@
 				line-height: 24px;
 			}
 			@include respond-to(medium-screens) {
-				font-size: 32px;
-				line-height: 36px;
+				font-size: 18px;
+				line-height: 24px;
 			}
 			@include respond-to(wide-and-above) {
 				font-size: 22px;
@@ -367,8 +367,8 @@
 		&.small {
 			h3 {
 				@include respond-to(medium-screens) {
-					font-size: 26px;
-					line-height: 30px;
+					font-size: 18px;
+					line-height: 24px;
 				}
 				@include respond-to(wide-and-above) {
 					font-size: 18px;
@@ -511,10 +511,18 @@
 			    float: right;
 			  }
 			}
+			@include respond-to(medium-screens) {
+				.logo {
+					float: none;
+				}
+			}
 			h3 {
 				@include respond-to(medium-and-above) {
 					text-align: right;
 					padding: 0;
+				}
+				@include respond-to(medium-screens) {
+					text-align: center;
 				}
 			}
 			&:after {
@@ -623,11 +631,17 @@
 				@include respond-to(handhelds) {
 					float: none;
 				}
+				@include respond-to(medium-screens) {
+					float: none;
+				}
 			}
 			h3 {
 				text-align: left;
 				padding: 0;
 				@include respond-to(handhelds) {
+					text-align: center;
+				}
+				@include respond-to(medium-screens) {
 					text-align: center;
 				}
 			}
@@ -736,7 +750,7 @@
 	}
 	.stacked {
 		display: block;
-		margin-bottom: 40px;
+		margin: 0 auto 40px;
 		@media all and (min-width: 1251px) {
 			width: 48%;
 			float: left;

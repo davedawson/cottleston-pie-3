@@ -1218,8 +1218,8 @@ footer, section {
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .more-work .project h3 {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -1235,8 +1235,8 @@ footer, section {
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .more-work .project.small h3 {
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -1490,10 +1490,20 @@ footer, section {
     float: right;
   }
 }
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project.nextgen .logo {
+    float: none;
+  }
+}
 @media only screen and (min-width: 641px) {
   .more-work .project.nextgen h3 {
     text-align: right;
     padding: 0;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project.nextgen h3 {
+    text-align: center;
   }
 }
 .more-work .project.nextgen:after {
@@ -1744,11 +1754,21 @@ footer, section {
     float: none;
   }
 }
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project.avicii .logo {
+    float: none;
+  }
+}
 .more-work .project.avicii h3 {
   text-align: left;
   padding: 0;
 }
 @media only screen and (max-width: 640px) {
+  .more-work .project.avicii h3 {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
   .more-work .project.avicii h3 {
     text-align: center;
   }
@@ -1901,7 +1921,7 @@ footer, section {
 }
 .logo-bar .stacked {
   display: block;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
 }
 @media all and (min-width: 1251px) {
   .logo-bar .stacked {
