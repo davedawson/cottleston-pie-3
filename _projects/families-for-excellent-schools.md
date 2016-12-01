@@ -5,7 +5,7 @@ path: /projects/families-for-excellent-schools
 class: fes
 role: Project Lead, Creative Direction, Design
 team: Cottleston Pie, Patronage
-live-url: familiesforexcellentschools.com
+live-url: familiesforexcellentschools.org
 intro: Fighting for the right to an excellent education.
 lead-in: Families for Excellent Schools is the organization behind the movement to ensure all kids have great schools.  
 ---

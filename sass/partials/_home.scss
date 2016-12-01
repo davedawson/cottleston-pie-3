@@ -345,8 +345,8 @@
 	    top: 50px;
 	    
 			@include respond-to(handhelds) {
-				font-size: 26px;
-				line-height: 29px;
+				font-size: 18px;
+				line-height: 24px;
 			}
 			@include respond-to(medium-screens) {
 				font-size: 32px;
@@ -602,7 +602,8 @@
 			background-size: cover;
 			@include respond-to(handhelds) {
 		    text-align: center;
-        background-position: -410px 0;
+        // background-position: -410px 0;
+        background-position: top right;
         h3 {
         	text-align: center;
         	padding: 0 20%;
@@ -619,10 +620,16 @@
 			.logo {
 				background-image: url('/img/logos/avicii.svg');
 				float: left;
+				@include respond-to(handhelds) {
+					float: none;
+				}
 			}
 			h3 {
 				text-align: left;
 				padding: 0;
+				@include respond-to(handhelds) {
+					text-align: center;
+				}
 			}
 		}
 		&.littlebits {
@@ -722,3 +729,104 @@
 	}
 }
 
+.logo-bar {
+	padding: 100px 3% 100px;
+	@include respond-to(handhelds) {
+		padding: 40px 6%;
+	}
+	.stacked {
+		display: block;
+		margin-bottom: 40px;
+		@media all and (min-width: 1251px) {
+			width: 48%;
+			float: left;
+			margin-right: 4%;
+		}
+	}
+	@media all and (max-width: 1250px) and (min-width: 900px) {
+		.stacked {
+			display: none
+		}
+	}
+
+	@media all and (max-width: 899px) {
+		.stacked {
+			// display: block
+		}
+	}
+	
+	.wide {
+		display: none;
+	}
+	@media all and (max-width: 1250px) and (min-width: 900px) {
+		.wide {
+			display: block;
+			margin-bottom: 40px;
+		}
+	}
+	.container {
+		@include clearfix;
+	}
+	h3 {
+		text-align: center;
+		width: 100%;
+		margin: 40px auto;
+		&:before {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.quotes {
+
+		
+		@media all and (min-width: 1250px) {
+			width: 48%; 
+			float: right;
+		}
+
+		@media all and (max-width: 1250px) and (min-width: 900px) {
+			clear: both;
+			width: 100%;
+		}
+		.quote {
+			margin-bottom: 60px;
+			width: 100%;
+			@media all and (max-width: 1250px) and (min-width: 900px) {
+				width: 48%;
+				margin-right: 4%;
+				float: left;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			p {
+				font-size: 22px;
+				line-height: 32px;
+				@include respond-to(handhelds) {
+					font-size: 17px;
+					line-height: 22px;
+				}
+				 &:before {
+		      content: '\201C';
+		      margin-left: -8px;
+		    }
+		    &:after {
+		      content: '\201D';
+		    }
+			}
+			address {
+				margin-top: 10px;
+				font-size: 18px;
+				line-height: 28px;
+				font-style: italic;
+				@include respond-to(handhelds) {
+					font-size: 15px;
+					line-height: 19px;
+				}
+				strong {
+					display: block;
+				}
+			}
+		}
+	}
+}

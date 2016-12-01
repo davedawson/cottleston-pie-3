@@ -23,3 +23,17 @@
 		display: inherit;
 	}
 }
+
+.t-hidden {
+	display: inherit;
+	@include respond-to(medium-screens) {
+		display: none;
+	}
+}
+
+.t-visible {
+	display: none;
+	@include respond-to(medium-screens) {
+		display: inherit;
+	}
+}

@@ -100,6 +100,24 @@ html, body, * {
   }
 }
 
+.t-hidden {
+  display: inherit;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .t-hidden {
+    display: none;
+  }
+}
+
+.t-visible {
+  display: none;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .t-visible {
+    display: inherit;
+  }
+}
+
 /* @license
  * MyFonts Webfont Build ID 2475516, 2013-02-10T12:19:37-0500
  *
@@ -1194,8 +1212,8 @@ footer, section {
 }
 @media only screen and (max-width: 640px) {
   .more-work .project h3 {
-    font-size: 26px;
-    line-height: 29px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
@@ -1683,7 +1701,7 @@ footer, section {
 @media only screen and (max-width: 640px) {
   .more-work .project.avicii {
     text-align: center;
-    background-position: -410px 0;
+    background-position: top right;
   }
   .more-work .project.avicii h3 {
     text-align: center;
@@ -1721,9 +1739,19 @@ footer, section {
   background-image: url("/img/logos/avicii.svg");
   float: left;
 }
+@media only screen and (max-width: 640px) {
+  .more-work .project.avicii .logo {
+    float: none;
+  }
+}
 .more-work .project.avicii h3 {
   text-align: left;
   padding: 0;
+}
+@media only screen and (max-width: 640px) {
+  .more-work .project.avicii h3 {
+    text-align: center;
+  }
 }
 .more-work .project.littlebits {
   background: url("/img/projects/home/littlebits.jpg") no-repeat;
@@ -1861,6 +1889,112 @@ footer, section {
   position: relative;
   z-index: 3;
   filter: drop-shadow(0px 0px 45px rgba(0, 0, 0, 0.3));
+}
+
+.logo-bar {
+  padding: 100px 3% 100px;
+}
+@media only screen and (max-width: 640px) {
+  .logo-bar {
+    padding: 40px 6%;
+  }
+}
+.logo-bar .stacked {
+  display: block;
+  margin-bottom: 40px;
+}
+@media all and (min-width: 1251px) {
+  .logo-bar .stacked {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+  }
+}
+@media all and (max-width: 1250px) and (min-width: 900px) {
+  .logo-bar .stacked {
+    display: none;
+  }
+}
+.logo-bar .wide {
+  display: none;
+}
+@media all and (max-width: 1250px) and (min-width: 900px) {
+  .logo-bar .wide {
+    display: block;
+    margin-bottom: 40px;
+  }
+}
+.logo-bar .container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.logo-bar h3 {
+  text-align: center;
+  width: 100%;
+  margin: 40px auto;
+}
+.logo-bar h3:before {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media all and (min-width: 1250px) {
+  .logo-bar .quotes {
+    width: 48%;
+    float: right;
+  }
+}
+@media all and (max-width: 1250px) and (min-width: 900px) {
+  .logo-bar .quotes {
+    clear: both;
+    width: 100%;
+  }
+}
+.logo-bar .quotes .quote {
+  margin-bottom: 60px;
+  width: 100%;
+}
+@media all and (max-width: 1250px) and (min-width: 900px) {
+  .logo-bar .quotes .quote {
+    width: 48%;
+    margin-right: 4%;
+    float: left;
+  }
+  .logo-bar .quotes .quote:last-child {
+    margin-right: 0;
+  }
+}
+.logo-bar .quotes .quote p {
+  font-size: 22px;
+  line-height: 32px;
+}
+@media only screen and (max-width: 640px) {
+  .logo-bar .quotes .quote p {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+.logo-bar .quotes .quote p:before {
+  content: '\201C';
+  margin-left: -8px;
+}
+.logo-bar .quotes .quote p:after {
+  content: '\201D';
+}
+.logo-bar .quotes .quote address {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 28px;
+  font-style: italic;
+}
+@media only screen and (max-width: 640px) {
+  .logo-bar .quotes .quote address {
+    font-size: 15px;
+    line-height: 19px;
+  }
+}
+.logo-bar .quotes .quote address strong {
+  display: block;
 }
 
 .interior .container {
