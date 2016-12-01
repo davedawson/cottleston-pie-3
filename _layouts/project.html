@@ -27,15 +27,26 @@ layout: default
 	    	</dl>
 	    </div>
 	    <div class="d4-d9 t3-t6 h-padinfull story">
-	    	{% contentblock description %}
+	    	{{ content }}
 	    </div>
     </div>
 	</div>
 </div>
 
 <article class="post-content">
-    {{ content }}
+    <!-- {{ content }} -->
+  <section class="project-expanded {% if image.count == 2 %} bi-screen {% else %} tri-screen {% endif %}">
+		<div class="container">
+			{% for image in page.screenshots %}
+				<div class="screen screen-{{ forloop.index }}">
+					<img src="{{ image }}" alt="" />
+				</div>
+	    {% endfor %}
+		</div>
+	</section>
+    
 </article>
+
 <section class="more-projects">
 	<div class="container">
 		<h3 class="section">More Projects</h3>	
