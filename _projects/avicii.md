@@ -8,6 +8,10 @@ team: Cottleston Pie, <a href="http://www.fourclops.com">Fourclops</a>
 live-url: truetu.be
 intro: Remixing the Internet with one of the world's biggest DJs
 lead-in: Avicii is known across the globe and the Internet as one of the most influential DJs today.
+screenshots: 
+	- "/img/projects/avicii/avicii-editor-a.jpg"
+	- "/img/projects/avicii/avicii-home.jpg"
+	- "/img/projects/avicii/avicii-editor-b.jpg"
 ---
 {% contentfor description %}
 	
