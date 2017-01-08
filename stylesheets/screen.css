@@ -386,8 +386,8 @@ h4 {
 
 p {
   font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 0.75em;
+  line-height: 28px;
+  margin-bottom: 0.85em;
 }
 p.small {
   font-size: 14px;
@@ -2557,8 +2557,23 @@ footer, section {
   padding: 5px;
 }
 
-.about-page {
+.about-page .page-content {
   color: rgba(0, 0, 0, 0.8);
+}
+.about-page .page-content .section, .about-page .page-content p {
+  color: rgba(0, 0, 0, 0.8);
+}
+.about-page .page-content .section {
+  margin: 0;
+}
+.about-page .page-content .section:before {
+  background: rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 1400px) {
+  .about-page .page-content .lead-in {
+    width: 74.23095703%;
+    margin-bottom: 30px;
+  }
 }
 .about-page .project-header {
   background-image: url("/img/about/about-hero-bg.png");
@@ -2586,15 +2601,6 @@ footer, section {
 }
 .about-page .project-description {
   margin-bottom: 60px;
-}
-.about-page .section, .about-page p {
-  color: rgba(0, 0, 0, 0.8);
-}
-.about-page .section {
-  margin: 0;
-}
-.about-page .section:before {
-  background: rgba(0, 0, 0, 0.1);
 }
 .about-page .projects-intro {
   padding-bottom: 30px;
@@ -2714,12 +2720,6 @@ footer, section {
 @media only screen and (min-width: 1025px) {
   .about-page .section .d2 {
     margin-left: -30px;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .about-page .lead-in {
-    width: 74.23095703%;
-    margin-bottom: 30px;
   }
 }
 .about-page .partners li {

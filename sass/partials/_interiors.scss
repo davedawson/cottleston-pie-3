@@ -368,7 +368,24 @@
 }
 
 .about-page {
-	color: $color-text;
+	.page-content {
+		color: $color-text;
+		.section, p {
+			color: $color-text;
+		}
+		.section {
+			margin: 0;
+			&:before {
+				background: rgba(0,0,0,0.1);
+			}
+		}
+		.lead-in {
+			@include respond-to(extra-wide-screens) {
+		    width: 74.23095703%;
+		    margin-bottom: 30px;
+			}
+		}
+	}
 	.project-header {
 		background-image: url('/img/about/about-hero-bg.png');
     background-position: bottom;
@@ -396,15 +413,8 @@
 	.project-description {
 		margin-bottom: 60px;
 	}
-	.section, p {
-		color: $color-text;
-	}
-	.section {
-		margin: 0;
-		&:before {
-			background: rgba(0,0,0,0.1);
-		}
-	}
+	
+	
 	.projects-intro {
 		 padding-bottom: 30px;
 	}
@@ -510,12 +520,7 @@
 			}
 		}
 	}
-	.lead-in {
-		@include respond-to(extra-wide-screens) {
-	    width: 74.23095703%;
-	    margin-bottom: 30px;
-		}
-	}
+	
 	.partners {
 		li {
 			display: inline;
