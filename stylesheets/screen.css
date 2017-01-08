@@ -399,6 +399,13 @@ p.caption {
   font-style: italic;
 }
 
+h5 {
+  font-size: 28px;
+  line-height: 36px;
+  font-family: "minion-pro", Georgia, Times, serif;
+  margin-bottom: 20px;
+}
+
 a {
   color: #e82643;
 }
@@ -628,7 +635,7 @@ nav a:hover {
 }
 @media only screen and (min-width: 641px) {
   .about {
-    padding: 60px 3%;
+    padding: 100px 3%;
   }
 }
 .about::after {
@@ -756,6 +763,91 @@ nav a:hover {
 }
 .footer h4 {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.commitment {
+  background: #07111e;
+  padding: 30px 6%;
+}
+.commitment::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 641px) {
+  .commitment {
+    padding: 60px 3%;
+  }
+}
+.commitment h3 {
+  text-align: center;
+  width: 100%;
+  margin: 40px auto;
+}
+.commitment h3:before {
+  margin-left: auto;
+  margin-right: auto;
+}
+.commitment .lead-in {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 641px) {
+  .commitment .money p, .commitment .money h5 {
+    display: block;
+    float: left;
+    margin-left: 35.34642%;
+    margin-right: -100%;
+    width: 64.65358%;
+  }
+}
+.commitment .money h5, .commitment .money p:first-of-type {
+  clear: both;
+}
+.commitment .money .logo {
+  float: right;
+  max-width: 180px;
+  padding: 30px;
+  clear: both;
+  margin-top: 5px;
+}
+@media only screen and (min-width: 641px) {
+  .commitment .money .logo {
+    float: inherit;
+    max-width: auto;
+    padding: 0;
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 29.30716%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .commitment .money .logo img {
+    width: 70%;
+    float: right;
+  }
+}
+.commitment .time p, .commitment .time h5 {
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 64.65358%;
+}
+.commitment .time .logo {
+  display: block;
+  float: left;
+  margin-left: 70.69284%;
+  margin-right: -100%;
+  width: 29.30716%;
+}
+.commitment .time .logo img {
+  width: 70%;
+  float: left;
 }
 
 * {

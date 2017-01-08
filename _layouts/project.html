@@ -35,7 +35,7 @@ layout: default
 
 <article class="post-content">
     <!-- {{ content }} -->
-  <section class="project-expanded {% if image.count == 2 %} bi-screen {% else %} tri-screen {% endif %}">
+  <section class="project-expanded {% if page.screenshots.count == 2 %} bi-screen {% else %} tri-screen {% endif %}">
 		<div class="container">
 			{% for image in page.screenshots %}
 				<div class="screen screen-{{ forloop.index }}">

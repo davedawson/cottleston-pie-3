@@ -2,7 +2,7 @@
 	background: $color-darkest-blue;
 	padding: 30px 6%;
 	@include respond-to(medium-and-above) {
-		padding: 60px 3%;
+		padding: 100px 3%;
 	}
 	@include clearfix;
 	h3 {
@@ -124,5 +124,72 @@
 	background: $color-darkest-blue;
 	h4 {
 		color: rgba(255,255,255,0.6);
+	}
+}
+
+.commitment {
+	background: $color-darkest-blue;
+	padding: 30px 6%;
+	@include clearfix;
+	@include respond-to(medium-and-above) {
+		padding: 60px 3%;
+	}
+	h3 {
+		text-align: center;
+		width: 100%;
+		margin: 40px auto;
+		&:before {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.lead-in {
+		font-size: 24px;
+		line-height: 32px;
+		margin-bottom: 40px;
+	}
+	.money {
+		p, h5 {
+			// @include gs-span(d, 7, 10, (7, 12));	
+			@include respond-to(medium-and-above) {
+				@include gs-span(d, 3, 6, (1, 6));
+			}
+		}
+		h5, p:first-of-type {
+			clear: both;
+		}
+		.logo {
+			// @include gs-span(d, 11, 12, (7, 12));
+			float: right;
+			max-width: 180px;
+			padding: 30px;
+			@include respond-to(medium-and-above) {
+				float: inherit;
+				max-width: auto;
+				padding: 0;
+				@include gs-span(d, 1, 2, (1, 6));
+			}
+			clear: both;
+			margin-top: 5px;
+			img {
+				@include respond-to(medium-and-above) {
+					width: 70%;
+					float: right;
+				}
+			}
+		}
+	}
+	.time {
+		p, h5 {
+			clear: both;
+			@include gs-span(d, 7, 10, (7, 12));	
+		}
+		.logo {
+			@include gs-span(d, 11, 12, (7, 12));
+			img {
+				width: 70%;
+				float: left;
+			}
+		}
 	}
 }
