@@ -5,13 +5,14 @@
 	z-index: 2;
 	@include respond-to(handhelds) {
 		li {
-			margin-right: 10%;
+			// margin-right: 10%;
+			margin: 0 2%;
 			&:last-child {
 				margin-right: 0;
 			}
 		}
 		li a {
-			font-size: 12px;
+			font-size: 11px;
 		}
 		h2 {
 			font-size: 16px;

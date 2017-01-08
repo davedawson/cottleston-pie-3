@@ -502,10 +502,31 @@ nav ul {
 }
 nav li {
   display: inline;
-  margin-right: 40px;
+  line-height: 26px;
+  margin: 0 4%;
 }
-nav li:last-child {
-  margin-right: 0;
+@media only screen and (min-width: 641px) {
+  nav li {
+    margin: 0 30px 0 0;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  nav li {
+    margin: 0 2%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  nav li:last-child {
+    margin-right: 0;
+  }
+}
+nav li.nav-commitment span {
+  display: none;
+}
+@media only screen and (min-width: 1400px) {
+  nav li.nav-commitment span {
+    display: inline;
+  }
 }
 nav a {
   text-transform: uppercase;
@@ -877,13 +898,13 @@ footer, section {
 }
 @media only screen and (max-width: 640px) {
   .nav-wrap li {
-    margin-right: 10%;
+    margin: 0 2%;
   }
   .nav-wrap li:last-child {
     margin-right: 0;
   }
   .nav-wrap li a {
-    font-size: 12px;
+    font-size: 11px;
   }
   .nav-wrap h2 {
     font-size: 16px;
