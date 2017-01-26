@@ -890,6 +890,11 @@ footer, section {
   margin: 0 auto;
 }
 
+.page-home .header {
+  margin-top: 0;
+  padding-top: 30px;
+}
+
 .nav-wrap {
   text-align: center;
   width: 100%;
@@ -944,44 +949,55 @@ footer, section {
   display: table;
   clear: both;
 }
-@media only screen and (min-width: 641px) {
-  .intro .tagline-wrap {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  .intro .tagline-wrap h2 {
-    height: 100%;
-    position: absolute;
-    left: 0;
-  }
+.intro .tagline-wrap {
+  padding: 20% 0;
+}
+.intro .tagline-wrap h2 {
+  text-align: center;
+  font-size: 25px;
+  line-height: 31px;
+  text-align: center;
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
-  .intro .tagline-wrap {
-    padding-top: 27%;
+  .intro .tagline-wrap h2 {
+    font-size: 20px;
+    line-height: 26px;
   }
 }
-@media only screen and (min-width: 1024px) {
-  .intro .tagline-wrap {
-    padding-top: 30%;
+@media only screen and (min-width: 641px) {
+  .intro .tagline-wrap h2 {
+    font-size: 42px;
+    line-height: 52px;
+    text-align: left;
+  }
+  .intro .tagline-wrap h2:before {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 7px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.4);
   }
 }
-@media only screen and (min-width: 1400px) {
-  .intro .tagline-wrap {
-    padding-top: 38%;
-  }
+.intro .tagline-wrap h2:before {
+  margin-left: auto;
+  margin-right: auto;
 }
-@media only screen and (min-width: 1400px) and (max-width: 1600px) {
-  .intro .tagline-wrap {
-    padding-top: 32%;
+.intro .tagline-wrap p {
+  text-align: center;
+  margin-top: 30px;
+}
+.intro .tagline-wrap p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media only screen and (min-width: 641px) {
+  .intro .tagline-wrap h2 {
+    text-align: center;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 831px) {
-  .intro .tagline-wrap {
-    padding-top: 23%;
-  }
   .intro .tagline-wrap h2 {
     font-size: 19px;
   }
@@ -1020,30 +1036,6 @@ footer, section {
   .intro h1 img {
     width: 130%;
     margin-left: -1%;
-  }
-}
-.intro h2 {
-  font-size: 25px;
-  line-height: 31px;
-  text-align: center;
-}
-@media only screen and (min-width: 641px) and (max-width: 1023px) {
-  .intro h2 {
-    font-size: 20px;
-    line-height: 26px;
-  }
-}
-@media only screen and (min-width: 641px) {
-  .intro h2 {
-    text-align: left;
-  }
-  .intro h2:before {
-    content: "";
-    display: block;
-    width: 56px;
-    height: 7px;
-    margin-bottom: 30px;
-    background: rgba(255, 255, 255, 0.4);
   }
 }
 

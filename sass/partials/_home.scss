@@ -1,3 +1,10 @@
+.page-home {
+	.header {
+		margin-top: 0;
+		padding-top: 30px;
+	}
+}
+
 .nav-wrap {
 	text-align: center;
 	width: 100%;
@@ -39,32 +46,62 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5a005', endColorstr='#e6114b',GradientType=0 ); /* IE6-9 */
 	@include clearfix;
 	.tagline-wrap {
+		padding: 20% 0;
+		h2 {
+			text-align: center;
+			font-size: 25px;
+			line-height: 31px;
+			text-align: center;
+			@include respond-to(medium-screens) {
+				font-size: 20px;
+				line-height: 26px;
+			}
+			@include respond-to(medium-and-above) {
+				font-size: 42px;
+				line-height: 52px;
+				text-align: left;
+				&:before {
+		      content: "";
+		      display: block;
+		      width: 56px;
+		      height: 7px;
+		      margin-bottom: 30px;
+		      background: rgba(255,255,255,0.4);
+		    }
+		  }
+		  &:before {
+		  	margin-left: auto;
+		  	margin-right: auto;
+		  }
+		}
+		p {
+			text-align: center;
+			margin-top: 30px;
+			a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: bold;
+			}			
+		}
     @include respond-to(medium-and-above) {
-    	position: absolute;
-	    width: 100%;
-	    top: 0;
-	    left: 0;
-	    z-index: 1;
 	    h2 {
-		    height: 100%;
-		    position: absolute;
-		    left: 0;
+		    text-align: center;
 	    }
     }
     @include respond-to(medium-screens) {
-			padding-top: 27%;
+			// padding-top: 27%;
 		}
 		@include respond-to(wide-screens) {
-			padding-top: 30%;
+			// padding-top: 30%;
 		}
 		@include respond-to(extra-wide-screens) {
-			padding-top: 38%;
+			// padding-top: 38%;
 		}
 		@media only screen and (min-width: 1400px) and (max-width: 1600px) { 
-			padding-top: 32%;	
+			// padding-top: 32%;	
 		}
 		@media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: 831px) { 
-			padding-top: 23%;
+			// padding-top: 23%;
 			h2 {
 				font-size: 19px;
 			}
@@ -107,24 +144,7 @@
 		}
 	}
 	h2 {
-		font-size: 25px;
-		line-height: 31px;
-		text-align: center;
-		@include respond-to(medium-screens) {
-			font-size: 20px;
-			line-height: 26px;
-		}
-		@include respond-to(medium-and-above) {
-			text-align: left;
-			&:before {
-	      content: "";
-	      display: block;
-	      width: 56px;
-	      height: 7px;
-	      margin-bottom: 30px;
-	      background: rgba(255,255,255,0.4);
-	    }
-	  }
+		
 	}
 }
 
