@@ -834,6 +834,10 @@
 				font-size: 18px;
 				line-height: 28px;
 				font-style: italic;
+				a {
+		    	color: #fff;
+		    	text-decoration: none;
+		    }
 				@include respond-to(handhelds) {
 					font-size: 15px;
 					line-height: 19px;

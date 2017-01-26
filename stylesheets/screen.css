@@ -2120,6 +2120,10 @@ footer, section {
   line-height: 28px;
   font-style: italic;
 }
+.logo-bar .quotes .quote address a {
+  color: #fff;
+  text-decoration: none;
+}
 @media only screen and (max-width: 640px) {
   .logo-bar .quotes .quote address {
     font-size: 15px;
