@@ -894,6 +894,9 @@ footer, section {
   margin-top: 0;
   padding-top: 30px;
 }
+.page-home .header h2 {
+  font-size: 25px;
+}
 
 .nav-wrap {
   text-align: center;
@@ -1037,6 +1040,49 @@ footer, section {
     width: 130%;
     margin-left: -1%;
   }
+}
+.intro h3 {
+  font-family: "macha", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 35px;
+}
+.intro .logo-section {
+  padding: 10% 0 20%;
+}
+.intro .logo-section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.intro .logo-section p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.intro .logo-section a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.intro .logo-section .stacked {
+  display: block;
+  margin: 0 auto 40px;
+}
+@media all and (max-width: 1250px) and (min-width: 900px) {
+  .intro .logo-section .stacked {
+    display: none;
+  }
+}
+.intro .logo-section .wide {
+  display: none;
+}
+@media all and (max-width: 1250px) and (min-width: 900px) {
+  .intro .logo-section .wide {
+    display: block;
+    margin-bottom: 40px;
+  }
+}
+.intro .logo-section .logos {
+  clear: none;
 }
 
 .description {
