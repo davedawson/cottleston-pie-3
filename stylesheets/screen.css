@@ -1403,6 +1403,159 @@ footer, section {
   position: relative;
   margin-bottom: -300px;
 }
+.more-work .project-item.raise {
+  clear: both;
+  margin-top: 300px;
+}
+.more-work .project-item.raise .wrap {
+  display: block;
+  float: left;
+  margin-left: 51.44043%;
+  margin-right: -100%;
+  width: 31.36393%;
+}
+.more-work .project-item.raise .device {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 48.51074%;
+}
+.more-work .project-item.tackle-ebola {
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 48.51074%;
+}
+.more-work .project-item.tackle-ebola .wrap {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 64.65358%;
+}
+.more-work .project-item.tackle-ebola .device {
+  display: block;
+  float: left;
+  margin-left: 70.69284%;
+  margin-right: -100%;
+  width: 29.30716%;
+}
+.more-work .project-item.the-feast {
+  display: block;
+  float: left;
+  margin-left: 51.44043%;
+  margin-right: -100%;
+  width: 48.51074%;
+}
+.more-work .project-item.the-feast .logo {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 29.30716%;
+}
+.more-work .project-item.the-feast .description-wrap {
+  display: block;
+  float: left;
+  margin-left: 35.34642%;
+  margin-right: -100%;
+  width: 64.65358%;
+}
+.more-work .project-item.the-feast .device {
+  clear: both;
+}
+.more-work .project-item.film-comment {
+  clear: both;
+  background: url("/img/home/background-filmcomment.jpg") no-repeat;
+  background-size: cover;
+}
+.more-work .project-item.film-comment::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.more-work .project-item.film-comment .wrap {
+  display: block;
+  float: left;
+  margin-left: 51.44043%;
+  margin-right: -100%;
+  width: 39.93734%;
+  padding: 150px 0;
+  text-align: center;
+}
+.more-work .project-item.film-comment .device {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 48.51074%;
+  margin-bottom: -200px;
+}
+.more-work .project-item.fes {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 65.65755%;
+  margin-top: 150px;
+  background-size: cover;
+  background: url("/img/home/background-fes.jpg") no-repeat;
+  position: relative;
+  z-index: 2;
+  min-height: 600px;
+}
+.more-work .project-item.fes .wrap {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 34.7112%;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+.more-work .project-item.fes .device {
+  display: block;
+  float: left;
+  margin-left: 13.05776%;
+  margin-right: -100%;
+  width: 60.82672%;
+  position: absolute;
+  bottom: -150px;
+  right: 105%;
+}
+.more-work .project-item.patronage {
+  clear: both;
+  background-size: cover;
+  background: url("/img/home/background-patronage.jpg") no-repeat;
+}
+.more-work .project-item.patronage::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.more-work .project-item.patronage .wrap {
+  text-align: center;
+}
+.more-work .project-item.patronage .device-a {
+  display: block;
+  float: left;
+  margin-left: 8.5734%;
+  margin-right: -100%;
+  width: 57.08415%;
+  position: relative;
+  z-index: 2;
+}
+.more-work .project-item.patronage .device-b {
+  display: block;
+  float: left;
+  margin-left: 51.44043%;
+  margin-right: -100%;
+  width: 48.51074%;
+}
 .more-work .quote-item {
   background: #fff;
   position: relative;
@@ -1441,6 +1594,10 @@ footer, section {
   clear: both;
   position: relative;
   top: -50px;
+}
+.more-work .quote-item.etr {
+  margin-top: 75px;
+  float: right;
 }
 
 .more-work {
