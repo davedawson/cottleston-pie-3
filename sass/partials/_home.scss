@@ -279,9 +279,11 @@
 			background-size: cover;
 			position: relative;
 			// @include gs-span(d, 4, 12);
-			width: 75%;
-			float: right;
 			@include clearfix;
+			@include respond-to(medium-and-above) {
+				width: 75%;
+				float: right;
+			}
 			.wrap {
 				@include gs-span(d, 4, 8);
 				padding: 100px 0;
@@ -303,18 +305,24 @@
 
 		&.nyit {
 			@include clearfix;
-			margin-top: -30%;
-			margin-bottom: 10%;
+			margin: 30px 0;
+			@include respond-to(medium-and-above) {
+				margin: auto;
+				margin-top: -30%;
+				margin-bottom: 10%;
+			}
 			
 			@include respond-to(medium-and-above) {
 				margin-right: 5%;
 			}
 			.wrap {
-				@include gs-span(d, 7, 12);
-				position: relative;
-		    width: 50%;
-		    overflow: hidden;
 				background: #f7a81b;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 7, 12);
+					position: relative;
+			    width: 50%;
+			    overflow: hidden;
+			  }
 				&:before{
 			    content: "";
 			    display: block;
@@ -342,9 +350,15 @@
 			}
 			.device {
 				@include gs-span(d, 4, 9);
-				position: absolute;
-				z-index: 3;
-				top: -50%;
+				position: relative;
+				margin-top: -80px;
+				z-index: 2;
+				@include respond-to(medium-and-above) {
+					clear: none;
+					position: absolute;
+					z-index: 3;
+					top: -50%;
+				}
 			}
 			.logo {
 				img {
@@ -359,28 +373,46 @@
 			background-position: bottom left;
 			background-size: 100%;
 			position: relative;
-			height: 580px;
+			padding-bottom: 200px;
 			@include respond-to(medium-and-above) {
 				margin-left: 5%;
 				margin-right: 5%;
+				height: 580px;
+				padding-bottom: 0;
 			}
 			.wrap {
-				position: absolute;
-				bottom: 40px;
-				left: 40px;
-				width: 100%;
+				@include respond-to(medium-and-above) {
+					position: absolute;
+					bottom: 40px;
+					left: 40px;
+					width: 100%;
+				}
 			}
 			.device {
-				@include gs-span(d, 1, 6);	
-				position: absolute;
-				top: -10%;
-				left: -7%;
+				@include gs-span(d, 2, 11);	
+				margin-top: 30px;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 1, 6);	
+					position: absolute;
+					top: -10%;
+					left: -7%;
+				}
 			}
 			.description-wrap {
-				@include gs-span(d, 4, 7);	
+				clear: both;
+				@include gs-span(d, 2, 11);	
+				@include respond-to(medium-and-above) {
+					clear: none;
+					@include gs-span(d, 4, 7);	
+				}
 			}
 			.logo {
-				@include gs-span(d, 2, 3);	
+				@include gs-span(d, 2, 5);	
+				clear: both;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 2, 3);	
+					clear: none;
+				}
 				img {
 					max-width: 120px;
 				}
@@ -388,17 +420,19 @@
 		}
 		
 		&.okcjr {
-			@include gs-span(d, 1, 6);	
+			@include respond-to(medium-and-above) {
+				@include gs-span(d, 1, 6)
+			}
 			margin-top: 15%;
 			.wrap {
-				// background: #fff;
 				text-align: center;
-				padding: 150px 40px;
 				@include gs-span(d, 3, 6, (1, 6));	
+				@include respond-to(medium-and-above) {
+					padding: 150px 40px;	
+				}
 			}
 			.device {
 				@include gs-span(d, 1, 3, (1, 6));
-				// margin-left: -10%;
 				margin-top: 16%;
 				position: relative;
 				z-index: 2;
@@ -411,13 +445,23 @@
 		}
 
 		&.nextgen {
-			@include gs-span(d, 7, 12);	
+			clear: both;
+			padding-top: 40px;
+			@include clearfix;
+			@include respond-to(medium-and-above) {
+				padding-top: 0;
+				clear: none;
+				@include gs-span(d, 7, 12);	
+			}
 			// @include clearfix;
 			.wrap {
 				// background: #fff;
 				text-align: center;
-				padding: 150px 40px 0px;
+				
 				@include gs-span(d, 8, 11, (7, 12));	
+				@include respond-to(medium-and-above) {
+					padding: 150px 40px 0px;
+				}
 			}
 			.device {
 				clear: both;
@@ -440,13 +484,20 @@
 				// bottom: 40px;
 				// left: 40px;
 				padding: 50px 5% 0;
-				@include gs-span(d, 6, 10);
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 6, 10);
+				}
 			}
 			.device {
 				clear: both;
-				@include gs-span(d, 6, 12);	
 				position: relative;
-				margin-bottom: -300px;
+				margin-bottom: -150px;
+				padding-bottom: 100px;
+				@include gs-span(d, 6, 12);	
+				@include respond-to(medium-and-above) {
+					margin-bottom: -300px;
+					padding-bottom: 0;
+				}
 				img {
 					// position: absolute;
 					// left: -20%;
@@ -454,34 +505,42 @@
 				}
 			}
 			.logo {
-				margin-left: -12%;
 				max-width: 250px;
+				@include respond-to(medium-and-above) {
+					margin-left: -12%;
+				}
 			}
 		}
 
 		&.raise {
 			clear: both;
-			padding-top: 150px;
-			padding-bottom: 150px;
 			position: relative;
 			margin-bottom: 10%;
+			margin-left: 5%;
+			margin-right: 5%;
 			@include clearfix;
 			@include respond-to(medium-and-above) {
-				margin-left: 5%;
-				margin-right: 5%;
+				padding-top: 150px;
+				padding-bottom: 150px;
 			}
 			.wrap {
-				margin-top: -8%;
-				@include gs-span(d, 7, 10);
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 7, 10);
+					margin-top: -8%;
+				}
 			}	
 			.logo img {
 				max-width: 300px;
 			}
 
 			.device {
-				@include gs-span(d, 1, 8);
-				margin-left: -17%;
-				margin-top: -40%;
+				@include gs-span(d, 2, 10);
+				margin-top: -70%;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 1, 8);
+					margin-left: -17%;
+					margin-top: -40%;
+				}
 				img {
 					width: 100%;
 				}
@@ -490,10 +549,15 @@
 
 		&.tackle-ebola {
 			clear: both;
-			margin-top: -15%;	
-			@include gs-span(d, 1, 6);
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-bottom: 40px;
 			@include respond-to(medium-and-above) {
+				@include gs-span(d, 1, 6);
 				margin-left: 5%;
+				margin-right: 0%;
+				margin-top: -15%;	
+				margin-bottom: 0;
 			}
 			.logo {
 				@include gs-span(d, 1, 4, (1, 6));
@@ -510,26 +574,39 @@
 			}
 			.device {
 				margin-top: -40%;
-				@include gs-span(d, 4, 5, (1, 6))	
+				@include gs-span(d, 5, 6, (1, 6));
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 4, 5, (1, 6))	
+				}
 
 			}
 		}
 
 		&.the-feast {
-			@include gs-span(d, 6, 12);	
-			margin-top: -240px;
 			@include clearfix;
 			overflow: hidden;
+			clear: both;
+			margin: 0 5%;
+			@include respond-to(medium-and-above) {
+				margin: -240px auto 0;
+				@include gs-span(d, 6, 12);					
+			}
 			.wrap {
 				// @include gs-span(d, 8, 11)
 			}
 			.logo {
-				@include gs-span(d, 7, 8, (6, 12));
 				max-width: 200px;
+
+				// @include gs-span(d, 2, 8);
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 7, 8, (6, 12));
+				}
 			}
 			.description-wrap {
-				@include gs-span(d, 9, 11, (6, 12));
 				padding-left: 30px;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 9, 11, (6, 12));
+				}
 			}
 			.device {
 				clear: both;
@@ -550,37 +627,65 @@
 			clear: both;
 			background: url('/img/home/background-filmcomment.jpg') no-repeat; 
 			background-size: cover;
+			padding: 50px 5% 0;
+			@include respond-to(medium-and-above) {
+				padding: 0;
+			}
 			.wrap {
-				@include gs-span(d, 8, 11);	
-				padding: 150px 0;
-				text-align: center;
+				margin-bottom: -50px;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 8, 11);	
+					margin-bottom: 0;
+					padding: 150px 0;
+					text-align: center;
+				}
 			}
 			.device {
-				@include gs-span(d, 1, 7);	
-		    position: absolute;
-		    bottom: -10%;
+				position: relative;
+				bottom: -70px;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 1, 7);	
+			    position: absolute;
+			    bottom: -10%;
+			  }
 			}
 		}
 
 		&.fes {
-			@include gs-span(d, 1, 8);	
-			margin-top: 150px;
+			margin: 50px 5%;
 			background-size: cover;
 			background: url('/img/home/background-fes.jpg') no-repeat; 
 			position: relative;
 			z-index: 2;
-			min-height: 600px;
+			clear: both;
+			padding: 350px 5% 0;
+			@include clearfix;
+			@include respond-to(medium-and-above) {
+				@include gs-span(d, 1, 8);	
+				padding: 0;
+				min-height: 600px;
+				margin-top: 150px;
+			}
 			.wrap {
-				@include gs-span(d, 1, 3, (1, 8));
-				position: absolute;
-				bottom: 40px;
-				left: 40px;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 1, 3, (1, 8));
+					position: absolute;
+					bottom: 40px;
+					left: 40px;
+				}
+			}
+			.logo {
+				max-width: 200px;
 			}
 			.device {
-				@include gs-span(d, 2, 8, (1, 8));
 				// margin-top: 300px;
-				position: absolute;
-				bottom: -70%;				
+				margin-bottom: -100px;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 2, 8, (1, 8));
+					margin-bottom: 0;
+					position: absolute;
+					bottom: -70%;				
+				}
 				img {
 					// position: absolute;
 					// right: -25%;
@@ -712,8 +817,10 @@
    //  position: relative;
     // z-index: 2;
     position: relative;
-    width: 50%;
-    overflow: hidden;
+    @include respond-to(medium-and-above) {
+    	width: 50%;
+	    overflow: hidden;
+    }
     &:before{
 	    content: "";
 	    display: block;
@@ -726,7 +833,10 @@
 	    bottom: 0;
 	    right: 0;
 	    text-align: left;
-	    padding: 100px;
+	    padding: 30px 5%;
+	    @include respond-to(medium-and-above) {
+		    padding: 100px;
+		  }
 	    .wrap {
 	    	display: table;
 			  width: 100%;
@@ -745,7 +855,9 @@
     &.filmlinc {
     	clear: both;
     	position: relative;
-    	top: -200px;
+    	@include respond-to(medium-and-above) {
+	    	top: -200px;
+	    }
     }
     &.etr {
     	margin-top: 75px;

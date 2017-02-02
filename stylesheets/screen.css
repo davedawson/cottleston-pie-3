@@ -1151,13 +1151,17 @@ footer, section {
   background-image: url("/img/home/background-yale.jpg");
   background-size: cover;
   position: relative;
-  width: 75%;
-  float: right;
 }
 .more-work .project-item.yale::after {
   content: "";
   display: table;
   clear: both;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.yale {
+    width: 75%;
+    float: right;
+  }
 }
 .more-work .project-item.yale .wrap {
   display: block;
@@ -1183,8 +1187,7 @@ footer, section {
   max-width: 200px;
 }
 .more-work .project-item.nyit {
-  margin-top: -30%;
-  margin-bottom: 10%;
+  margin: 30px 0;
 }
 .more-work .project-item.nyit::after {
   content: "";
@@ -1193,19 +1196,30 @@ footer, section {
 }
 @media only screen and (min-width: 641px) {
   .more-work .project-item.nyit {
+    margin: auto;
+    margin-top: -30%;
+    margin-bottom: 10%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.nyit {
     margin-right: 5%;
   }
 }
 .more-work .project-item.nyit .wrap {
-  display: block;
-  float: left;
-  margin-left: 51.44043%;
-  margin-right: -100%;
-  width: 48.51074%;
-  position: relative;
-  width: 50%;
-  overflow: hidden;
   background: #f7a81b;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.nyit .wrap {
+    display: block;
+    float: left;
+    margin-left: 51.44043%;
+    margin-right: -100%;
+    width: 48.51074%;
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+  }
 }
 .more-work .project-item.nyit .wrap:before {
   content: "";
@@ -1237,9 +1251,17 @@ footer, section {
   margin-left: 25.72021%;
   margin-right: -100%;
   width: 48.51074%;
-  position: absolute;
-  z-index: 3;
-  top: -50%;
+  position: relative;
+  margin-top: -80px;
+  z-index: 2;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.nyit .device {
+    clear: none;
+    position: absolute;
+    z-index: 3;
+    top: -50%;
+  }
 }
 .more-work .project-item.nyit .logo img {
   max-width: 200px;
@@ -1249,7 +1271,7 @@ footer, section {
   background-position: bottom left;
   background-size: 100%;
   position: relative;
-  height: 580px;
+  padding-bottom: 200px;
 }
 .more-work .project-item.filmlinc::after {
   content: "";
@@ -1260,57 +1282,101 @@ footer, section {
   .more-work .project-item.filmlinc {
     margin-left: 5%;
     margin-right: 5%;
+    height: 580px;
+    padding-bottom: 0;
   }
 }
-.more-work .project-item.filmlinc .wrap {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  width: 100%;
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.filmlinc .wrap {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 100%;
+  }
 }
 .more-work .project-item.filmlinc .device {
   display: block;
   float: left;
-  margin-left: 0%;
+  margin-left: 8.5734%;
   margin-right: -100%;
-  width: 48.51074%;
-  position: absolute;
-  top: -10%;
-  left: -7%;
+  width: 82.80436%;
+  margin-top: 30px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.filmlinc .device {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 48.51074%;
+    position: absolute;
+    top: -10%;
+    left: -7%;
+  }
 }
 .more-work .project-item.filmlinc .description-wrap {
+  clear: both;
   display: block;
   float: left;
-  margin-left: 25.72021%;
+  margin-left: 8.5734%;
   margin-right: -100%;
-  width: 31.36393%;
+  width: 82.80436%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.filmlinc .description-wrap {
+    clear: none;
+    display: block;
+    float: left;
+    margin-left: 25.72021%;
+    margin-right: -100%;
+    width: 31.36393%;
+  }
 }
 .more-work .project-item.filmlinc .logo {
   display: block;
   float: left;
   margin-left: 8.5734%;
   margin-right: -100%;
-  width: 14.21712%;
+  width: 31.36393%;
+  clear: both;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.filmlinc .logo {
+    display: block;
+    float: left;
+    margin-left: 8.5734%;
+    margin-right: -100%;
+    width: 14.21712%;
+    clear: none;
+  }
 }
 .more-work .project-item.filmlinc .logo img {
   max-width: 120px;
 }
 .more-work .project-item.okcjr {
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 48.51074%;
   margin-top: 15%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.okcjr {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 48.51074%;
+  }
 }
 .more-work .project-item.okcjr .wrap {
   text-align: center;
-  padding: 150px 40px;
   display: block;
   float: left;
   margin-left: 35.34642%;
   margin-right: -100%;
   width: 64.65358%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.okcjr .wrap {
+    padding: 150px 40px;
+  }
 }
 .more-work .project-item.okcjr .device {
   display: block;
@@ -1326,20 +1392,37 @@ footer, section {
   max-width: 200px;
 }
 .more-work .project-item.nextgen {
-  display: block;
-  float: left;
-  margin-left: 51.44043%;
-  margin-right: -100%;
-  width: 48.51074%;
+  clear: both;
+  padding-top: 40px;
+}
+.more-work .project-item.nextgen::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.nextgen {
+    padding-top: 0;
+    clear: none;
+    display: block;
+    float: left;
+    margin-left: 51.44043%;
+    margin-right: -100%;
+    width: 48.51074%;
+  }
 }
 .more-work .project-item.nextgen .wrap {
   text-align: center;
-  padding: 150px 40px 0px;
   display: block;
   float: left;
   margin-left: 17.67321%;
   margin-right: -100%;
   width: 64.65358%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.nextgen .wrap {
+    padding: 150px 40px 0px;
+  }
 }
 .more-work .project-item.nextgen .device {
   clear: both;
@@ -1365,32 +1448,47 @@ footer, section {
 }
 .more-work .project-item.audubon .wrap {
   padding: 50px 5% 0;
-  display: block;
-  float: left;
-  margin-left: 42.86702%;
-  margin-right: -100%;
-  width: 39.93734%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.audubon .wrap {
+    display: block;
+    float: left;
+    margin-left: 42.86702%;
+    margin-right: -100%;
+    width: 39.93734%;
+  }
 }
 .more-work .project-item.audubon .device {
   clear: both;
+  position: relative;
+  margin-bottom: -150px;
+  padding-bottom: 100px;
   display: block;
   float: left;
   margin-left: 42.86702%;
   margin-right: -100%;
   width: 57.08415%;
-  position: relative;
-  margin-bottom: -300px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.audubon .device {
+    margin-bottom: -300px;
+    padding-bottom: 0;
+  }
 }
 .more-work .project-item.audubon .logo {
-  margin-left: -12%;
   max-width: 250px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.audubon .logo {
+    margin-left: -12%;
+  }
 }
 .more-work .project-item.raise {
   clear: both;
-  padding-top: 150px;
-  padding-bottom: 150px;
   position: relative;
   margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .more-work .project-item.raise::after {
   content: "";
@@ -1399,17 +1497,19 @@ footer, section {
 }
 @media only screen and (min-width: 641px) {
   .more-work .project-item.raise {
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 }
-.more-work .project-item.raise .wrap {
-  margin-top: -8%;
-  display: block;
-  float: left;
-  margin-left: 51.44043%;
-  margin-right: -100%;
-  width: 31.36393%;
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.raise .wrap {
+    display: block;
+    float: left;
+    margin-left: 51.44043%;
+    margin-right: -100%;
+    width: 31.36393%;
+    margin-top: -8%;
+  }
 }
 .more-work .project-item.raise .logo img {
   max-width: 300px;
@@ -1417,27 +1517,42 @@ footer, section {
 .more-work .project-item.raise .device {
   display: block;
   float: left;
-  margin-left: 0%;
+  margin-left: 8.5734%;
   margin-right: -100%;
-  width: 65.65755%;
-  margin-left: -17%;
-  margin-top: -40%;
+  width: 74.23096%;
+  margin-top: -70%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.raise .device {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 65.65755%;
+    margin-left: -17%;
+    margin-top: -40%;
+  }
 }
 .more-work .project-item.raise .device img {
   width: 100%;
 }
 .more-work .project-item.tackle-ebola {
   clear: both;
-  margin-top: -15%;
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 48.51074%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 40px;
 }
 @media only screen and (min-width: 641px) {
   .more-work .project-item.tackle-ebola {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 48.51074%;
     margin-left: 5%;
+    margin-right: 0%;
+    margin-top: -15%;
+    margin-bottom: 0;
   }
 }
 .more-work .project-item.tackle-ebola .logo {
@@ -1461,39 +1576,62 @@ footer, section {
   margin-top: -40%;
   display: block;
   float: left;
-  margin-left: 53.01963%;
+  margin-left: 70.69284%;
   margin-right: -100%;
   width: 29.30716%;
 }
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.tackle-ebola .device {
+    display: block;
+    float: left;
+    margin-left: 53.01963%;
+    margin-right: -100%;
+    width: 29.30716%;
+  }
+}
 .more-work .project-item.the-feast {
-  display: block;
-  float: left;
-  margin-left: 42.86702%;
-  margin-right: -100%;
-  width: 57.08415%;
-  margin-top: -240px;
   overflow: hidden;
+  clear: both;
+  margin: 0 5%;
 }
 .more-work .project-item.the-feast::after {
   content: "";
   display: table;
   clear: both;
 }
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.the-feast {
+    margin: -240px auto 0;
+    display: block;
+    float: left;
+    margin-left: 42.86702%;
+    margin-right: -100%;
+    width: 57.08415%;
+  }
+}
 .more-work .project-item.the-feast .logo {
-  display: block;
-  float: left;
-  margin-left: 15.01889%;
-  margin-right: -100%;
-  width: 24.90555%;
   max-width: 200px;
 }
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.the-feast .logo {
+    display: block;
+    float: left;
+    margin-left: 15.01889%;
+    margin-right: -100%;
+    width: 24.90555%;
+  }
+}
 .more-work .project-item.the-feast .description-wrap {
-  display: block;
-  float: left;
-  margin-left: 45.05667%;
-  margin-right: -100%;
-  width: 39.92444%;
   padding-left: 30px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.the-feast .description-wrap {
+    display: block;
+    float: left;
+    margin-left: 45.05667%;
+    margin-right: -100%;
+    width: 39.92444%;
+  }
 }
 .more-work .project-item.the-feast .device {
   clear: both;
@@ -1514,61 +1652,103 @@ footer, section {
   clear: both;
   background: url("/img/home/background-filmcomment.jpg") no-repeat;
   background-size: cover;
+  padding: 50px 5% 0;
 }
 .more-work .project-item.film-comment::after {
   content: "";
   display: table;
   clear: both;
 }
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.film-comment {
+    padding: 0;
+  }
+}
 .more-work .project-item.film-comment .wrap {
-  display: block;
-  float: left;
-  margin-left: 60.01383%;
-  margin-right: -100%;
-  width: 31.36393%;
-  padding: 150px 0;
-  text-align: center;
+  margin-bottom: -50px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.film-comment .wrap {
+    display: block;
+    float: left;
+    margin-left: 60.01383%;
+    margin-right: -100%;
+    width: 31.36393%;
+    margin-bottom: 0;
+    padding: 150px 0;
+    text-align: center;
+  }
 }
 .more-work .project-item.film-comment .device {
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 57.08415%;
-  position: absolute;
-  bottom: -10%;
+  position: relative;
+  bottom: -70px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.film-comment .device {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 57.08415%;
+    position: absolute;
+    bottom: -10%;
+  }
 }
 .more-work .project-item.fes {
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 65.65755%;
-  margin-top: 150px;
+  margin: 50px 5%;
   background-size: cover;
   background: url("/img/home/background-fes.jpg") no-repeat;
   position: relative;
   z-index: 2;
-  min-height: 600px;
+  clear: both;
+  padding: 350px 5% 0;
 }
-.more-work .project-item.fes .wrap {
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 34.7112%;
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
+.more-work .project-item.fes::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.fes {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 65.65755%;
+    padding: 0;
+    min-height: 600px;
+    margin-top: 150px;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.fes .wrap {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 34.7112%;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+  }
+}
+.more-work .project-item.fes .logo {
+  max-width: 200px;
 }
 .more-work .project-item.fes .device {
-  display: block;
-  float: left;
-  margin-left: 13.05776%;
-  margin-right: -100%;
-  width: 86.94224%;
-  position: absolute;
-  bottom: -70%;
+  margin-bottom: -100px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.fes .device {
+    display: block;
+    float: left;
+    margin-left: 13.05776%;
+    margin-right: -100%;
+    width: 86.94224%;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: -70%;
+  }
 }
 .more-work .project-item.patronage {
   clear: both;
@@ -1742,8 +1922,12 @@ footer, section {
 .more-work .quote-item {
   background: #fff;
   position: relative;
-  width: 50%;
-  overflow: hidden;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .quote-item {
+    width: 50%;
+    overflow: hidden;
+  }
 }
 .more-work .quote-item:before {
   content: "";
@@ -1757,7 +1941,12 @@ footer, section {
   bottom: 0;
   right: 0;
   text-align: left;
-  padding: 100px;
+  padding: 30px 5%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .quote-item .quote-text {
+    padding: 100px;
+  }
 }
 .more-work .quote-item .quote-text .wrap {
   display: table;
@@ -1776,7 +1965,11 @@ footer, section {
 .more-work .quote-item.filmlinc {
   clear: both;
   position: relative;
-  top: -200px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .quote-item.filmlinc {
+    top: -200px;
+  }
 }
 .more-work .quote-item.etr {
   margin-top: 75px;
