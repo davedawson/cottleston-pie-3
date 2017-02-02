@@ -38,6 +38,7 @@
 
 .intro {
 	margin: 0 auto;
+	margin-bottom: -600px;
 	// Needs latest Compass, add '@import "compass"' to your scss
 	// Permalink - use to edit and share this gradient:
 	// http://colorzilla.com/gradient-editor/#f6a505+0,f6a303+0,f6a103+2,f59908+9,f28014+23,eb4133+51,ec3a36+53,eb3638+56,ea2f3c+58,e81a45+70,e7144a+76,e7114b+76,e6114d+100
@@ -202,152 +203,76 @@
 
 
 
-
-.description {
-	background: #b80f4a;
-	padding: 30px 6%;
-	@include clearfix;	
-	@include respond-to(medium-screens) {
-		margin-top: -73px;
-		padding: 100px 3%;
-		max-height: 1000px;
-		overflow: hidden;
-	}
-	@include respond-to(wide-and-above) {
-		margin-top: -106px;
-		padding: 100px 0;
-		max-height: 1000px;
-		overflow: hidden;
-	}
-	.intro-text {
-		position: relative;
-		z-index: 2;
-	}
-	.button {
-		margin-left: 20px;
-		white-space:nowrap;
-		border-bottom: 2px solid white;
-		@include respond-to(handhelds) {
-			display: block;
-			text-align: center;
-			margin-left: 0;
-			margin-top: 10px;
-		}
-	}
-	.featured-work {
-		display: none;
-		@include respond-to(medium-and-above) {
-			display: block;
-		}
-		.project-1 {
-			float: right;
-			position: relative;
-			margin-right: -350px;
-			margin-top: 90px;
-			@include respond-to(medium-and-above) {
-				margin-top:0;
-				margin-right: -640px;
-			}
-			@include respond-to(wide-screens) {
-				margin-right: -500px;
-				margin-top: 120px;
-			}
-			@include respond-to(extra-wide-screens) {
-				margin-right: -300px;
-			}
-			.iphone {
-				position: relative;
-				top: -400px;
-				left: 475px;
-				display: none;
-				@include respond-to(extra-wide-screens) {
-					display: block;
-					left: 75%;
-				}
-			}
-			.ipad {
-				top: 130px;
-			}
-			.macbook {
-				position: relative;
-				@include respond-to(medium-screens) {
-					right: -7%;
-				}
-				@include respond-to(extra-wide-screens) {
-					left: 5%;
-				}
-			}
-		}
-		.project-2 {
-			position: absolute;
-			top: 370px;
-			@media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: 831px) { 
-				top: 550px;
-			}
-			.ipad {
-				position: relative;
-				@include respond-to(medium-and-above) {
-					right: 300px;
-					top: 150px;
-					width: 820px;
-				}
-				@include respond-to(wide-screens) {
-					right: 140px;
-				}
-				@include respond-to(extra-wide-screens) {
-					left: 0;
-				}
-			}
-			.iphone {
-				position: relative;
-				top: -400px;
-				right: -150px;
-				display: none;
-				@include respond-to(extra-wide-screens) {
-					right: auto; 
-					display: block;
-					left: -20%;
-				}
-			}
-		}
-	}
-	h2 {
-		margin-bottom: 30px;
-		@include respond-to(handhelds) {
-			font-size: 28px;
-			line-height: 34px;
-		}
-	}
-	p {
-		margin-bottom: 20px;
-		@include respond-to(wide-and-above) {
-			margin-right: 25%;
-		}
-	}
-}
-
 .more-work {
+	h3 {
+		@include respond-to(medium-and-above) {
+			margin-left: 5%;
+		}
+		width: 25%;
+		left: 0;
+	}
 	.project-item {
 		p {
+			color: $color-text;
+			font-size: 22px;
+			line-height: 31px;
+		}
+		a {
+			color: $color-text;
+			text-decoration: none;
+			&:hover {
 
+			}
+		}
+
+		&.light-text {
+			p, a {
+				color: #fff;
+			}
+		}
+		.logo {
+			img {
+				margin-bottom: 30px;
+				width: 100%;
+			}
 		}
 
 		// Project specific item styles
 		&.yale {
 			background-image: url('/img/home/background-yale.jpg');
 			background-size: cover;
-			@include gs-span(d, 4, 12);
+			position: relative;
+			// @include gs-span(d, 4, 12);
+			width: 75%;
+			float: right;
+			@include clearfix;
 			.wrap {
 				@include gs-span(d, 4, 8);
+				padding: 100px 0;
+				text-align: center;
 			}
 			.device {
 				@include gs-span(d, 9, 12);	
+				margin-top: -10%;
+				img {
+					display: block;
+				}
+			}
+			.logo {
+				img {
+					max-width: 200px;
+				}
 			}
 		}
 
 		&.nyit {
 			@include clearfix;
-			margin-top: -10%;
+			margin-top: -30%;
+			margin-bottom: 10%;
+			
+			@include respond-to(medium-and-above) {
+				margin-right: 5%;
+			}
 			.wrap {
 				@include gs-span(d, 7, 12);
 				position: relative;
@@ -365,11 +290,7 @@
 			    left: 0;
 			    bottom: 0;
 			    right: 0;
-					// width: 100%;
-			    // height: 50vw;
-			    // padding-top: 100%;
 			    text-align: center;
-			    // padding: 25vh;
 				}
 				.center {
 					display: table;
@@ -389,59 +310,84 @@
 				z-index: 3;
 				top: -50%;
 			}
+			.logo {
+				img {
+					max-width: 200px;
+				}
+			}
 		}
 
 		&.filmlinc {
 			@include clearfix;
-			background: #f9642a url('/img/home/background-filmlinc.jpg') no-repeat;
+			background: #ff6418 url('/img/home/background-filmlinc.jpg') no-repeat;
 			background-position: bottom left;
 			background-size: 100%;
-			// min-height: 700px;
+			position: relative;
+			height: 580px;
+			@include respond-to(medium-and-above) {
+				margin-left: 5%;
+				margin-right: 5%;
+			}
 			.wrap {
 				position: absolute;
 				bottom: 40px;
 				left: 40px;
+				width: 100%;
 			}
 			.device {
 				@include gs-span(d, 1, 6);	
+				position: absolute;
+				top: -10%;
+				left: -7%;
+			}
+			.description-wrap {
+				@include gs-span(d, 4, 7);	
+			}
+			.logo {
+				@include gs-span(d, 2, 3);	
 				img {
-					position: relative;
-					left: -20%;
-					top: -150%;
+					max-width: 120px;
 				}
 			}
 		}
 		
 		&.okcjr {
-			
-			// @include clearfix;
+			@include gs-span(d, 1, 6);	
+			margin-top: 15%;
 			.wrap {
-				background: #fff;
+				// background: #fff;
 				text-align: center;
 				padding: 150px 40px;
-				@include gs-span(d, 2, 6);	
+				@include gs-span(d, 3, 6, (1, 6));	
 			}
 			.device {
-				@include gs-span(d, 1, 3);
+				@include gs-span(d, 1, 3, (1, 6));
+				// margin-left: -10%;
+				margin-top: 16%;
 				position: relative;
 				z-index: 2;
+			}
+			.logo {
+				img {
+					max-width: 200px;
+				}
 			}
 		}
 
 		&.nextgen {
-			
+			@include gs-span(d, 7, 12);	
 			// @include clearfix;
 			.wrap {
-				background: #fff;
+				// background: #fff;
 				text-align: center;
-				padding: 150px 40px;
-				@include gs-span(d, 8, 11);	
+				padding: 150px 40px 0px;
+				@include gs-span(d, 8, 11, (7, 12));	
 			}
 			.device {
 				clear: both;
 				position: relative;
 				z-index: 2;
-				@include gs-span(d, 7, 11);
+				@include gs-span(d, 7, 12, (7, 12));
 			}	
 		}
 
@@ -449,15 +395,16 @@
 			clear: both;
 			@include clearfix;
 			background: #fff url('/img/home/background-audubon.jpg') no-repeat;
-			background-position:  top left;
+			background-position:  bottom left;
 			background-size: 50%;
+			margin-bottom: 300px;
 			// min-height: 700px;
 			.wrap {
 				// position: absolute;
 				// bottom: 40px;
 				// left: 40px;
-				padding: 50px 5%;
-				@include gs-span(d, 6, 9);
+				padding: 50px 5% 0;
+				@include gs-span(d, 6, 10);
 			}
 			.device {
 				clear: both;
@@ -470,42 +417,95 @@
 					// top: -150%;
 				}
 			}
+			.logo {
+				margin-left: -12%;
+				max-width: 250px;
+			}
 		}
 
 		&.raise {
 			clear: both;
-			margin-top: 300px;
+			padding-top: 150px;
+			padding-bottom: 150px;
+			position: relative;
+			margin-bottom: 10%;
+			@include clearfix;
+			@include respond-to(medium-and-above) {
+				margin-left: 5%;
+				margin-right: 5%;
+			}
 			.wrap {
+				margin-top: -8%;
 				@include gs-span(d, 7, 10);
 			}	
+			.logo img {
+				max-width: 300px;
+			}
 
 			.device {
-				@include gs-span(d, 1, 6);
+				@include gs-span(d, 1, 8);
+				margin-left: -17%;
+				margin-top: -40%;
+				img {
+					width: 100%;
+				}
 			}
 		}
 
 		&.tackle-ebola {
 			clear: both;
-			@include gs-span(d, 1, 6);	
+			margin-top: -15%;	
+			@include gs-span(d, 1, 6);
+			@include respond-to(medium-and-above) {
+				margin-left: 5%;
+			}
+			.logo {
+				@include gs-span(d, 1, 4, (1, 6));
+				max-width: 250px;
+				margin-top: 20%;
+			}
+			.description-wrap {
+				clear: both;
+				@include gs-span(d, 1, 3, (1, 6));
+			}
 			.wrap {
-				@include gs-span(d, 1, 4, (1, 6))
+				// @include gs-span(d, 1, 4, (1, 6));
+				// padding: 125px 0;
 			}
 			.device {
-				@include gs-span(d, 5, 6, (1, 6))	
+				margin-top: -40%;
+				@include gs-span(d, 4, 5, (1, 6))	
+
 			}
 		}
 
 		&.the-feast {
-			@include gs-span(d, 7, 12);	
+			@include gs-span(d, 6, 12);	
+			margin-top: -240px;
+			@include clearfix;
+			overflow: hidden;
+			.wrap {
+				// @include gs-span(d, 8, 11)
+			}
 			.logo {
-				@include gs-span(d, 7, 8, (7, 12))
+				@include gs-span(d, 7, 8, (6, 12));
+				max-width: 200px;
 			}
 			.description-wrap {
-				@include gs-span(d, 9, 12, (7, 12))
+				@include gs-span(d, 9, 11, (6, 12));
+				padding-left: 30px;
 			}
 			.device {
 				clear: both;
-				// @include gs-span(d, 12, 12, (7, 12))	
+				position: relative;
+				margin-top: -7%;
+				@include gs-span(d, 6, 12, (6, 12));
+				right: 0%;
+
+				img {
+					position: relative;
+			    right: -5%;
+				}
 			}
 		}
 
@@ -515,13 +515,14 @@
 			background: url('/img/home/background-filmcomment.jpg') no-repeat; 
 			background-size: cover;
 			.wrap {
-				@include gs-span(d, 7, 11);	
+				@include gs-span(d, 8, 11);	
 				padding: 150px 0;
 				text-align: center;
 			}
 			.device {
-				@include gs-span(d, 1, 6);	
-				margin-bottom: -200px;
+				@include gs-span(d, 1, 7);	
+		    position: absolute;
+		    bottom: -10%;
 			}
 		}
 
@@ -540,11 +541,15 @@
 				left: 40px;
 			}
 			.device {
-				@include gs-span(d, 2, 6, (1, 8));
+				@include gs-span(d, 2, 8, (1, 8));
 				// margin-top: 300px;
 				position: absolute;
-				bottom: -150px;
-				right: 105%;
+				bottom: -70%;				
+				img {
+					// position: absolute;
+					// right: -25%;
+					// bottom: -10%;
+				}
 			}
 		}
 
@@ -552,9 +557,26 @@
 			@include clearfix;
 			clear: both;
 			background-size: cover;
-			background: url('/img/home/background-patronage.jpg') no-repeat; 
+			background: #05a6e6 url('/img/home/background-patronage.jpg') center center; 
+			// margin-top: 200px;
+			margin-top: 20%;
+			padding: 200px 0 25%;
+			.container {
+				clear: both;
+				@include clearfix;
+			}
+			.logo img {
+				max-width: 200px;
+			}
+
 			.wrap {
-				text-align: center;;
+				text-align: center;
+			}
+			.devices {
+				@include clearfix;
+				clear: both;
+				position: absolute;
+				width: 100%;
 			}
 			.device-a {
 				@include gs-span(d, 2, 8);	
@@ -563,6 +585,83 @@
 			}
 			.device-b {
 				@include gs-span(d, 7, 12);	
+			}
+		}
+
+		&.fairness {
+			clear: both;
+			margin-top: 30%;
+			.device {
+				@include gs-span(d, 1, 3);	
+			}
+			.wrap {
+				@include gs-span(d, 3, 5);	
+				text-align: center;
+			}
+			.logo {
+				max-width: 200px;
+				margin: 0 auto;
+			}
+		}
+
+		&.muckfest {
+			@include gs-span(d, 7, 12);	
+			background: url('/img/home/background-muckfest.jpg');
+			background-size: cover;
+			padding: 60px 0;
+			.description-wrap {
+				clear: both;
+				@include gs-span(d, 8, 11, (7, 12));
+				text-align: center;
+			}
+			.logo {
+				@include gs-span(d, 9, 10, (7, 12));
+			}
+			.device {
+				clear: both;
+				@include gs-span(d, 8, 11, (7, 12));
+			}
+		}
+
+		&.hustwit {			
+			@include gs-span(d, 1, 6);	
+			clear: both;
+			background: url('/img/home/background-hustwit.jpg');
+			background-size: cover;	
+			position: relative;
+			min-height: 400px;
+			margin-top: 10%;
+			@include respond-to(medium-and-above) {
+				padding-right: 5%;
+				margin-left: 5%;
+			}
+			.wrap {
+				@include gs-span(d, 2, 4, (1, 7));
+				padding: 200px 0;
+			}
+			.device {
+				position: absolute;
+				bottom: -260px;
+				@include gs-span(d, 2, 7, (1, 7));
+				img {
+					position: relative;
+					right: -10%;
+				}
+			}
+		}
+
+		&.littlebits {
+			@include gs-span(d, 8, 12);	
+			margin-top: 300px;
+			@include respond-to(medium-and-above) {
+				padding-right: 5%;
+				padding-left: 5%;
+			}
+			.wrap {
+				text-align: center;
+				img {
+					max-width: 200px;
+				}
 			}
 		}
 
@@ -610,7 +709,7 @@
     &.filmlinc {
     	clear: both;
     	position: relative;
-    	top: -50px;
+    	top: -200px;
     }
     &.etr {
     	margin-top: 75px;
@@ -626,11 +725,11 @@
 
 .more-work {
 	// background: #242742;
-	padding: 0 6%;
+	// padding: 0 6%;
 	position: relative;
 	@include clearfix;
 	@include respond-to(medium-and-above) {
-		padding: 60px 0;
+		// padding: 60px 0;
 	}
 	.project {
 		text-decoration: none;

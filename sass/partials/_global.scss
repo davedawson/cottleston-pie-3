@@ -30,9 +30,9 @@ body {
     padding: 0 3%;
   }
   @include respond-to(wide-screens) {
-    max-width: 1082px;
+    // max-width: 1082px;
     margin: 0 auto;
-    padding: 0 1%;
+    padding: 0%;
   }
   @include respond-to(extra-wide-screens) {
     max-width: 1400px;
@@ -206,4 +206,8 @@ input[type=submit] {
 address {
   font-size: 14px;
   line-height: 20px;
+}
+
+img {
+  // display: block;
 }

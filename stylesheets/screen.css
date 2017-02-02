@@ -292,9 +292,8 @@ body {
 }
 @media only screen and (min-width: 1024px) {
   .container {
-    max-width: 1082px;
     margin: 0 auto;
-    padding: 0 1%;
+    padding: 0%;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -931,6 +930,7 @@ footer, section {
 
 .intro {
   margin: 0 auto;
+  margin-bottom: -600px;
   background-image: url("/img/intro-bg-gradient.png");
 }
 .intro::after {
@@ -1071,175 +1071,42 @@ footer, section {
   clear: none;
 }
 
-.description {
-  background: #b80f4a;
-  padding: 30px 6%;
-}
-.description::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media only screen and (min-width: 641px) and (max-width: 1023px) {
-  .description {
-    margin-top: -73px;
-    padding: 100px 3%;
-    max-height: 1000px;
-    overflow: hidden;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  .description {
-    margin-top: -106px;
-    padding: 100px 0;
-    max-height: 1000px;
-    overflow: hidden;
-  }
-}
-.description .intro-text {
-  position: relative;
-  z-index: 2;
-}
-.description .button {
-  margin-left: 20px;
-  white-space: nowrap;
-  border-bottom: 2px solid white;
-}
-@media only screen and (max-width: 640px) {
-  .description .button {
-    display: block;
-    text-align: center;
-    margin-left: 0;
-    margin-top: 10px;
-  }
-}
-.description .featured-work {
-  display: none;
+.more-work h3 {
+  width: 25%;
+  left: 0;
 }
 @media only screen and (min-width: 641px) {
-  .description .featured-work {
-    display: block;
+  .more-work h3 {
+    margin-left: 5%;
   }
 }
-.description .featured-work .project-1 {
-  float: right;
-  position: relative;
-  margin-right: -350px;
-  margin-top: 90px;
+.more-work .project-item p {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 22px;
+  line-height: 31px;
 }
-@media only screen and (min-width: 641px) {
-  .description .featured-work .project-1 {
-    margin-top: 0;
-    margin-right: -640px;
-  }
+.more-work .project-item a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
 }
-@media only screen and (min-width: 1024px) {
-  .description .featured-work .project-1 {
-    margin-right: -500px;
-    margin-top: 120px;
-  }
+.more-work .project-item.light-text p, .more-work .project-item.light-text a {
+  color: #fff;
 }
-@media only screen and (min-width: 1400px) {
-  .description .featured-work .project-1 {
-    margin-right: -300px;
-  }
-}
-.description .featured-work .project-1 .iphone {
-  position: relative;
-  top: -400px;
-  left: 475px;
-  display: none;
-}
-@media only screen and (min-width: 1400px) {
-  .description .featured-work .project-1 .iphone {
-    display: block;
-    left: 75%;
-  }
-}
-.description .featured-work .project-1 .ipad {
-  top: 130px;
-}
-.description .featured-work .project-1 .macbook {
-  position: relative;
-}
-@media only screen and (min-width: 641px) and (max-width: 1023px) {
-  .description .featured-work .project-1 .macbook {
-    right: -7%;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .description .featured-work .project-1 .macbook {
-    left: 5%;
-  }
-}
-.description .featured-work .project-2 {
-  position: absolute;
-  top: 370px;
-}
-@media only screen and (min-width: 641px) and (max-width: 831px) {
-  .description .featured-work .project-2 {
-    top: 550px;
-  }
-}
-.description .featured-work .project-2 .ipad {
-  position: relative;
-}
-@media only screen and (min-width: 641px) {
-  .description .featured-work .project-2 .ipad {
-    right: 300px;
-    top: 150px;
-    width: 820px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .description .featured-work .project-2 .ipad {
-    right: 140px;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .description .featured-work .project-2 .ipad {
-    left: 0;
-  }
-}
-.description .featured-work .project-2 .iphone {
-  position: relative;
-  top: -400px;
-  right: -150px;
-  display: none;
-}
-@media only screen and (min-width: 1400px) {
-  .description .featured-work .project-2 .iphone {
-    right: auto;
-    display: block;
-    left: -20%;
-  }
-}
-.description h2 {
+.more-work .project-item .logo img {
   margin-bottom: 30px;
+  width: 100%;
 }
-@media only screen and (max-width: 640px) {
-  .description h2 {
-    font-size: 28px;
-    line-height: 34px;
-  }
-}
-.description p {
-  margin-bottom: 20px;
-}
-@media only screen and (min-width: 1025px) {
-  .description p {
-    margin-right: 25%;
-  }
-}
-
 .more-work .project-item.yale {
   background-image: url("/img/home/background-yale.jpg");
   background-size: cover;
-  display: block;
-  float: left;
-  margin-left: 25.72021%;
-  margin-right: -100%;
-  width: 74.23096%;
+  position: relative;
+  width: 75%;
+  float: right;
+}
+.more-work .project-item.yale::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .more-work .project-item.yale .wrap {
   display: block;
@@ -1247,6 +1114,8 @@ footer, section {
   margin-left: 25.72021%;
   margin-right: -100%;
   width: 39.93734%;
+  padding: 100px 0;
+  text-align: center;
 }
 .more-work .project-item.yale .device {
   display: block;
@@ -1254,14 +1123,27 @@ footer, section {
   margin-left: 68.58724%;
   margin-right: -100%;
   width: 31.36393%;
+  margin-top: -10%;
+}
+.more-work .project-item.yale .device img {
+  display: block;
+}
+.more-work .project-item.yale .logo img {
+  max-width: 200px;
 }
 .more-work .project-item.nyit {
-  margin-top: -10%;
+  margin-top: -30%;
+  margin-bottom: 10%;
 }
 .more-work .project-item.nyit::after {
   content: "";
   display: table;
   clear: both;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.nyit {
+    margin-right: 5%;
+  }
 }
 .more-work .project-item.nyit .wrap {
   display: block;
@@ -1308,20 +1190,32 @@ footer, section {
   z-index: 3;
   top: -50%;
 }
+.more-work .project-item.nyit .logo img {
+  max-width: 200px;
+}
 .more-work .project-item.filmlinc {
-  background: #f9642a url("/img/home/background-filmlinc.jpg") no-repeat;
+  background: #ff6418 url("/img/home/background-filmlinc.jpg") no-repeat;
   background-position: bottom left;
   background-size: 100%;
+  position: relative;
+  height: 580px;
 }
 .more-work .project-item.filmlinc::after {
   content: "";
   display: table;
   clear: both;
 }
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.filmlinc {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 .more-work .project-item.filmlinc .wrap {
   position: absolute;
   bottom: 40px;
   left: 40px;
+  width: 100%;
 }
 .more-work .project-item.filmlinc .device {
   display: block;
@@ -1329,40 +1223,72 @@ footer, section {
   margin-left: 0%;
   margin-right: -100%;
   width: 48.51074%;
+  position: absolute;
+  top: -10%;
+  left: -7%;
 }
-.more-work .project-item.filmlinc .device img {
-  position: relative;
-  left: -20%;
-  top: -150%;
+.more-work .project-item.filmlinc .description-wrap {
+  display: block;
+  float: left;
+  margin-left: 25.72021%;
+  margin-right: -100%;
+  width: 31.36393%;
 }
-.more-work .project-item.okcjr .wrap {
-  background: #fff;
-  text-align: center;
-  padding: 150px 40px;
+.more-work .project-item.filmlinc .logo {
   display: block;
   float: left;
   margin-left: 8.5734%;
   margin-right: -100%;
-  width: 39.93734%;
+  width: 14.21712%;
+}
+.more-work .project-item.filmlinc .logo img {
+  max-width: 120px;
+}
+.more-work .project-item.okcjr {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 48.51074%;
+  margin-top: 15%;
+}
+.more-work .project-item.okcjr .wrap {
+  text-align: center;
+  padding: 150px 40px;
+  display: block;
+  float: left;
+  margin-left: 35.34642%;
+  margin-right: -100%;
+  width: 64.65358%;
 }
 .more-work .project-item.okcjr .device {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
-  width: 22.79053%;
+  width: 46.98037%;
+  margin-top: 16%;
   position: relative;
   z-index: 2;
 }
-.more-work .project-item.nextgen .wrap {
-  background: #fff;
-  text-align: center;
-  padding: 150px 40px;
+.more-work .project-item.okcjr .logo img {
+  max-width: 200px;
+}
+.more-work .project-item.nextgen {
   display: block;
   float: left;
-  margin-left: 60.01383%;
+  margin-left: 51.44043%;
   margin-right: -100%;
-  width: 31.36393%;
+  width: 48.51074%;
+}
+.more-work .project-item.nextgen .wrap {
+  text-align: center;
+  padding: 150px 40px 0px;
+  display: block;
+  float: left;
+  margin-left: 17.67321%;
+  margin-right: -100%;
+  width: 64.65358%;
 }
 .more-work .project-item.nextgen .device {
   clear: both;
@@ -1370,15 +1296,16 @@ footer, section {
   z-index: 2;
   display: block;
   float: left;
-  margin-left: 51.44043%;
+  margin-left: 0%;
   margin-right: -100%;
-  width: 39.93734%;
+  width: 100%;
 }
 .more-work .project-item.audubon {
   clear: both;
   background: #fff url("/img/home/background-audubon.jpg") no-repeat;
-  background-position: top left;
+  background-position: bottom left;
   background-size: 50%;
+  margin-bottom: 300px;
 }
 .more-work .project-item.audubon::after {
   content: "";
@@ -1386,12 +1313,12 @@ footer, section {
   clear: both;
 }
 .more-work .project-item.audubon .wrap {
-  padding: 50px 5%;
+  padding: 50px 5% 0;
   display: block;
   float: left;
   margin-left: 42.86702%;
   margin-right: -100%;
-  width: 31.36393%;
+  width: 39.93734%;
 }
 .more-work .project-item.audubon .device {
   clear: both;
@@ -1403,69 +1330,134 @@ footer, section {
   position: relative;
   margin-bottom: -300px;
 }
+.more-work .project-item.audubon .logo {
+  margin-left: -12%;
+  max-width: 250px;
+}
 .more-work .project-item.raise {
   clear: both;
-  margin-top: 300px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+  margin-bottom: 10%;
+}
+.more-work .project-item.raise::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.raise {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 .more-work .project-item.raise .wrap {
+  margin-top: -8%;
   display: block;
   float: left;
   margin-left: 51.44043%;
   margin-right: -100%;
   width: 31.36393%;
 }
+.more-work .project-item.raise .logo img {
+  max-width: 300px;
+}
 .more-work .project-item.raise .device {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
-  width: 48.51074%;
+  width: 65.65755%;
+  margin-left: -17%;
+  margin-top: -40%;
+}
+.more-work .project-item.raise .device img {
+  width: 100%;
 }
 .more-work .project-item.tackle-ebola {
   clear: both;
+  margin-top: -15%;
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 48.51074%;
 }
-.more-work .project-item.tackle-ebola .wrap {
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.tackle-ebola {
+    margin-left: 5%;
+  }
+}
+.more-work .project-item.tackle-ebola .logo {
   display: block;
   float: left;
   margin-left: 0%;
   margin-right: -100%;
   width: 64.65358%;
+  max-width: 250px;
+  margin-top: 20%;
 }
-.more-work .project-item.tackle-ebola .device {
+.more-work .project-item.tackle-ebola .description-wrap {
+  clear: both;
   display: block;
   float: left;
-  margin-left: 70.69284%;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 46.98037%;
+}
+.more-work .project-item.tackle-ebola .device {
+  margin-top: -40%;
+  display: block;
+  float: left;
+  margin-left: 53.01963%;
   margin-right: -100%;
   width: 29.30716%;
 }
 .more-work .project-item.the-feast {
   display: block;
   float: left;
-  margin-left: 51.44043%;
+  margin-left: 42.86702%;
   margin-right: -100%;
-  width: 48.51074%;
+  width: 57.08415%;
+  margin-top: -240px;
+  overflow: hidden;
+}
+.more-work .project-item.the-feast::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .more-work .project-item.the-feast .logo {
   display: block;
   float: left;
-  margin-left: 0%;
+  margin-left: 15.01889%;
   margin-right: -100%;
-  width: 29.30716%;
+  width: 24.90555%;
+  max-width: 200px;
 }
 .more-work .project-item.the-feast .description-wrap {
   display: block;
   float: left;
-  margin-left: 35.34642%;
+  margin-left: 45.05667%;
   margin-right: -100%;
-  width: 64.65358%;
+  width: 39.92444%;
+  padding-left: 30px;
 }
 .more-work .project-item.the-feast .device {
   clear: both;
+  position: relative;
+  margin-top: -7%;
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 100%;
+  right: 0%;
+}
+.more-work .project-item.the-feast .device img {
+  position: relative;
+  right: -5%;
 }
 .more-work .project-item.film-comment {
   clear: both;
@@ -1480,9 +1472,9 @@ footer, section {
 .more-work .project-item.film-comment .wrap {
   display: block;
   float: left;
-  margin-left: 51.44043%;
+  margin-left: 60.01383%;
   margin-right: -100%;
-  width: 39.93734%;
+  width: 31.36393%;
   padding: 150px 0;
   text-align: center;
 }
@@ -1491,8 +1483,9 @@ footer, section {
   float: left;
   margin-left: 0%;
   margin-right: -100%;
-  width: 48.51074%;
-  margin-bottom: -200px;
+  width: 57.08415%;
+  position: absolute;
+  bottom: -10%;
 }
 .more-work .project-item.fes {
   display: block;
@@ -1522,23 +1515,45 @@ footer, section {
   float: left;
   margin-left: 13.05776%;
   margin-right: -100%;
-  width: 60.82672%;
+  width: 86.94224%;
   position: absolute;
-  bottom: -150px;
-  right: 105%;
+  bottom: -70%;
 }
 .more-work .project-item.patronage {
   clear: both;
   background-size: cover;
-  background: url("/img/home/background-patronage.jpg") no-repeat;
+  background: #05a6e6 url("/img/home/background-patronage.jpg") center center;
+  margin-top: 20%;
+  padding: 200px 0 25%;
 }
 .more-work .project-item.patronage::after {
   content: "";
   display: table;
   clear: both;
 }
+.more-work .project-item.patronage .container {
+  clear: both;
+}
+.more-work .project-item.patronage .container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.more-work .project-item.patronage .logo img {
+  max-width: 200px;
+}
 .more-work .project-item.patronage .wrap {
   text-align: center;
+}
+.more-work .project-item.patronage .devices {
+  clear: both;
+  position: absolute;
+  width: 100%;
+}
+.more-work .project-item.patronage .devices::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .more-work .project-item.patronage .device-a {
   display: block;
@@ -1555,6 +1570,123 @@ footer, section {
   margin-left: 51.44043%;
   margin-right: -100%;
   width: 48.51074%;
+}
+.more-work .project-item.fairness {
+  clear: both;
+  margin-top: 30%;
+}
+.more-work .project-item.fairness .device {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 22.79053%;
+}
+.more-work .project-item.fairness .wrap {
+  display: block;
+  float: left;
+  margin-left: 17.14681%;
+  margin-right: -100%;
+  width: 22.79053%;
+  text-align: center;
+}
+.more-work .project-item.fairness .logo {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.more-work .project-item.muckfest {
+  display: block;
+  float: left;
+  margin-left: 51.44043%;
+  margin-right: -100%;
+  width: 48.51074%;
+  background: url("/img/home/background-muckfest.jpg");
+  background-size: cover;
+  padding: 60px 0;
+}
+.more-work .project-item.muckfest .description-wrap {
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 17.67321%;
+  margin-right: -100%;
+  width: 64.65358%;
+  text-align: center;
+}
+.more-work .project-item.muckfest .logo {
+  display: block;
+  float: left;
+  margin-left: 35.34642%;
+  margin-right: -100%;
+  width: 29.30716%;
+}
+.more-work .project-item.muckfest .device {
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 17.67321%;
+  margin-right: -100%;
+  width: 64.65358%;
+}
+.more-work .project-item.hustwit {
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 48.51074%;
+  clear: both;
+  background: url("/img/home/background-hustwit.jpg");
+  background-size: cover;
+  position: relative;
+  min-height: 400px;
+  margin-top: 10%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.hustwit {
+    padding-right: 5%;
+    margin-left: 5%;
+  }
+}
+.more-work .project-item.hustwit .wrap {
+  display: block;
+  float: left;
+  margin-left: 15.01889%;
+  margin-right: -100%;
+  width: 39.92444%;
+  padding: 200px 0;
+}
+.more-work .project-item.hustwit .device {
+  position: absolute;
+  bottom: -260px;
+  display: block;
+  float: left;
+  margin-left: 15.01889%;
+  margin-right: -100%;
+  width: 84.98111%;
+}
+.more-work .project-item.hustwit .device img {
+  position: relative;
+  right: -10%;
+}
+.more-work .project-item.littlebits {
+  display: block;
+  float: left;
+  margin-left: 60.01383%;
+  margin-right: -100%;
+  width: 39.93734%;
+  margin-top: 300px;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.littlebits {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+.more-work .project-item.littlebits .wrap {
+  text-align: center;
+}
+.more-work .project-item.littlebits .wrap img {
+  max-width: 200px;
 }
 .more-work .quote-item {
   background: #fff;
@@ -1593,7 +1725,7 @@ footer, section {
 .more-work .quote-item.filmlinc {
   clear: both;
   position: relative;
-  top: -50px;
+  top: -200px;
 }
 .more-work .quote-item.etr {
   margin-top: 75px;
@@ -1601,18 +1733,12 @@ footer, section {
 }
 
 .more-work {
-  padding: 0 6%;
   position: relative;
 }
 .more-work::after {
   content: "";
   display: table;
   clear: both;
-}
-@media only screen and (min-width: 641px) {
-  .more-work {
-    padding: 60px 0;
-  }
 }
 .more-work .project {
   text-decoration: none;
