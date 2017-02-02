@@ -930,7 +930,7 @@ footer, section {
 
 .intro {
   margin: 0 auto;
-  margin-bottom: -600px;
+  text-align: center;
   background-image: url("/img/intro-bg-gradient.png");
 }
 .intro::after {
@@ -938,34 +938,45 @@ footer, section {
   display: table;
   clear: both;
 }
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .intro {
+    padding-bottom: 400px;
+    margin-bottom: -400px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .intro {
+    padding-bottom: 500px;
+    margin-bottom: -470px;
+    text-align: left;
+  }
+}
 .intro .tagline-wrap {
   padding: 20% 0;
 }
 .intro .tagline-wrap h2 {
-  text-align: center;
   font-size: 25px;
   line-height: 31px;
   text-align: center;
 }
+.intro .tagline-wrap h2:before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 7px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.4);
+}
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .intro .tagline-wrap h2 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 32px;
+    line-height: 40px;
   }
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 1025px) {
   .intro .tagline-wrap h2 {
     font-size: 42px;
     line-height: 52px;
-    text-align: left;
-  }
-  .intro .tagline-wrap h2:before {
-    content: "";
-    display: block;
-    width: 56px;
-    height: 7px;
-    margin-bottom: 30px;
-    background: rgba(255, 255, 255, 0.4);
   }
 }
 .intro .tagline-wrap h2:before {
@@ -980,19 +991,6 @@ footer, section {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-}
-@media only screen and (min-width: 641px) {
-  .intro .tagline-wrap h2 {
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 641px) and (max-width: 831px) {
-  .intro .tagline-wrap h2 {
-    font-size: 19px;
-  }
-}
-.intro .title-wrap {
-  margin: 0 auto;
 }
 @media only screen and (max-width: 640px) {
   .intro .nav-wrap {
@@ -1034,6 +1032,7 @@ footer, section {
 }
 .intro .logo-section {
   padding: 10% 0 20%;
+  margin: 0 auto;
 }
 .intro .logo-section::after {
   content: "";
@@ -1053,18 +1052,61 @@ footer, section {
   display: block;
   margin: 0 auto 40px;
 }
-@media all and (max-width: 1250px) and (min-width: 900px) {
-  .intro .logo-section .stacked {
-    display: none;
+@media only screen and (min-width: 1025px) {
+  .intro .logo-section .logos {
+    display: block;
+    float: left;
+    margin-left: 8.5734%;
+    margin-right: -100%;
+    width: 39.93734%;
   }
+}
+.intro .logo-section .details {
+  text-align: center;
+}
+@media only screen and (max-width: 640px) {
+  .intro .logo-section .details h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .intro .logo-section .details {
+    text-align: left;
+    display: block;
+    float: left;
+    margin-left: 51.44043%;
+    margin-right: -100%;
+    width: 39.93734%;
+  }
+}
+.intro .logo-section .details h3 {
+  margin-bottom: 15px;
 }
 .intro .logo-section .wide {
   display: none;
 }
-@media all and (max-width: 1250px) and (min-width: 900px) {
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .intro .logo-section .stacked {
+    display: none;
+  }
   .intro .logo-section .wide {
     display: block;
     margin-bottom: 40px;
+    display: block;
+    float: left;
+    margin-left: 17.4337%;
+    margin-right: -100%;
+    width: 65.0546%;
+  }
+  .intro .logo-section .details {
+    display: block;
+    float: left;
+    margin-left: 17.4337%;
+    margin-right: -100%;
+    width: 65.0546%;
+    clear: both;
+    text-align: center;
   }
 }
 .intro .logo-section .logos {
@@ -1072,12 +1114,21 @@ footer, section {
 }
 
 .more-work h3 {
-  width: 25%;
-  left: 0;
+  float: left;
+  display: none;
+  margin-left: 5%;
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
   .more-work h3 {
-    margin-left: 5%;
+    width: 15%;
+    display: block;
+    margin-left: 2%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .more-work h3 {
+    width: 25%;
+    display: block;
   }
 }
 .more-work .project-item p {
@@ -2539,116 +2590,6 @@ footer, section {
   position: relative;
   z-index: 3;
   filter: drop-shadow(0px 0px 45px rgba(0, 0, 0, 0.3));
-}
-
-.logo-bar {
-  padding: 100px 3% 100px;
-}
-@media only screen and (max-width: 640px) {
-  .logo-bar {
-    padding: 40px 6%;
-  }
-}
-.logo-bar .stacked {
-  display: block;
-  margin: 0 auto 40px;
-}
-@media all and (min-width: 1251px) {
-  .logo-bar .stacked {
-    width: 48%;
-    float: left;
-    margin-right: 4%;
-  }
-}
-@media all and (max-width: 1250px) and (min-width: 900px) {
-  .logo-bar .stacked {
-    display: none;
-  }
-}
-.logo-bar .wide {
-  display: none;
-}
-@media all and (max-width: 1250px) and (min-width: 900px) {
-  .logo-bar .wide {
-    display: block;
-    margin-bottom: 40px;
-  }
-}
-.logo-bar .container::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.logo-bar h3 {
-  text-align: center;
-  width: 100%;
-  margin: 40px auto;
-}
-.logo-bar h3:before {
-  margin-left: auto;
-  margin-right: auto;
-}
-@media all and (min-width: 1250px) {
-  .logo-bar .quotes {
-    width: 48%;
-    float: right;
-  }
-}
-@media all and (max-width: 1250px) and (min-width: 900px) {
-  .logo-bar .quotes {
-    clear: both;
-    width: 100%;
-  }
-}
-.logo-bar .quotes .quote {
-  margin-bottom: 60px;
-  width: 100%;
-}
-@media all and (max-width: 1250px) and (min-width: 900px) {
-  .logo-bar .quotes .quote {
-    width: 48%;
-    margin-right: 4%;
-    float: left;
-  }
-  .logo-bar .quotes .quote:last-child {
-    margin-right: 0;
-  }
-}
-.logo-bar .quotes .quote p {
-  font-size: 22px;
-  line-height: 32px;
-}
-@media only screen and (max-width: 640px) {
-  .logo-bar .quotes .quote p {
-    font-size: 17px;
-    line-height: 22px;
-  }
-}
-.logo-bar .quotes .quote p:before {
-  content: '\201C';
-  margin-left: -8px;
-}
-.logo-bar .quotes .quote p:after {
-  content: '\201D';
-}
-.logo-bar .quotes .quote address {
-  margin-top: 10px;
-  font-size: 18px;
-  line-height: 28px;
-  font-style: italic;
-}
-.logo-bar .quotes .quote address a {
-  color: #fff;
-  text-decoration: none;
-}
-@media only screen and (max-width: 640px) {
-  .logo-bar .quotes .quote address {
-    font-size: 15px;
-    line-height: 19px;
-  }
-}
-.logo-bar .quotes .quote address strong {
-  display: block;
 }
 
 .interior .container {

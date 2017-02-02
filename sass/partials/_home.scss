@@ -38,38 +38,43 @@
 
 .intro {
 	margin: 0 auto;
-	margin-bottom: -600px;
-	// Needs latest Compass, add '@import "compass"' to your scss
-	// Permalink - use to edit and share this gradient:
-	// http://colorzilla.com/gradient-editor/#f6a505+0,f6a303+0,f6a103+2,f59908+9,f28014+23,eb4133+51,ec3a36+53,eb3638+56,ea2f3c+58,e81a45+70,e7144a+76,e7114b+76,e6114d+100
-	// background-color: #f6a505; // Old browsers
-	// @include filter-gradient(#f6a505, #e6114d, vertical); // IE6-9
-	// @include background-image(linear-gradient(top,  #f6a505 0%,#f6a303 0%,#f6a103 2%,#f59908 9%,#f28014 23%,#eb4133 51%,#ec3a36 53%,#eb3638 56%,#ea2f3c 58%,#e81a45 70%,#e7144a 76%,#e7114b 76%,#e6114d 100%));
+	text-align: center;
 	background-image: url('/img/intro-bg-gradient.png');
 	@include clearfix;
+
+	@include respond-to(medium-screens) {
+	  padding-bottom: 400px;
+    margin-bottom: -400px;
+	}
+	@include respond-to(wide-and-above) {
+    padding-bottom: 500px;
+    margin-bottom: -470px;
+		text-align: left;
+	}
+	
+	// header styles
 	.tagline-wrap {
 		padding: 20% 0;
 		h2 {
-			text-align: center;
+			
 			font-size: 25px;
 			line-height: 31px;
 			text-align: center;
+			&:before {
+	      content: "";
+	      display: block;
+	      width: 56px;
+	      height: 7px;
+	      margin-bottom: 30px;
+	      background: rgba(255,255,255,0.4);
+	    }
 			@include respond-to(medium-screens) {
-				font-size: 20px;
-				line-height: 26px;
+				font-size: 32px;
+				line-height: 40px;
 			}
-			@include respond-to(medium-and-above) {
+			@include respond-to(wide-and-above) {
 				font-size: 42px;
 				line-height: 52px;
-				text-align: left;
-				&:before {
-		      content: "";
-		      display: block;
-		      width: 56px;
-		      height: 7px;
-		      margin-bottom: 30px;
-		      background: rgba(255,255,255,0.4);
-		    }
 		  }
 		  &:before {
 		  	margin-left: auto;
@@ -85,11 +90,7 @@
 				font-weight: bold;
 			}			
 		}
-    @include respond-to(medium-and-above) {
-	    h2 {
-		    text-align: center;
-	    }
-    }
+
     @include respond-to(medium-screens) {
 			// padding-top: 27%;
 		}
@@ -105,14 +106,12 @@
 		@media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: 831px) { 
 			// padding-top: 23%;
 			h2 {
-				font-size: 19px;
+				// font-size: 19px;
 			}
 		}
     
 	}
-	.title-wrap {
-		margin: 0 auto;
-	}
+	
 	.nav-wrap {
 		@include respond-to(handhelds) {
 			background: $color-dark-blue;
@@ -126,6 +125,7 @@
 			z-index: 2;
 		}
 	}
+
 	h1 {
 		// margin-top: 50px;
 		position: relative;
@@ -145,17 +145,17 @@
 			}
 		}
 	}
-	h2 {
-		
-	}
+
 	h3 {
 		font-family: $typeSans;
 		font-size: 26px;
 		line-height: 35px;
 	}
+
 	.logo-section {
 		padding: 10% 0 20%;
 		@include clearfix;
+		margin: 0 auto;
 		p {
 			font-size: 18px;
 			line-height: 26px;
@@ -174,11 +174,28 @@
 				// margin-right: 4%;
 			}
 		}
-		@media all and (max-width: 1250px) and (min-width: 900px) {
-			.stacked {
-				display: none
+		.logos {
+			@include respond-to(wide-and-above) {
+				@include gs-span(d, 2, 6);
 			}
 		}
+		.details {
+			text-align: center;
+			@include respond-to(handhelds) {
+				h3 {
+					font-size: 20px;	
+					line-height: 26px;
+				}
+			}
+			@include respond-to(medium-and-above) {
+				text-align: left;
+				@include gs-span(d, 7, 11);
+			}
+			h3 {
+				margin-bottom: 15px;
+			}
+		}
+
 
 		@media all and (max-width: 899px) {
 			.stacked {
@@ -189,15 +206,27 @@
 		.wide {
 			display: none;
 		}
-		@media all and (max-width: 1250px) and (min-width: 900px) {
+		// @media all and (max-width: 1250px) and (min-width: 900px) {
+		@include respond-to(medium-screens) {
+
+			.stacked {
+				display: none
+			}
 			.wide {
 				display: block;
 				margin-bottom: 40px;
+				@include gs-span(t, 2, 5);
+			}
+			.details {
+				@include gs-span(t, 2, 5);
+				clear: both;
+				text-align: center;
 			}
 		}
 		.logos {
 			clear: none;
 		}
+		
 	}
 }
 
@@ -205,11 +234,18 @@
 
 .more-work {
 	h3 {
-		@include respond-to(medium-and-above) {
-			margin-left: 5%;
+		float: left;
+		display: none;
+		margin-left: 5%;
+		@include respond-to(medium-screens) {
+			width: 15%;
+			display: block;
+			margin-left: 2%;
 		}
-		width: 25%;
-		left: 0;
+		@include respond-to(wide-and-above) {
+			width: 25%;
+			display: block;			
+		}
 	}
 	.project-item {
 		p {
@@ -1216,108 +1252,3 @@
 	}
 }
 
-.logo-bar {
-	padding: 100px 3% 100px;
-	@include respond-to(handhelds) {
-		padding: 40px 6%;
-	}
-	.stacked {
-		display: block;
-		margin: 0 auto 40px;
-		@media all and (min-width: 1251px) {
-			width: 48%;
-			float: left;
-			margin-right: 4%;
-		}
-	}
-	@media all and (max-width: 1250px) and (min-width: 900px) {
-		.stacked {
-			display: none
-		}
-	}
-
-	@media all and (max-width: 899px) {
-		.stacked {
-			// display: block
-		}
-	}
-	
-	.wide {
-		display: none;
-	}
-	@media all and (max-width: 1250px) and (min-width: 900px) {
-		.wide {
-			display: block;
-			margin-bottom: 40px;
-		}
-	}
-	.container {
-		@include clearfix;
-	}
-	h3 {
-		text-align: center;
-		width: 100%;
-		margin: 40px auto;
-		&:before {
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-	.quotes {
-
-		
-		@media all and (min-width: 1250px) {
-			width: 48%; 
-			float: right;
-		}
-
-		@media all and (max-width: 1250px) and (min-width: 900px) {
-			clear: both;
-			width: 100%;
-		}
-		.quote {
-			margin-bottom: 60px;
-			width: 100%;
-			@media all and (max-width: 1250px) and (min-width: 900px) {
-				width: 48%;
-				margin-right: 4%;
-				float: left;
-				&:last-child {
-					margin-right: 0;
-				}
-			}
-			p {
-				font-size: 22px;
-				line-height: 32px;
-				@include respond-to(handhelds) {
-					font-size: 17px;
-					line-height: 22px;
-				}
-				 &:before {
-		      content: '\201C';
-		      margin-left: -8px;
-		    }
-		    &:after {
-		      content: '\201D';
-		    }
-			}
-			address {
-				margin-top: 10px;
-				font-size: 18px;
-				line-height: 28px;
-				font-style: italic;
-				a {
-		    	color: #fff;
-		    	text-decoration: none;
-		    }
-				@include respond-to(handhelds) {
-					font-size: 15px;
-					line-height: 19px;
-				}
-				strong {
-					display: block;
-				}
-			}
-		}
-	}
-}
