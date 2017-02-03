@@ -1755,12 +1755,17 @@ footer, section {
   background-size: cover;
   background: #05a6e6 url("/img/home/background-patronage.jpg") center center;
   margin-top: 20%;
-  padding: 200px 0 25%;
+  padding: 40px 0 25%;
 }
 .more-work .project-item.patronage::after {
   content: "";
   display: table;
   clear: both;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.patronage {
+    padding: 200px 0 25%;
+  }
 }
 .more-work .project-item.patronage .container {
   clear: both;
@@ -1811,29 +1816,61 @@ footer, section {
   float: left;
   margin-left: 0%;
   margin-right: -100%;
-  width: 22.79053%;
+  width: 39.93734%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.fairness .device {
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 22.79053%;
+  }
 }
 .more-work .project-item.fairness .wrap {
   display: block;
   float: left;
-  margin-left: 17.14681%;
+  margin-left: 25.72021%;
   margin-right: -100%;
-  width: 22.79053%;
+  width: 74.23096%;
   text-align: center;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.fairness .wrap {
+    display: block;
+    float: left;
+    margin-left: 17.14681%;
+    margin-right: -100%;
+    width: 22.79053%;
+  }
 }
 .more-work .project-item.fairness .logo {
   max-width: 200px;
   margin: 0 auto;
 }
 .more-work .project-item.muckfest {
+  background: url("/img/home/background-muckfest.jpg") no-repeat center center;
+  background-size: cover;
+  clear: both;
+  padding: 30px 0;
+  margin-top: 40px;
   display: block;
   float: left;
-  margin-left: 51.44043%;
+  margin-left: 0%;
   margin-right: -100%;
-  width: 48.51074%;
-  background: url("/img/home/background-muckfest.jpg");
-  background-size: cover;
-  padding: 60px 0;
+  width: 99.95117%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.muckfest {
+    display: block;
+    float: left;
+    margin-left: 51.44043%;
+    margin-right: -100%;
+    width: 48.51074%;
+    clear: none;
+    padding: 60px 0;
+    margin-top: 20px;
+  }
 }
 .more-work .project-item.muckfest .description-wrap {
   clear: both;
@@ -1860,40 +1897,61 @@ footer, section {
   width: 64.65358%;
 }
 .more-work .project-item.hustwit {
-  display: block;
-  float: left;
-  margin-left: 0%;
-  margin-right: -100%;
-  width: 48.51074%;
   clear: both;
   background: url("/img/home/background-hustwit.jpg");
   background-size: cover;
   position: relative;
   min-height: 400px;
-  margin-top: 10%;
+  display: block;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%;
+  width: 99.95117%;
+  width: 90%;
+  margin: 30px 5% 30px;
 }
 @media only screen and (min-width: 641px) {
   .more-work .project-item.hustwit {
+    margin-top: 10%;
     padding-right: 5%;
     margin-left: 5%;
+    display: block;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 48.51074%;
   }
 }
 .more-work .project-item.hustwit .wrap {
-  display: block;
-  float: left;
-  margin-left: 15.01889%;
-  margin-right: -100%;
-  width: 39.92444%;
-  padding: 200px 0;
+  padding: 200px 5%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.hustwit .wrap {
+    display: block;
+    float: left;
+    margin-left: 15.01889%;
+    margin-right: -100%;
+    width: 39.92444%;
+  }
 }
 .more-work .project-item.hustwit .device {
   position: absolute;
-  bottom: -260px;
+  bottom: -100px;
   display: block;
   float: left;
   margin-left: 15.01889%;
   margin-right: -100%;
   width: 84.98111%;
+}
+@media only screen and (min-width: 641px) {
+  .more-work .project-item.hustwit .device {
+    bottom: -260px;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.hustwit .device {
+    bottom: -100px;
+  }
 }
 .more-work .project-item.hustwit .device img {
   position: relative;
@@ -1902,13 +1960,23 @@ footer, section {
 .more-work .project-item.littlebits {
   display: block;
   float: left;
-  margin-left: 60.01383%;
+  margin-left: 0%;
   margin-right: -100%;
-  width: 39.93734%;
-  margin-top: 300px;
+  width: 99.95117%;
+  clear: both;
+  margin-top: 140px;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 @media only screen and (min-width: 641px) {
   .more-work .project-item.littlebits {
+    display: block;
+    float: left;
+    margin-left: 60.01383%;
+    margin-right: -100%;
+    width: 39.93734%;
+    clear: none;
+    margin-top: 300px;
     padding-right: 5%;
     padding-left: 5%;
   }
@@ -1971,9 +2039,11 @@ footer, section {
     top: -200px;
   }
 }
-.more-work .quote-item.etr {
-  margin-top: 75px;
-  float: right;
+@media only screen and (min-width: 641px) {
+  .more-work .quote-item.etr {
+    margin-top: 75px;
+    float: right;
+  }
 }
 
 .more-work {

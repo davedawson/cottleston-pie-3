@@ -701,7 +701,10 @@
 			background: #05a6e6 url('/img/home/background-patronage.jpg') center center; 
 			// margin-top: 200px;
 			margin-top: 20%;
-			padding: 200px 0 25%;
+			padding: 40px 0 25%;
+			@include respond-to(medium-and-above) {
+				padding: 200px 0 25%;
+			}
 			.container {
 				clear: both;
 				@include clearfix;
@@ -733,10 +736,16 @@
 			clear: both;
 			margin-top: 30%;
 			.device {
-				@include gs-span(d, 1, 3);	
+				@include gs-span(d, 1, 5);	
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 1, 3);	
+				}
 			}
 			.wrap {
-				@include gs-span(d, 3, 5);	
+				@include gs-span(d, 4, 12);	
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 3, 5);	
+				}
 				text-align: center;
 			}
 			.logo {
@@ -746,10 +755,18 @@
 		}
 
 		&.muckfest {
-			@include gs-span(d, 7, 12);	
-			background: url('/img/home/background-muckfest.jpg');
+			background: url('/img/home/background-muckfest.jpg') no-repeat center center;
 			background-size: cover;
-			padding: 60px 0;
+			clear: both;
+			padding: 30px 0;
+			margin-top: 40px;
+			@include gs-span(d, 1, 12);	
+			@include respond-to(medium-and-above) {
+				@include gs-span(d, 7, 12);	
+				clear: none;
+				padding: 60px 0;
+				margin-top: 20px;
+			}
 			.description-wrap {
 				clear: both;
 				@include gs-span(d, 8, 11, (7, 12));
@@ -765,24 +782,38 @@
 		}
 
 		&.hustwit {			
-			@include gs-span(d, 1, 6);	
+			
 			clear: both;
 			background: url('/img/home/background-hustwit.jpg');
 			background-size: cover;	
 			position: relative;
 			min-height: 400px;
-			margin-top: 10%;
+			
+			@include gs-span(d, 1, 12);	
+			width: 90%;
+			margin: 30px 5% 30px;
 			@include respond-to(medium-and-above) {
+				margin-top: 10%;
 				padding-right: 5%;
 				margin-left: 5%;
+				@include gs-span(d, 1, 6);	
 			}
 			.wrap {
-				@include gs-span(d, 2, 4, (1, 7));
-				padding: 200px 0;
+				padding: 200px 5%;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 2, 4, (1, 7));
+				}
+				
 			}
 			.device {
 				position: absolute;
-				bottom: -260px;
+				bottom: -100px;
+				@include respond-to(medium-and-above) {
+					bottom: -260px;
+				}
+				@include respond-to(medium-screens) {
+					bottom: -100px;
+				}
 				@include gs-span(d, 2, 7, (1, 7));
 				img {
 					position: relative;
@@ -792,9 +823,15 @@
 		}
 
 		&.littlebits {
-			@include gs-span(d, 8, 12);	
-			margin-top: 300px;
+			@include gs-span(d, 1, 12);	
+			clear: both;
+			margin-top: 140px;
+			padding-right: 5%;
+			padding-left: 5%;
 			@include respond-to(medium-and-above) {
+				@include gs-span(d, 8, 12);	
+				clear: none;
+				margin-top: 300px;
 				padding-right: 5%;
 				padding-left: 5%;
 			}
@@ -860,8 +897,10 @@
 	    }
     }
     &.etr {
-    	margin-top: 75px;
-			float: right;
+    	@include respond-to(medium-and-above) {
+	    	margin-top: 75px;
+				float: right;
+			}
 		}
 	}
 
