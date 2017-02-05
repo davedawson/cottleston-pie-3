@@ -46,7 +46,7 @@
 		text-align: left;
 	}
 	.header {
-		@include respond-to(medium-and-above) {
+		@include respond-to(wide-and-above) {
 			position: fixed;
 			width: 100%;
 			z-index: 4;
@@ -54,7 +54,16 @@
 	}
 	// header styles
 	.tagline-wrap {
-		padding: 20% 0;
+		padding: 20% 3%;
+		@include respond-to(wide-and-above) {
+			padding: 0 3%;
+	    height: 100vh;
+	    display: flex;
+	    align-items: center;
+	  }
+	  .wrap {
+    	margin: 0 auto;
+    }
 		h2 {
 			
 			font-size: 25px;
@@ -259,9 +268,16 @@
 	.project-item {
 		p {
 			color: $color-text;
-			font-size: 22px;
-			line-height: 31px;
 			margin-bottom: 5px;
+			font-size: 16px;
+			line-height: 22px;
+			@include respond-to(medium-and-above) {
+			}
+			@include respond-to(wide-and-above) {
+				font-size: 22px;
+				line-height: 28px;
+			}
+			
 		}
 		a {
 			color: $color-text;
@@ -290,8 +306,10 @@
 		}
 		.description-wrap {
 			a {
-				font-size: 18px;
-				line-height: 24px;
+				@include respond-to(wide-and-above) {
+					font-size: 18px;
+					line-height: 24px;
+				}
 			}
 		}
 
@@ -306,28 +324,44 @@
 				width: 75%;
 				float: right;
 			}
-			@include respond-to(wide-and-above) {
+			@include respond-to(medium-and-above) {
 				padding: 5% 0;
+			}
+			@include respond-to(extra-wide-screens) {
+				padding: 10% 0;
 			}
 			.container {
 				position: relative;
 			}
 			.wrap {
-				@include gs-span(d, 4, 8);
+				
 				padding: 100px 0;
 				text-align: center;
+				// @include respond-to(medium-and-above) {
+					@include gs-span(d, 4, 8);
+				// }
 			}
 			.device {
-				@include gs-span(d, 9, 12);	
+				@include gs-span(d, 7, 12);	
 				// margin-top: -10%;
+				@include respond-to(medium-and-above) {
+					@include gs-span(d, 9, 12);	
+				}
 				img { 
-					@include respond-to(medium-and-above) {
+					// @include respond-to(medium-and-above) {
 						position: absolute;
 						bottom: 0;
 						right: 5%;
-					}
+						max-width: 100px;
+					// }
 					@include respond-to(medium-screens) {
-						max-width: 210px;
+						max-width: 160px;
+					}
+					@include respond-to(wide-screens) {
+						max-width: 260px
+					}
+					@include respond-to(extra-wide-screens) {
+						max-width: 400px
 					}
 				}
 				
@@ -352,7 +386,7 @@
 				margin-right: 5%;
 			}
 			@include respond-to(medium-screens) {
-				margin: -15% 0 30px;
+				margin: -5% 0 30px;
 			}
 
 			.wrap {
@@ -364,11 +398,16 @@
 			    overflow: hidden;
 			  }
 			  @include respond-to(medium-screens) {
+			  	overflow: visible;
+			  	width: auto;
 			  }
 				&:before{
 			    content: "";
 			    display: block;
 			    padding-top: 100%;
+			    @include respond-to(medium-screens) {
+			    	padding: 0;
+			    }
 				}
 				.inner-wrap {
 					position:  absolute;
@@ -377,6 +416,9 @@
 			    bottom: 0;
 			    right: 0;
 			    text-align: center;
+			    @include respond-to(medium-screens) {
+			    	position: relative;
+			    }
 				}
 				.center {
 					display: table;
@@ -395,7 +437,13 @@
 				position: relative;
 				margin-top: -80px;
 				z-index: 2;
-				@include respond-to(medium-and-above) {
+				@include respond-to(medium-screens) {
+					clear: none;
+					position: absolute;
+					z-index: 3;
+					top: -40%;
+				}
+				@include respond-to(wide-and-above) {
 					clear: none;
 					position: absolute;
 					z-index: 3;
@@ -428,17 +476,29 @@
 			background-size: 100%;
 			position: relative;
 			padding-bottom: 200px;
-			@include respond-to(medium-and-above) {
+			@include respond-to(medium-screens) {
+				// margin-left: 5%;
+				// margin-right: 5%;
+				height: 480px;
+				// padding: 200px 0;
+				padding-bottom: 0;
+			}
+			@include respond-to(wide-and-above) {
 				margin-left: 5%;
 				margin-right: 5%;
 				height: 580px;
 				padding-bottom: 0;
 			}
+			@include respond-to(extra-wide-screens) {
+				height: auto;
+				padding: 20% 0;
+				margin: 0;
+			}
 			.wrap {
 				@include respond-to(medium-and-above) {
 					position: absolute;
 					bottom: 40px;
-					left: 40px;
+					// left: 40px;
 					width: 100%;
 				}
 			}
@@ -458,7 +518,7 @@
 			.description-wrap {
 				clear: both;
 				@include gs-span(d, 2, 11);	
-				@include respond-to(medium-and-above) {
+				@include respond-to(wide-and-above) {
 					clear: none;
 					@include gs-span(d, 4, 7);	
 				}
@@ -510,6 +570,10 @@
 				clear: none;
 				@include gs-span(d, 7, 12);	
 			}
+			.logo {
+				max-width: 250px;
+				margin: 0 auto;
+			}
 			// @include clearfix;
 			.wrap {
 				// background: #fff;
@@ -532,9 +596,16 @@
 			clear: both;
 			@include clearfix;
 			background: #fff url('/img/home/background-audubon.jpg') no-repeat;
-			background-position:  bottom left;
+			background-position: bottom left;
 			background-size: 50%;
 			margin-bottom: 300px;
+			@include respond-to(medium-screens) {
+				background-position: top left;
+			}
+			@include respond-to(extra-wide-screens) {
+				background-size: 30%;
+				padding: 5% 0;
+			}
 			// min-height: 700px;
 			.wrap {
 				// position: absolute;
@@ -544,6 +615,7 @@
 				@include respond-to(medium-and-above) {
 					@include gs-span(d, 6, 10);
 				}
+				
 			}
 			.device {
 				clear: both;
@@ -628,12 +700,20 @@
 			.wrap {
 				// @include gs-span(d, 1, 4, (1, 6));
 				// padding: 125px 0;
+				@include respond-to(extra-wide-screens) {
+					position: relative;
+			    top: 300px;
+				}
 			}
 			.device {
 				margin-top: -40%;
 				@include gs-span(d, 5, 6, (1, 6));
 				@include respond-to(medium-and-above) {
 					@include gs-span(d, 4, 5, (1, 6))	
+				}
+				@include respond-to(extra-wide-screens) {
+					position: relative;
+			    top: 120px;
 				}
 
 			}
@@ -688,6 +768,9 @@
 			@include respond-to(medium-and-above) {
 				padding: 0;
 			}
+			@include respond-to(extra-wide-screens) {
+				padding: 10% 0;
+			}
 			.wrap {
 				margin-bottom: -50px;
 				@include respond-to(medium-and-above) {
@@ -700,6 +783,7 @@
 			.device {
 				position: relative;
 				bottom: -70px;
+				z-index: 2;
 				@include respond-to(medium-and-above) {
 					@include gs-span(d, 1, 7);	
 			    position: absolute;
@@ -725,6 +809,9 @@
 			}
 			@include respond-to(medium-screens) {
 				@include gs-span(t, 2, 5);	
+			}
+			@include respond-to(extra-wide-screens) {
+				margin-top: 20%;
 			}
 			.wrap {
 				@include respond-to(medium-and-above) {
@@ -752,6 +839,9 @@
 					position: absolute;
 					bottom: 0;
 				}
+				@include respond-to(extra-wide-screens) {
+					bottom: -120%;
+				}
 				img {
 					// position: absolute;
 					// right: -25%;
@@ -768,8 +858,12 @@
 			// margin-top: 200px;
 			margin-top: 20%;
 			padding: 40px 0 25%;
+			@include respond-to(medium-screens) {
+				margin-top: 40px;
+			}
 			@include respond-to(medium-and-above) {
 				padding: 200px 0 25%;
+				
 			}
 			.container {
 				clear: both;
@@ -787,6 +881,7 @@
 				clear: both;
 				position: absolute;
 				width: 100%;
+				left: 0;
 			}
 			.device-a {
 				@include gs-span(d, 2, 8);	
@@ -806,6 +901,12 @@
 				@include respond-to(medium-and-above) {
 					@include gs-span(d, 1, 3);	
 				}
+				@include respond-to(medium-screens) {
+					margin-top: 25%;
+				}
+				@include respond-to(extra-wide-screens) {
+					margin-top: 15%;
+				}
 			}
 			.wrap {
 				@include gs-span(d, 4, 12);	
@@ -813,6 +914,12 @@
 					@include gs-span(d, 3, 5);	
 				}
 				text-align: center;
+				@include respond-to(medium-screens) {
+					margin-top: 25%;
+				}
+				@include respond-to(extra-wide-screens) {
+					margin-top: 15%;
+				}
 			}
 			.logo {
 				max-width: 200px;
@@ -866,8 +973,11 @@
 			}
 			.wrap {
 				padding: 200px 5%;
-				@include respond-to(medium-and-above) {
+				@include respond-to(wide-and-above) {
 					@include gs-span(d, 2, 4, (1, 7));
+				}
+				@include respond-to(medium-screens) {
+					@include gs-span(d, 2, 6, (1, 7));
 				}
 				
 			}
@@ -944,6 +1054,17 @@
 	    @include respond-to(medium-and-above) {
 		    padding: 100px;
 		  }
+		  @include respond-to(extra-wide-screens) {
+		  	padding: 100px 20%;
+		  	p {
+		  		font-size: 26px;
+			  	line-height: 38px;
+		  	}
+		  	address {
+			  	font-size: 20px;
+			  	line-height: 28px;	
+		  	}
+		  }
 	    .wrap {
 	    	display: table;
 			  width: 100%;
@@ -958,6 +1079,19 @@
     p, address {
     	color: $color-text;
     	text-align: left;
+    }
+    p {
+    	&:before {
+    		content: "\201C";
+		    position: absolute;
+		    margin-left: -.4em;
+    	}
+	    &:after {
+		    content: "\201D";
+			}
+    }
+    strong {
+    	display: block;
     }
     &.filmlinc {
     	clear: both;

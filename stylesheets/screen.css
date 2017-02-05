@@ -1045,7 +1045,7 @@ footer, section {
     text-align: left;
   }
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 1025px) {
   .intro .header {
     position: fixed;
     width: 100%;
@@ -1053,7 +1053,18 @@ footer, section {
   }
 }
 .intro .tagline-wrap {
-  padding: 20% 0;
+  padding: 20% 3%;
+}
+@media only screen and (min-width: 1025px) {
+  .intro .tagline-wrap {
+    padding: 0 3%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+.intro .tagline-wrap .wrap {
+  margin: 0 auto;
 }
 .intro .tagline-wrap h2 {
   font-size: 25px;
@@ -1235,9 +1246,15 @@ footer, section {
 }
 .more-work .project-item p {
   color: rgba(0, 0, 0, 0.8);
-  font-size: 22px;
-  line-height: 31px;
   margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media only screen and (min-width: 1025px) {
+  .more-work .project-item p {
+    font-size: 22px;
+    line-height: 28px;
+  }
 }
 .more-work .project-item a {
   color: rgba(0, 0, 0, 0.8);
@@ -1250,9 +1267,11 @@ footer, section {
   margin-bottom: 30px;
   width: 100%;
 }
-.more-work .project-item .description-wrap a {
-  font-size: 18px;
-  line-height: 24px;
+@media only screen and (min-width: 1025px) {
+  .more-work .project-item .description-wrap a {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .more-work .project-item.yale {
   background-image: url("/img/home/background-yale.jpg");
@@ -1270,40 +1289,63 @@ footer, section {
     float: right;
   }
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 641px) {
   .more-work .project-item.yale {
     padding: 5% 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.yale {
+    padding: 10% 0;
   }
 }
 .more-work .project-item.yale .container {
   position: relative;
 }
 .more-work .project-item.yale .wrap {
+  padding: 100px 0;
+  text-align: center;
   display: block;
   float: left;
   margin-left: 25.72021%;
   margin-right: -100%;
   width: 39.93734%;
-  padding: 100px 0;
-  text-align: center;
 }
 .more-work .project-item.yale .device {
   display: block;
   float: left;
-  margin-left: 68.58724%;
+  margin-left: 51.44043%;
   margin-right: -100%;
-  width: 31.36393%;
+  width: 48.51074%;
 }
 @media only screen and (min-width: 641px) {
-  .more-work .project-item.yale .device img {
-    position: absolute;
-    bottom: 0;
-    right: 5%;
+  .more-work .project-item.yale .device {
+    display: block;
+    float: left;
+    margin-left: 68.58724%;
+    margin-right: -100%;
+    width: 31.36393%;
   }
+}
+.more-work .project-item.yale .device img {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  max-width: 100px;
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .more-work .project-item.yale .device img {
-    max-width: 210px;
+    max-width: 160px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .more-work .project-item.yale .device img {
+    max-width: 260px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.yale .device img {
+    max-width: 400px;
   }
 }
 .more-work .project-item.yale .device img {
@@ -1330,7 +1372,7 @@ footer, section {
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .more-work .project-item.nyit {
-    margin: -15% 0 30px;
+    margin: -5% 0 30px;
   }
 }
 .more-work .project-item.nyit .wrap {
@@ -1348,10 +1390,21 @@ footer, section {
     overflow: hidden;
   }
 }
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.nyit .wrap {
+    overflow: visible;
+    width: auto;
+  }
+}
 .more-work .project-item.nyit .wrap:before {
   content: "";
   display: block;
   padding-top: 100%;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.nyit .wrap:before {
+    padding: 0;
+  }
 }
 .more-work .project-item.nyit .wrap .inner-wrap {
   position: absolute;
@@ -1360,6 +1413,11 @@ footer, section {
   bottom: 0;
   right: 0;
   text-align: center;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.nyit .wrap .inner-wrap {
+    position: relative;
+  }
 }
 .more-work .project-item.nyit .wrap .center {
   display: table;
@@ -1382,7 +1440,15 @@ footer, section {
   margin-top: -80px;
   z-index: 2;
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.nyit .device {
+    clear: none;
+    position: absolute;
+    z-index: 3;
+    top: -40%;
+  }
+}
+@media only screen and (min-width: 1025px) {
   .more-work .project-item.nyit .device {
     clear: none;
     position: absolute;
@@ -1431,7 +1497,13 @@ footer, section {
   display: table;
   clear: both;
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.filmlinc {
+    height: 480px;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1025px) {
   .more-work .project-item.filmlinc {
     margin-left: 5%;
     margin-right: 5%;
@@ -1439,11 +1511,17 @@ footer, section {
     padding-bottom: 0;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.filmlinc {
+    height: auto;
+    padding: 20% 0;
+    margin: 0;
+  }
+}
 @media only screen and (min-width: 641px) {
   .more-work .project-item.filmlinc .wrap {
     position: absolute;
     bottom: 40px;
-    left: 40px;
     width: 100%;
   }
 }
@@ -1480,7 +1558,7 @@ footer, section {
   margin-right: -100%;
   width: 82.80436%;
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 1025px) {
   .more-work .project-item.filmlinc .description-wrap {
     clear: none;
     display: block;
@@ -1569,6 +1647,10 @@ footer, section {
     width: 48.51074%;
   }
 }
+.more-work .project-item.nextgen .logo {
+  max-width: 250px;
+  margin: 0 auto;
+}
 .more-work .project-item.nextgen .wrap {
   text-align: center;
   display: block;
@@ -1603,6 +1685,17 @@ footer, section {
   content: "";
   display: table;
   clear: both;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.audubon {
+    background-position: top left;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.audubon {
+    background-size: 30%;
+    padding: 5% 0;
+  }
 }
 .more-work .project-item.audubon .wrap {
   padding: 50px 5% 0;
@@ -1730,6 +1823,12 @@ footer, section {
   margin-right: -100%;
   width: 46.98037%;
 }
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.tackle-ebola .wrap {
+    position: relative;
+    top: 300px;
+  }
+}
 .more-work .project-item.tackle-ebola .device {
   margin-top: -40%;
   display: block;
@@ -1745,6 +1844,12 @@ footer, section {
     margin-left: 53.01963%;
     margin-right: -100%;
     width: 29.30716%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.tackle-ebola .device {
+    position: relative;
+    top: 120px;
   }
 }
 .more-work .project-item.the-feast {
@@ -1822,6 +1927,11 @@ footer, section {
     padding: 0;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.film-comment {
+    padding: 10% 0;
+  }
+}
 .more-work .project-item.film-comment .wrap {
   margin-bottom: -50px;
 }
@@ -1840,6 +1950,7 @@ footer, section {
 .more-work .project-item.film-comment .device {
   position: relative;
   bottom: -70px;
+  z-index: 2;
 }
 @media only screen and (min-width: 641px) {
   .more-work .project-item.film-comment .device {
@@ -1887,6 +1998,11 @@ footer, section {
     width: 65.0546%;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.fes {
+    margin-top: 20%;
+  }
+}
 @media only screen and (min-width: 641px) {
   .more-work .project-item.fes .wrap {
     display: block;
@@ -1929,6 +2045,11 @@ footer, section {
     bottom: 0;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.fes .device {
+    bottom: -120%;
+  }
+}
 .more-work .project-item.patronage {
   clear: both;
   background-size: cover;
@@ -1940,6 +2061,11 @@ footer, section {
   content: "";
   display: table;
   clear: both;
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.patronage {
+    margin-top: 40px;
+  }
 }
 @media only screen and (min-width: 641px) {
   .more-work .project-item.patronage {
@@ -1964,6 +2090,7 @@ footer, section {
   clear: both;
   position: absolute;
   width: 100%;
+  left: 0;
 }
 .more-work .project-item.patronage .devices::after {
   content: "";
@@ -2006,6 +2133,16 @@ footer, section {
     width: 22.79053%;
   }
 }
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.fairness .device {
+    margin-top: 25%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.fairness .device {
+    margin-top: 15%;
+  }
+}
 .more-work .project-item.fairness .wrap {
   display: block;
   float: left;
@@ -2021,6 +2158,16 @@ footer, section {
     margin-left: 17.14681%;
     margin-right: -100%;
     width: 22.79053%;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.fairness .wrap {
+    margin-top: 25%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .more-work .project-item.fairness .wrap {
+    margin-top: 15%;
   }
 }
 .more-work .project-item.fairness .logo {
@@ -2104,13 +2251,22 @@ footer, section {
 .more-work .project-item.hustwit .wrap {
   padding: 200px 5%;
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 1025px) {
   .more-work .project-item.hustwit .wrap {
     display: block;
     float: left;
     margin-left: 15.01889%;
     margin-right: -100%;
     width: 39.92444%;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .more-work .project-item.hustwit .wrap {
+    display: block;
+    float: left;
+    margin-left: 15.01889%;
+    margin-right: -100%;
+    width: 69.96222%;
   }
 }
 .more-work .project-item.hustwit .device {
@@ -2201,6 +2357,19 @@ footer, section {
     padding: 100px;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .more-work .quote-item .quote-text {
+    padding: 100px 20%;
+  }
+  .more-work .quote-item .quote-text p {
+    font-size: 26px;
+    line-height: 38px;
+  }
+  .more-work .quote-item .quote-text address {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
 .more-work .quote-item .quote-text .wrap {
   display: table;
   width: 100%;
@@ -2214,6 +2383,17 @@ footer, section {
 .more-work .quote-item p, .more-work .quote-item address {
   color: rgba(0, 0, 0, 0.8);
   text-align: left;
+}
+.more-work .quote-item p:before {
+  content: "\201C";
+  position: absolute;
+  margin-left: -.4em;
+}
+.more-work .quote-item p:after {
+  content: "\201D";
+}
+.more-work .quote-item strong {
+  display: block;
 }
 .more-work .quote-item.filmlinc {
   clear: both;
