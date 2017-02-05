@@ -481,6 +481,22 @@ address {
   line-height: 20px;
 }
 
+.fade-box .lazyload,
+.fade-box .lazyloading {
+  opacity: 0;
+  transition: opacity;
+}
+
+.fade-box img.lazyloaded {
+  transition-duration: 0.3s;
+  opacity: 1;
+}
+
+.fade-box.logo img.lazyloaded {
+  transition-duration: 0.1s;
+  opacity: 1;
+}
+
 nav {
   text-align: center;
 }

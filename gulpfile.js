@@ -9,6 +9,7 @@ var s3          = require("gulp-s3");
 var minifycss   = require('gulp-minify-css');
 // var awsCredentials = JSON.parse(fs.readFileSync('aws.json'));
 var creds       = require('./aws.json');
+var $ = require('gulp-load-plugins')();
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -78,3 +79,30 @@ gulp.task('upload', function() {
         }
       }));
 });
+
+gulp.task('images', function () {
+  return gulp.src('img/home/devices/source/*.{jpg,png}')
+    .pipe($.responsive({
+      // Resize all JPG images to three different sizes: 200, 500, and 630 pixels
+      '*.png': [{
+        width: '60%',
+        rename: { suffix: '-60%' },
+      }, {
+        width: '30%',
+        rename: { suffix: '-30%' },
+      }, {
+        // Compress, strip metadata, and rename original image
+        // rename: { suffix: '-original' },
+      }],
+    }, {
+      // Global configuration for all images
+      // The output quality for JPEG, WebP and TIFF output formats
+      quality: 70,
+      // Use progressive (interlace) scan for JPEG and PNG output
+      progressive: true,
+      // Strip all metadata
+      withMetadata: false,
+    }))
+    .pipe(gulp.dest('img/home/devices'));
+});
+
