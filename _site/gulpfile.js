@@ -10,6 +10,10 @@ var minifycss   = require('gulp-minify-css');
 // var awsCredentials = JSON.parse(fs.readFileSync('aws.json'));
 var creds       = require('./aws.json');
 var $ = require('gulp-load-plugins')();
+var iconfont    = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
+var fontName = 'cp-icons';
+var runTimestamp = Math.round(Date.now()/1000);
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -106,3 +110,23 @@ gulp.task('images', function () {
     .pipe(gulp.dest('img/home/devices'));
 });
 
+gulp.task('iconfont', function(){
+  return gulp.src(['img/icons/*.svg'])
+    .pipe(iconfontCss({
+      fontName: fontName,
+      path: 'sass/templates/_icons.scss',
+      targetPath: '../sass/modules/_icons.scss',
+      fontPath: '/webfonts/'
+    }))
+    .pipe(iconfont({
+      fontName: fontName, // required 
+      prependUnicode: true, // recommended option 
+      formats: ['ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available 
+      timestamp: runTimestamp, // recommended to get consistent builds when watching files 
+    }))
+      .on('glyphs', function(glyphs, options) {
+        // CSS templating, e.g. 
+        console.log(glyphs, options);
+      })
+    .pipe(gulp.dest('webfonts/'));
+});

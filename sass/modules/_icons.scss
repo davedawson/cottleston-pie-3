@@ -1,0 +1,72 @@
+@font-face {
+	font-family: "cp-icons";
+	src: url('/webfonts/cp-icons.eot');
+	src: url('/webfonts/cp-icons.eot?#iefix') format('eot'),
+		url('/webfonts/cp-icons.woff') format('woff'),
+		url('/webfonts/cp-icons.ttf') format('truetype'),
+		url('/webfonts/cp-icons.svg#cp-icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "cp-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == Artboard1 {
+		$char: "\E001";
+	}
+	@if $filename == icon-right-arrow {
+		$char: "\E002";
+	}
+	@if $filename == right-arrow {
+		$char: "\E003";
+	}
+
+	@return $char;
+}
+
+@mixin icon-after($filename, $insert: after, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+@mixin icon-before($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-Artboard1 {
+	@include icon-after(Artboard1);
+}
+.icon-icon-right-arrow {
+	@include icon-after(icon-right-arrow);
+}
+.icon-right-arrow {
+	@include icon-after(right-arrow);
+}

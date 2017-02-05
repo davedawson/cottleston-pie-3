@@ -59,6 +59,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+@font-face {
+  font-family: "cp-icons";
+  src: url("/webfonts/cp-icons.eot");
+  src: url("/webfonts/cp-icons.eot?#iefix") format("eot"), url("/webfonts/cp-icons.woff") format("woff"), url("/webfonts/cp-icons.ttf") format("truetype"), url("/webfonts/cp-icons.svg#cp-icons") format("svg");
+}
+.icon-Artboard1:after, .icon-icon-right-arrow:after, .icon-right-arrow:after, .arrow:after {
+  font-family: "cp-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.icon-Artboard1:after {
+  content: "";
+}
+
+.icon-icon-right-arrow:after {
+  content: "";
+}
+
+.icon-right-arrow:after {
+  content: "";
+}
+
 html, body, * {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -258,6 +286,13 @@ html, body, * {
 .button:hover {
   color: white;
   background: #981024;
+}
+
+.arrow:after {
+  content: "";
+}
+.arrow:after {
+  padding-left: 7px;
 }
 
 * {
@@ -1202,6 +1237,7 @@ footer, section {
   color: rgba(0, 0, 0, 0.8);
   font-size: 22px;
   line-height: 31px;
+  margin-bottom: 5px;
 }
 .more-work .project-item a {
   color: rgba(0, 0, 0, 0.8);
@@ -1213,6 +1249,10 @@ footer, section {
 .more-work .project-item .logo img {
   margin-bottom: 30px;
   width: 100%;
+}
+.more-work .project-item .description-wrap a {
+  font-size: 18px;
+  line-height: 24px;
 }
 .more-work .project-item.yale {
   background-image: url("/img/home/background-yale.jpg");

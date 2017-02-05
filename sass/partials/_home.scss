@@ -261,6 +261,7 @@
 			color: $color-text;
 			font-size: 22px;
 			line-height: 31px;
+			margin-bottom: 5px;
 		}
 		a {
 			color: $color-text;
@@ -285,6 +286,12 @@
 		.device {
 			img {
 				// width: 100%;
+			}
+		}
+		.description-wrap {
+			a {
+				font-size: 18px;
+				line-height: 24px;
 			}
 		}
 

@@ -120,3 +120,10 @@
 		background: darken($color-red, 20%);
 	}
 }
+
+.arrow {
+	@include icon-after(icon-right-arrow);
+	&:after {
+		padding-left: 7px;
+	}
+}
