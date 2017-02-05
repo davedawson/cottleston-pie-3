@@ -10,19 +10,6 @@
 
 .hide { display: none; }
 
-.h-hidden {
-	display: inherit;
-	@include respond-to(handhelds) {
-		display: none;
-	}
-}
-
-.h-visible {
-	display: none;
-	@include respond-to(handhelds) {
-		display: inherit;
-	}
-}
 
 .t-hidden {
 	display: inherit;
@@ -34,6 +21,20 @@
 .t-visible {
 	display: none;
 	@include respond-to(medium-screens) {
+		display: inherit;
+	}
+}
+
+.h-hidden {
+	display: inherit;
+	@include respond-to(handhelds) {
+		display: none;
+	}
+}
+
+.h-visible {
+	display: none;
+	@include respond-to(handhelds) {
 		display: inherit;
 	}
 }

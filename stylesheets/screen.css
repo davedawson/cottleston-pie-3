@@ -82,24 +82,6 @@ html, body, * {
   display: none;
 }
 
-.h-hidden {
-  display: inherit;
-}
-@media only screen and (max-width: 640px) {
-  .h-hidden {
-    display: none;
-  }
-}
-
-.h-visible {
-  display: none;
-}
-@media only screen and (max-width: 640px) {
-  .h-visible {
-    display: inherit;
-  }
-}
-
 .t-hidden {
   display: inherit;
 }
@@ -114,6 +96,24 @@ html, body, * {
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .t-visible {
+    display: inherit;
+  }
+}
+
+.h-hidden {
+  display: inherit;
+}
+@media only screen and (max-width: 640px) {
+  .h-hidden {
+    display: none;
+  }
+}
+
+.h-visible {
+  display: none;
+}
+@media only screen and (max-width: 640px) {
+  .h-visible {
     display: inherit;
   }
 }
@@ -551,6 +551,17 @@ nav a {
   font-weight: bold;
   text-decoration: none;
 }
+@media only screen and (min-width: 640px) and (max-width: 905px) {
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+}
+@media only screen and (min-width: 905px) and (max-width: 1074px) {
+  nav a {
+    font-size: 13px;
+  }
+}
 nav a.contact {
   position: relative;
 }
@@ -592,6 +603,7 @@ nav a:hover {
 .header {
   text-align: center;
   margin: 30px 0;
+  padding: 0 3%;
 }
 .header::after {
   content: "";
@@ -600,7 +612,7 @@ nav a:hover {
 }
 @media only screen and (min-width: 641px) and (max-width: 1023px) {
   .header {
-    padding: 0 3%;
+    padding: 0%;
   }
 }
 @media only screen and (min-width: 641px) {
@@ -640,6 +652,19 @@ nav a:hover {
   margin-right: 10px;
   padding-bottom: 5px;
 }
+@media only screen and (min-width: 640px) and (max-width: 715px) {
+  .header .tagline {
+    display: none;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .header .new-york-city {
+    display: none;
+  }
+  .header .nyc {
+    display: inline;
+  }
+}
 .header strong {
   font-family: "macha", Helvetica, Arial, sans-serif;
   font-weight: 100;
@@ -662,6 +687,30 @@ nav a:hover {
     display: inline-block;
     margin-top: 5px;
     padding: 5px 15px;
+  }
+}
+
+.page-home .header {
+  margin-top: 0;
+  padding-top: 30px;
+}
+.page-home .header.in-work {
+  padding-top: 15px;
+}
+.page-home .header.in-work h2 a, .page-home .header.in-work ul li a {
+  color: #242742;
+}
+.page-home .header.in-work h2 a strong, .page-home .header.in-work ul li a strong {
+  color: #fff;
+}
+@media only screen and (min-width: 641px) {
+  .page-home .header h2 {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 1050px) {
+  .page-home .header h2 {
+    font-size: 20px;
   }
 }
 
@@ -908,13 +957,6 @@ footer, section {
 .page-home {
   background: #f9f9f5;
 }
-.page-home .header {
-  margin-top: 0;
-  padding-top: 30px;
-}
-.page-home .header h2 {
-  font-size: 25px;
-}
 
 .nav-wrap {
   text-align: center;
@@ -966,6 +1008,13 @@ footer, section {
     padding-bottom: 500px;
     margin-bottom: -470px;
     text-align: left;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .intro .header {
+    position: fixed;
+    width: 100%;
+    z-index: 4;
   }
 }
 .intro .tagline-wrap {
@@ -1056,6 +1105,13 @@ footer, section {
   display: table;
   clear: both;
 }
+@media only screen and (min-width: 1025px) {
+  .intro .logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .intro .logo-section p {
   font-size: 18px;
   line-height: 26px;
@@ -1071,11 +1127,7 @@ footer, section {
 }
 @media only screen and (min-width: 1025px) {
   .intro .logo-section .logos {
-    display: block;
-    float: left;
-    margin-left: 8.5734%;
-    margin-right: -100%;
-    width: 39.93734%;
+    width: 35%;
   }
 }
 .intro .logo-section .details {
@@ -1087,14 +1139,12 @@ footer, section {
     line-height: 26px;
   }
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 1025px) {
   .intro .logo-section .details {
     text-align: left;
-    display: block;
-    float: left;
-    margin-left: 51.44043%;
-    margin-right: -100%;
-    width: 39.93734%;
+    width: 45%;
+    float: right;
+    padding-left: 10%;
   }
 }
 .intro .logo-section .details h3 {
@@ -2966,6 +3016,11 @@ footer, section {
 
 .interior .container {
   padding: 0;
+}
+@media only screen and (min-width: 641px) {
+  .interior .page-content {
+    margin: 0 3%;
+  }
 }
 
 .project-header {
