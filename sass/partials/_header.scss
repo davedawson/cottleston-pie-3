@@ -90,7 +90,7 @@ nav {
 	padding: 0 3%;
 	@include clearfix;
 	@include respond-to(medium-screens) {
-		padding: 0%;
+		padding: 0 3%;
 	}
 	@include respond-to(medium-and-above) {
 		text-align: left;
