@@ -3234,7 +3234,7 @@ footer, section {
   padding: 0;
 }
 @media only screen and (min-width: 641px) {
-  .interior .page-content {
+  .interior .content-wrap {
     margin: 0 3%;
   }
 }
@@ -3414,10 +3414,56 @@ footer, section {
 .project-header.four-seasons {
   background-image: url("/img/projects/four-seasons/hero-fs.jpg");
 }
+.project-header.okcjr {
+  background-image: url("/img/projects/okcjr/hero-okcjr.jpg");
+}
+.project-header.audubon-birdlife {
+  background-image: url("/img/projects/audubon-birdlife/hero-audubon-birdlife.jpg");
+}
+.project-header.patronage {
+  background-image: url("/img/projects/patronage/hero-patronage.jpg");
+}
+@media only screen and (min-width: 1025px) {
+  .project-header.patronage:after {
+    content: "";
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 57%, transparent 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(57%, transparent), color-stop(100%, transparent));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 57%, transparent 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 57%, transparent 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 57%, transparent 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 0) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+    /* IE6-9 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+    width: 140%;
+  }
+}
+.project-header.fairness {
+  background-image: url("/img/projects/fairness/hero-fairness.jpg");
+}
+.project-header.muckfest {
+  background-image: url("/img/projects/muckfest/hero-muckfest.jpg");
+}
+.project-header.yale {
+  background-image: url("/img/projects/yale/hero-yale.jpg");
+}
 
 .project-deets {
   font-size: 14px;
   line-height: 18px;
+  position: relative;
+  z-index: 4;
 }
 .project-deets dt {
   text-transform: uppercase;

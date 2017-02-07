@@ -2,7 +2,7 @@
 	.container {
 		padding: 0;
 	}
-	.page-content {
+	.content-wrap {
 		@include respond-to(medium-and-above) {
 			margin: 0 3%;
 		}
@@ -131,11 +131,38 @@
 	&.four-seasons {
 		background-image: url('/img/projects/four-seasons/hero-fs.jpg');
 	}
+	&.okcjr {
+		background-image: url('/img/projects/okcjr/hero-okcjr.jpg');
+	}
+	&.audubon-birdlife {
+		background-image: url('/img/projects/audubon-birdlife/hero-audubon-birdlife.jpg');
+	}
+	&.patronage {
+		background-image: url('/img/projects/patronage/hero-patronage.jpg');
+		@include respond-to(wide-and-above) {
+			&:after {
+				content: "";
+				@include left-to-right-dark-gradient;
+				width: 140%;
+			}
+		}
+	}
+	&.fairness {
+		background-image: url('/img/projects/fairness/hero-fairness.jpg');
+	}
+	&.muckfest {
+		background-image: url('/img/projects/muckfest/hero-muckfest.jpg');
+	}
+	&.yale {
+		background-image: url('/img/projects/yale/hero-yale.jpg');
+	}
 }
 
 .project-deets {
 	font-size: 14px;
 	line-height: 18px;
+	position: relative;
+	z-index: 4;
 	dt {
     text-transform: uppercase;
     letter-spacing: 0.2em;
